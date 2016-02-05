@@ -1,5 +1,10 @@
 //"use strict";
 
+
+/*
+STICKY NAVIGATION
+*/
+
 /*
 $(window).scroll(function() {
 	var view = $("body");
