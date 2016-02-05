@@ -15,90 +15,44 @@ $(window).scroll(function() {
 });
 */
 
-
 /*
-// Call stylesheet init so that all stylesheet changing functions 
-// will work.
-$.stylesheetInit();
+STYLESHEET SWITCHER
 
-// This code loops through the stylesheets when you click the link with 
-// an ID of "toggler" below.
-$("#contrast").bind(
-	"click",
-	function(e) {
-		$.stylesheetToggle();
-		return false;
-	}
-);
+* put class ".theme" on the stylesheets you want to cycle through
+* add an element with id "#contrast" in markup to let you switch styles
+
+Inspired by Kelvin Luck's jQuery Stylesheet Switcher:
+http://2008.kelvinluck.com/assets/jquery/styleswitch/toggle.html
 */
 
+(function($) {
 
-//I would suggest you give the link-tag an id such as theme.
-//Put the name of the css file in a data-attribute on the buttons
-//and use the same handler on them both:
-
-//Html:
-
-//<button id="grayscale" data-theme="style2.css">Gray Theme</button>
-
-
-
-
-
-//And js:
-
-//$("button[data-theme]").click(function() {
-//    $("head link#theme").attr("href", $(this).data("theme"));
-//}
-
-
-// old init
-//$("link[class*='theme']").each(function(i) {
-//	styles.push(this.getAttribute("href"));
-//});
-
-// init
-var styles = $("link[class*='theme']"),
-	styleOn = 0;
-
-// functions
-$.styleSwitch = function() {
-	// disable the last one
-	styles[styleOn].disabled = true;
-
-	// advance the counter
-	styleOn ++;
-	if(styleOn >= styles.length) {
+	// load up the current stylesheets
+	var styles = $("link[class*='theme']"),
 		styleOn = 0;
-	}
 
-	//$.styleNext(styles[styleOn]);
+	// main functions
+	$.styleSwitch = function() {
+		// disable the current style
+		styles[styleOn].disabled = true;
 
-	if(styles[styleOn].disabled == true) {
-		styles[styleOn].disabled = false
-	}
-};
+		// advance the counter
+		styleOn ++;
+		if(styleOn >= styles.length) {
+			styleOn = 0;
+		}
 
-$.styleNext = function(parame) {
-	// enable the next one
-	//console.log("yup!" + styleOn)
-	if(parame.disabled == true) {
-		parame.disabled = false
-	}
-};
+		// enable the next style
+		if(styles[styleOn].disabled == true) {
+			styles[styleOn].disabled = false
+		}
+	};
 
+})(jQuery);
 
-
-// action
+// switching actor, listening in for a click on the "#contrast" element
 $("#contrast").bind("click", function(e) {
 	$.styleSwitch();
 });
 
 
-
-
-/*
-(function($) {
-
-})(jQuery);
-*/
