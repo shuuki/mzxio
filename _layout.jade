@@ -1,0 +1,31 @@
+doctype
+html(itemscope itemtype="http://schema.org/CreativeWork")
+	head
+		// meta
+		title #{title}
+		meta(description="#{description}")
+		link(rel="icon" type="image/x-icon" href="img/oic.png")
+
+		// display
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+
+		// styles
+		link(rel="stylesheet" href="style/reset.css")
+		//link(rel="stylesheet" href="style/index.css").theme
+		link(rel="stylesheet" href="style/index-dark.css" media="screen").theme
+		link(rel="stylesheet" href="style/index-light.css" media="screen" disabled).theme
+
+
+		// fonts
+		link(rel="stylesheet" href="style/fonts/montserrat/style.css")
+		link(rel="stylesheet" href="style/fonts/mzxio/style.css")
+		link(rel="stylesheet" href="style/fonts/VOX-2015/style.css")
+
+	body
+		!= partial("_shared/nav")
+		!= yield
+		// scripts
+		script(src="script/library/jquery-2.2.0.min.js")
+		//script(src="script/library/jquery-stylesheetToggle.js")
+		script(src="script/index.js")
+

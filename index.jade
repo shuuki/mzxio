@@ -1,0 +1,10 @@
+
+//#intro
+	#splash MZXIO
+
+//#longer
+	section
+		h1 Begin
+
+		for post, slug in public.posts._data
+			p: a(href="/posts/#{slug}")= post.title

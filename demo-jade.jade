@@ -1,0 +1,74 @@
+section
+	h1 Begin
+
+	//hush now
+	p
+		| It keeps going. There won't be any turning back now. When you look behind you, you'll see it catching up. There's no other way. How's this for 
+		a(href="#") creepy
+		| lorem ipsum? The elder ones will be displeased upon waking. Best not wake them.
+	for post, slug in public.posts._data
+		p: a(href="/posts/#{slug}")= post.title
+	h2 Not Quite
+	h3 Almost There
+	p We don't see where this should be.
+	p Where? Nowhere, of course.
+	p Not at all. Maybe.
+
+	hr
+	h4 Is there such a thing?
+	p Possibly. It depends on how this looks.
+	p
+		| This could happen
+		code if only
+		| this works.
+	code inline code
+	pre: p longer preformatted
+		| text is      rele   vant
+		| to the task at hand 
+	blockquote: p Blockquote
+		//blockquote: p level two
+			blockquote: p another nested quote
+	h5 Not Really Real 
+	table
+		thead
+			tr
+				th Left
+				th Right
+		tbody
+			tr
+				td nah
+				td yah
+			tr
+				td that 
+				td feel
+			tr
+				td when
+				td your
+
+
+	h6 Placeholder in the Sun
+
+
+	ul
+		li something
+		li something
+		li something
+			ul
+				li something
+					ul
+						li something
+				li something
+		li something
+	ol
+		li something
+		li something
+		li something
+			ol
+				li something
+					ol
+						li something
+						li something
+				li something
+				li something
+		li something
+		li something
