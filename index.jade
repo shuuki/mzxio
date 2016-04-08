@@ -1,11 +1,18 @@
+#intro
+	#splash MZXIO
 
-#splash MZXIO
-//#intro
 	
 
-//#longer
-	section
-		h1 Begin
+#longer
 
-		for post, slug in public.posts._data
-			p: a(href="/posts/#{slug}")= post.title
+
+	section
+		//h1 Begin
+
+		!= partial("/begin.md")
+
+	section
+		for post, slug in public.cases._data
+			p: a(href="/cases/#{slug}")= post.title
+
+		//pre #{ JSON.stringify(public, null, '\t') }

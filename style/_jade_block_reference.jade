@@ -1,0 +1,36 @@
+
+
+
+
+
+// my-template.jade
+extends my-layout
+	
+block head
+	script(src="myfile.js")
+
+block content
+	h1 My page
+
+
+
+
+
+
+
+
+// my-layout.jade
+doctype 5
+html
+	head
+		title My title
+		block head
+	body
+		#content
+			block content
+
+
+
+
+
+

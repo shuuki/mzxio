@@ -3,5 +3,8 @@
 		"title" : "MZXIO",
 		"description" : ""
 	},
+	"service" : {
+		"analytics": "UA-73314906-1"
+	},
 	"domains" : ["mzx.io"]
 }
