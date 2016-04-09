@@ -1,7 +1,6 @@
 #intro
 	#splash MZXIO
 
-	
 
 #longer
 
@@ -13,6 +12,8 @@
 
 	section
 		for post, slug in public.cases._data
-			p: a(href="/cases/#{slug}")= post.title
+			p: a(href="cases/#{slug}")= post.title
+		for post, slug in public.posts._data
+			p: a(href="posts/#{slug}")= post.title
 
 		//pre #{ JSON.stringify(public, null, '\t') }

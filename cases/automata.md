@@ -1,4 +1,4 @@
 # AUTOMATA
 
 
-## "Learn you some JavaScript."
+## "The blob lives."

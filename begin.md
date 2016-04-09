@@ -9,13 +9,13 @@ In a desert, where and when don't matter. Wasteland, void, an infinite desolate 
 
 We begin by the fire, beset by darkness. Flames reflected in our eyes dull the light of distant stars. We take up the fire for ourselves. Sun traverses sky, horizon to horizon, day upon day. Years pass in shuddering seasons. We rise up and fall again. Wind and water etch their marks upon the face of the earth. We observe cycles, honor ceremonies, sing in ancient ways. Our laughter rings out at the end of sorrow. We carry the fire.
 
-"There’s always still hope, so— I love you."
+"There's always still hope, so— I love you."
 
 `Message undeliverable. Signal lost.`
 
 ---
 
-## "Upon entering a universe, there is no way to return."
+#### "Upon entering a universe, there is no way to return."
 
 ---
 
@@ -42,6 +42,6 @@ Remember the right way to swallow. Combinations of gestures, sore, rendered alie
 
 ---
 
-## "You gotta be down with it if you want to stay around. Ain't got time for no begrudging."
+#### "You gotta be down with it if you want to stay around. Ain't got time for no begrudging."
 
 ---

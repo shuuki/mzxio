@@ -5,20 +5,19 @@
 STICKY NAVIGATION
 */
 
-/*
+
 $(window).scroll(function() {
 	var view = $("body");
 	var breakpoint = $(window).height() - 40; // height of #top
 
 	if (view.scrollTop() > breakpoint) {
-		//$("#intro").css("background", "magenta");
+		$("#intro").css("background", "magenta");
 		$("nav").addClass("fixed");
 	} else {
-		//$("#intro").css("background", "rgb(232,232,232)");
+		$("#intro").css("background", "rgb(232,232,232)");
 		$("nav").removeClass("fixed");
 	}
 });
-*/
 
 /*
 STYLESHEET SWITCHER

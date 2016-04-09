@@ -40,23 +40,23 @@ body {
 nav {
 	box-shadow: 0 0.1em 0 fadeout(@main, 90%);
 	background: fadeout(@base, 2%);
-	color: fadeout(@main, 50%);
+	color: fadeout(@main, 30%);
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	height: 40px;
 	transition: all 0.3s;
 	z-index: 99;
-	position: fixed;
+	position: absolute;
 	left: 0;
-	top: 0;
+	bottom: 0;
+	// make fixed top for classic sticky top style
+	// or absolute bottom with .fixed class for fancy scroll-to-top
 }
 
 .fixed {
-//	background: rgba(11,11,11,0.98) !important;
-//	color: rgba(232,232,232,0.98) !important;
-//	position: fixed !important;
-//	top: 0;
+	position: fixed !important;
+	top: 0;
 }
 
 #logo {
@@ -124,7 +124,7 @@ nav {
 
 #splash {
 	background-color: white;
-	//background-image: url(images/sky__nyc_variant_converted_32px.gif);
+	//]background-image: url(images/sky__nyc_variant_converted_32px.gif);
 	background-image: url(images/tiger-gullet.png);
 	//image-rendering: pixelated;// if you want pixels 
 	background-position: 50% 30%;
