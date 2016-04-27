@@ -25,9 +25,9 @@ html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 	body
 		!= partial("_shared/nav")
 
-		section
-			!= yield
+		// libraries
+		script(src="script/library/jquery-2.2.0.min.js")
+		script(src="script/library/packery.pkgd.min.js")
 
 		// scripts
-		script(src="script/library/jquery-2.2.0.min.js")
 		script(src="script/index.js")
