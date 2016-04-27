@@ -141,6 +141,27 @@ nav {
 	.centered;
 }
 
+#gallery {
+	padding: 1em;
+	position: relative;
+	z-index: 99;
+	background: black;
+	opacity: 0.5;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.piece {
+	background-size: cover;
+	background-position: 50% 50%;
+	display: inline-block;
+	margin: 1em;
+	height: 8em;
+	width: 10em;
+	overflow: hidden;
+}
+
 #longer {
 //	background: @dark;
 //	color: @light;
@@ -335,7 +356,3 @@ UTILITIES
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 }
-
-
-
-
