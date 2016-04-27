@@ -9,21 +9,23 @@ html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 		// display
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 
-		// styles
-		link(rel="stylesheet" href="style/index.css")
-		//link(rel="stylesheet" href="style/index-dark.css" media="screen").theme
-		//link(rel="stylesheet" href="style/index-light.css" media="screen" disabled).theme
-
 		// fonts
 		link(rel="stylesheet" href="style/fonts/montserrat/style.css")
 		link(rel="stylesheet" href="style/fonts/mzxio/style.css")
 		link(rel="stylesheet" href="style/fonts/VOX-2015/style.css")
+
+		// styles
+		link(rel="stylesheet" href="style/index.css")
+		link(rel="stylesheet" href="style/theme-soupcans.css" media="screen" disabled).theme
+		link(rel="stylesheet" href="style/theme-dark.css" media="screen" disabled).theme
+		link(rel="stylesheet" href="style/theme-light.css" media="screen" disabled).theme
 
 		// jade extension block
 		block head
 
 	body
 		!= partial("_shared/nav")
+		!= yield
 
 		// libraries
 		script(src="script/library/jquery-2.2.0.min.js")

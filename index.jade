@@ -1,19 +1,24 @@
+
 #intro
 	#splash MZXIO
 
-
 #longer
-
-
 	section
-		//h1 Begin
+		h1 You are here.
 
-		!= partial("/begin.md")
-
-	section
+		h2 Unsolved Cases
 		for post, slug in public.cases._data
 			p: a(href="cases/#{slug}")= post.title
+
+		h2 Posts
 		for post, slug in public.posts._data
 			p: a(href="posts/#{slug}")= post.title
 
-		//pre #{ JSON.stringify(public, null, '\t') }
+		//h2 Gallery
+		//#gallery(class="grid" data-packery='{ "itemSelector": ".piece", "gutter": 0 }')
+			for image in public.gallery.small._contents
+				.piece: img(src="gallery/small/#{ image }")
+
+
+		h2 Directory
+		pre #{ JSON.stringify(public, null, '\t') }
