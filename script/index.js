@@ -2,20 +2,8 @@
 
 
 /*
-PACKERY
-*/
-
-$('.grid').packery({
-  // options
-  itemSelector: '.grid-item',
-  gutter: 10
-});
-
-
-/*
 STICKY NAVIGATION
 */
-
 
 $(window).scroll(function() {
 	var view = $("body");
