@@ -26,7 +26,7 @@ body {
 	color: @main;
 	font-family: @copy;
 	font-size: 18px;
-	line-height: 1.5;
+	line-height: 1.326;
 	margin-top: 120px;
 	transition: all 0.5s;
 	-webkit-font-smoothing: antialiased;
@@ -37,10 +37,14 @@ body {
 	color: @dark;
 }
 
+a {
+	cursor: pointer;
+}
+
 nav {
-	box-shadow: 0 0.1em 0 fadeout(@main, 90%);
-	background: fadeout(@base, 2%);
-	color: fadeout(@main, 30%);
+	box-shadow: 0 0.1em 0 fadeout(@base, 90%);
+	background: fadeout(@main, 2%);
+	color: fadeout(@base, 30%);
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -87,7 +91,7 @@ nav {
 	}
 	a {
 		background: transparent;
-		color: inherit;
+		color: @base;
 		text-decoration: none;
 		&:after {
 			content: "";
@@ -113,7 +117,7 @@ nav {
 
 
 #intro {
-	background: @light;
+	//background: @light;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -142,8 +146,8 @@ nav {
 }
 
 #longer {
-//	background: @dark;
-//	color: @light;
+	background: @dark;
+	color: @light;
 	position: absolute;
 	top: 100%;
 	left: 0;
