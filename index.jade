@@ -3,20 +3,36 @@
 	#splash MZXIO
 
 #longer
-	section
+
+	//section#beginning
 		h1 You are here.
 
-		h2 Unsolved Cases
-		for post, slug in public.cases._data
-			p: a(href="cases/#{slug}")= post.title
+	section#annihilation
+		h1 Artist statement:
+		p For at least fifty thousand years, human beings carved familiar shapes into whatever material was close at hand. The artist continues in this grand tradition.
+		p Art seeks being in non-being, thing-ness from no-thing-ness. Life keeps the lights on, sweeps the floors, tells the stories. Life emerged as glitch, a rounding error while some organic molecules sought comfortable repose. Thus the artist embraces glitch and all things transcendent, ordered, numerical, insane. Here, now; past, future; history, imagination: no being is too small, no story irrelevant. Life is the audience, creation is the canvas. The artist peers into spaces between space, seeking seeds of creation. Entropy consumes all. It keeps going. There won't be any turning back. When you look behind you, you'll see it catching up. There is no other way. All may eventually come to ruin and dust, all the same. Venture deep into oblivion. Go as far as you dare. Bring back inspiration. Even in the dying light of the void, the artist writes its name upon the wall.
+		p Art is but an affirmation: not dead yet.
 
-		.gallery
-			for image in public.gallery.small._contents
-				img(src="gallery/small/#{ image }").piece
+		a(onClick="location.reload()") Reset
 
-		//h2 Posts
-		//for post, slug in public.posts._data
-			p: a(href="posts/#{slug}")= post.title
+
+
+
+
+	section#next
+
+
+
+
+
+
+
+
+
+		//h2 Unsolved Cases|||for post, slug in public.cases._data|||p: a(href="cases/#{slug}")= post.title
+		//h2 Posts|||for post, slug in public.posts._data|||p: a(href="posts/#{slug}")= post.title
 
 		//h2 Directory
 		//pre #{ JSON.stringify(public, null, '\t') }
+
+		//.gallery:::for image in public.gallery.small._contents:::img(src="gallery/small/#{ image net}").piece
