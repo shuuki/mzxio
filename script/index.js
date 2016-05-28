@@ -68,31 +68,31 @@ http://2008.kelvinluck.com/assets/jquery/styleswitch/toggle.html
 
 
 
-	// load up the current stylesheets
-	var styles = $("link[class*='theme']"),
+// load up the current stylesheets
+var styles = $("link[class*='theme']"),
+	styleOn = 0;
+
+// main functions
+$.styleSwitch = function() {
+	// disable the current style
+	styles[styleOn].disabled = true;
+
+	// advance the counter
+	styleOn ++;
+	if(styleOn >= styles.length) {
 		styleOn = 0;
+	}
 
-	// main functions
-	$.styleSwitch = function() {
-		// disable the current style
-		styles[styleOn].disabled = true;
-
-		// advance the counter
-		styleOn ++;
-		if(styleOn >= styles.length) {
-			styleOn = 0;
-		}
-
-		// enable the next style
-		if(styles[styleOn].disabled == true) {
-			styles[styleOn].disabled = false
-		}
-	};
+	// enable the next style
+	if(styles[styleOn].disabled == true) {
+		styles[styleOn].disabled = false
+	}
+};
 
 
 // switching actor, listening in for a click on the "#contrast" element
 $("#contrast").bind("click", function(e) {
-	$.styleSwitch();
+$.styleSwitch();
 });
 
 
