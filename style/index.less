@@ -427,8 +427,8 @@ KEYPAD
 // CODE INPUT FIELD
 ////////////////////////////////////////////////
 
-#display,
-#message {
+.key #display,
+.key #message {
   background-color: #231f20;
   border: 0.2rem solid rgba(242,86,51,0.2);
   border-radius: 0.15rem;
@@ -451,11 +451,11 @@ KEYPAD
   width: 100%;
 }
 
-#display {
+.key #display {
   z-index: 9;
 }
 
-#message {
+.key #message {
   margin-bottom: -3rem;
   opacity: 0;
   z-index: 10;
@@ -469,7 +469,7 @@ KEYPAD
 // KEYPAD AND BUTTONS
 ////////////////////////////////////////////////
 
-#keypad {
+.key #keypad {
 	border-collapse: collapse;
 	margin-top: 1rem;
 	width: 100%;
@@ -478,7 +478,7 @@ KEYPAD
 	}
 }
 
-button {
+.key button {
   transition: all 0ms linear;
   background-color: #888;
   border: 0;
@@ -516,7 +516,7 @@ button {
 	}
 }
 
-.braille {
+.key .braille {
 	color: rgba(255,255,255,0.5);
 	font-size: 1rem;
 	float: right;

@@ -4,15 +4,12 @@ INIT
 
 "use strict";
 
-
-
+(function($) {
 
 
 /***
 KEYPAD
 */
-
-
 
 function addCode(key) {
 	var code = document.forms[0].code;
@@ -21,7 +18,7 @@ function addCode(key) {
 	}
   if(code.value.length == 6) {
     document.getElementById("message").style.opacity = "1";
-    //setTimeout(submitForm,1000);
+    setTimeout(submitForm,1000);
   }
 }
 
@@ -32,10 +29,6 @@ function submitForm() {
 function emptyCode() {
 	document.forms[0].code.value = "";
 }
-
-
-
-(function($) {
 
 
 
@@ -69,12 +62,14 @@ $(window).scroll(function() {
 FULL HEIGHT SECTIONS
 */
 
+// should make this something you can enable if desired
+
 // set sections to window height
-//$("section").css("min-height", $(window).height());
+$("section").css("min-height", $(window).height());
 
 // update section height on resize
 $(window).resize(function() {
-//	$("section").css("min-height", $(window).height());
+	$("section").css("min-height", $(window).height());
 });
 
 
