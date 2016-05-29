@@ -400,8 +400,6 @@ KEYPAD
 // CALIBRATION
 ////////////////////////////////////////////////
 
-@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono|Hind:700);
-
 * {
   box-sizing: border-box;
   outline: 0;
@@ -413,12 +411,7 @@ KEYPAD
 // LAYOUT CONTROLS
 ////////////////////////////////////////////////
 
-body {
-	background-color: #231f20;
-	font-size: 16px;
-}
-
-form {
+.key {
 	background: #333;
 	border-bottom: 0.2rem solid rgba(0,0,0,0.4);
   margin: 0 auto;
@@ -444,7 +437,7 @@ form {
 		0 0 8rem rgba(242,86,51,0.6);
   color: #e57d00;
   display: block;
-  font-family: "Share Tech Mono", monospace;
+  font-family: @console;
   font-size: 1.8rem;
   height: 3rem;
   letter-spacing: 0.3rem;
@@ -497,9 +490,9 @@ button {
 		0 0 1rem rgba(0,0,0,0.8);
   color: #231f20;
   cursor: pointer;
-	font-family: "Hind", sans-serif;
+	font-family: @heading;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   height: 3rem;
 	line-height: 3rem;
   margin: 0;
