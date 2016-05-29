@@ -1,39 +1,36 @@
 
-#intro
+#intro.stickyNav
 	#splash MZXIO
 
 #longer
-
 
 	section#annihilation
 		h2 ARTIST STATEMENT
 		p For at least fifty thousand years, human beings carved familiar shapes into whatever material was close at hand. The artist continues in this grand tradition.
 		p Art seeks being in non-being, thing-ness from no-thing-ness. Life keeps the lights on, sweeps the floors, tells the stories. Life emerged as glitch, a rounding error while some organic molecules sought comfortable repose. Thus the artist embraces glitch and all things transcendent, ordered, numerical, insane. Here, now; past, future; history, imagination: no being is too small, no story irrelevant. Life is the audience, creation is the canvas. The artist peers into spaces between space, seeking seeds of creation. Entropy consumes all. It keeps going. There won't be any turning back. When you look behind you, you'll see it catching up. There is no other way. All may eventually come to ruin and dust, all the same. Venture deep into oblivion. Go as far as you dare. Bring back inspiration. Even in the dying light of the void, the artist writes its name upon the wall.
 		p Art is but an affirmation: not dead yet.
-
-		a(onClick="location.reload()") Reset
-
+		a(onClick="location.reload()").button Reset
 
 	section#beginning
-		//h1 You are here.
 		h2 YOU ARE HERE
-		img(src="img/tumblr_n2gp78dofg1tro3g4o1_1280.jpg")
-		img(src="img/tumblr_n2gooouyx61tro3g4o1_1280.jpg")
-		img(src="img/tumblr_n2gooouyx61tro3g4o2_1280.jpg")
 
 
+
+	.swiper-container
+		.swiper-wrapper
+			.swiper-slide
+				img(src="img/tumblr_n2gp78dofg1tro3g4o1_1280.jpg")
+			.swiper-slide
+				img(src="img/tumblr_n2gooouyx61tro3g4o1_1280.jpg")
+			.swiper-slide
+				img(src="img/tumblr_n2gooouyx61tro3g4o2_1280.jpg")
+		.swiper-button-next
+		.swiper-button-prev
+
+	section#dedication
+		h4 for you.
 
 	section#next
-
-
-
-
-
-
-
-
-
-
 		//h2 Unsolved Cases|||for post, slug in public.cases._data|||p: a(href="cases/#{slug}")= post.title
 		//h2 Posts|||for post, slug in public.posts._data|||p: a(href="posts/#{slug}")= post.title
 
@@ -41,3 +38,44 @@
 		//pre #{ JSON.stringify(public, null, '\t') }
 
 		//.gallery:::for image in public.gallery.small._contents:::img(src="gallery/small/#{ image net}").piece
+
+// styles
+link(rel="stylesheet" href="style/swiper.css")
+
+style.
+	body {
+		background: #888;
+		margin: 0;
+		padding: 0;
+	}
+	.swiper-container {
+		margin: 0 auto;
+		width: 100%;
+	}
+	.swiper-slide {
+		width: 80%;
+		transition: all 0.25s;
+	}
+	.swiper-slide-active {
+		opacity: 1;
+	}
+	.swiper-slide-next, .swiper-slide-prev {
+		opacity: 0.5;
+	}
+	.swiper-slide img {
+		width: 100%;
+	}
+
+
+script.
+	var swiper = new Swiper('.swiper-container', {
+		centeredSlides: true,
+		grabCursor: true,
+		keyboardControl: true,
+		loop: true,
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		scrollbarHide: true,
+		slidesPerView: 'auto',
+		spaceBetween: 18
+	});

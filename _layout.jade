@@ -3,6 +3,7 @@ html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 	head
 		// meta
 		title #{title}
+		meta(charset="utf-16")
 		meta(description="#{description}")
 		link(rel="icon" type="image/x-icon" href="favicon.ico")
 
@@ -23,13 +24,16 @@ html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 		block head
 
 	body
-		!= partial("_shared/nav")
-		!= yield
+
 
 		// libraries
 		script(src="script/library/jquery-2.2.0.min.js")
-		script(src="script/library/imagesloaded.pkgd.min.js")
-		script(src="script/library/packery.pkgd.min.js")
+		script(src="script/library/swiper.min.js")
+		//script(src="script/library/imagesloaded.pkgd.min.js")
+		//script(src="script/library/packery.pkgd.min.js")
 
 		// scripts
 		script(src="script/index.js")
+
+		!= partial("_shared/nav")
+		!= yield
