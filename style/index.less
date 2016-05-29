@@ -44,13 +44,12 @@ section {
 
 
 
-
-
 nav {
 	box-shadow: 0 0.1em 0 fadeout(@base, 90%);
-	background: fadeout(@base, 2%);
-	color: @main;
+	background: @main;//fadeout(@base, 2%);
+	color: @base;//@main;
 	display: flex;
+	font-size: 1em;
 	justify-content: space-between;
 	width: 100%;
 	height: 2em;
@@ -59,8 +58,15 @@ nav {
 	position: absolute;
 	left: 0;
 	bottom: 0;
+	user-select: none;
+	a {
+		background: transparent;
+		color: @base;
+		text-decoration: none;
+	}
 	// make fixed top for classic sticky top style
 	// or absolute bottom with .fixed class for fancy scroll-to-top
+
 }
 
 .fixed {
@@ -70,23 +76,14 @@ nav {
 }
 
 #logo {
-	font-size: 1em;
 	line-height: 2em;
 	font-family: "MZXIO";
 	letter-spacing: 0;
 	font-weight: normal;
 	cursor: default;
-	user-select: none;
-	a {
-		background: transparent;
-		color: inherit;
-		text-decoration: none;
-	}
 }
 
 #links {
-	font-size: 1em;
-	user-select: none;
 	ul {
 		display: inline-block;
 		padding: 0;
@@ -96,19 +93,16 @@ nav {
 		}
 	}
 	a {
-		background: transparent;
-		color: inherit;
-		text-decoration: none;
 		&:after {
 			content: "";
 			transition: all 180ms;
-			background: fadeout(@main, 80%);
+			background: fadeout(@base, 80%);
 			opacity: 0;
 			height: 1.5em;
-			width: 1.5em;
+			width: 2em;
 			display: inline-block;
-			margin-left: -1.25em;
-			border-radius: 50%;
+			margin-left: -1.5em;
+			border-radius: 1em;
 			position: relative;
 			top: 0.3em;
 		}
@@ -171,6 +165,10 @@ nav {
 	max-width: 10%;
 //	margin: auto;
 }
+
+
+
+
 
 /*
 TYPOGRAPHY
@@ -340,16 +338,202 @@ img {
 	max-width: 100%;
 }
 
+
+
 /***
 UTILITIES
 */
 
 .centered {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+	transform: translate(-50%, -50%);
 }
+
+
+/***
+SWIPER LIBRARY
+*/
+
+.swiper-container {
+	width: 100%;
+}
+.swiper-slide {
+	width: 70%;
+	transition: all 0.25s;
+}
+.swiper-slide-active {
+	opacity: 1;
+}
+.swiper-slide-next, .swiper-slide-prev {
+	opacity: 0.5;
+}
+.swiper-slide img {
+	width: 100%;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23e8e8e8'%2F%3E%3C%2Fsvg%3E");
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23e8e8e8'%2F%3E%3C%2Fsvg%3E");
+}
+
+
+
+
+
+
+
+
+
+
+
+/***
+KEYPAD
+*/
+
+
+
+////////////////////////////////////////////////
+// CALIBRATION
+////////////////////////////////////////////////
+
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono|Hind:700);
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+  transition: all 280ms ease-in;
+  -webkit-font-smoothing: antialiased;
+}
+
+////////////////////////////////////////////////
+// LAYOUT CONTROLS
+////////////////////////////////////////////////
+
+body {
+	background-color: #231f20;
+	font-size: 16px;
+}
+
+form {
+	background: #333;
+	border-bottom: 0.2rem solid rgba(0,0,0,0.4);
+  margin: 0 auto;
+	padding: 1rem;
+  text-align:center;
+  width: 15rem;
+	table td {
+		border: none;
+	}
+}
+
+////////////////////////////////////////////////
+// CODE INPUT FIELD
+////////////////////////////////////////////////
+
+#display,
+#message {
+  background-color: #231f20;
+  border: 0.2rem solid rgba(242,86,51,0.2);
+  border-radius: 0.15rem;
+  box-shadow:
+		inset 0 0 4rem rgba(242,86,51,0.9),
+		0 0 8rem rgba(242,86,51,0.6);
+  color: #e57d00;
+  display: block;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.8rem;
+  height: 3rem;
+  letter-spacing: 0.3rem;
+  line-height: 3rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align:center;
+  text-shadow: 0 0 1rem rgba(242,86,51,0.9);
+	user-select: none;
+  width: 100%;
+}
+
+#display {
+  z-index: 9;
+}
+
+#message {
+  margin-bottom: -3rem;
+  opacity: 0;
+  z-index: 10;
+}
+
+::-webkit-input-placeholder { color: #e57d00; }
+::-moz-placeholder { color: #e57d00; }
+:-ms-input-placeholder { color: #e57d00; }
+
+////////////////////////////////////////////////
+// KEYPAD AND BUTTONS
+////////////////////////////////////////////////
+
+#keypad {
+	border-collapse: collapse;
+	margin-top: 1rem;
+	width: 100%;
+	td {
+		padding: 0.2rem;
+	}
+}
+
+button {
+  transition: all 0ms linear;
+  background-color: #888;
+  border: 0;
+  border-bottom: 0.2rem solid rgba(0,0,0,0.4);
+  border-radius: 0.15rem;
+	box-shadow:
+		inset -0.5rem -0.5rem 1rem rgba(255,255,255,0.2),
+		inset 0.75rem 0.75rem 3rem rgba(255,255,255,0.4),
+		0 0 1rem rgba(0,0,0,0.8);
+  color: #231f20;
+  cursor: pointer;
+	font-family: "Hind", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 3rem;
+	line-height: 3rem;
+  margin: 0;
+  padding: 0 0.25rem;
+  position: relative;
+  text-align: left;
+  top: 0;
+	user-select: none;
+  vertical-align: middle;
+  width: 100%;
+	&:hover {
+		background: #777;
+	}
+	&:focus {
+		position: relative;
+	}
+	&:active {
+		border-bottom: 0.2rem solid rgba(0,0,0,0.6);
+		position: relative;
+		top: 1px;
+	}
+}
+
+.braille {
+	color: rgba(255,255,255,0.5);
+	font-size: 1rem;
+	float: right;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+
+
+
+
 
 
 /***

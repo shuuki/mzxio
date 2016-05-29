@@ -29,8 +29,62 @@
 		.swiper-button-next
 		.swiper-button-prev
 
+
+
+
+
+
 	section#dedication
 		h4 for you.
+
+	section#key
+		form(action="code/" method="get")
+			p#message ######
+			input(type="text" name="code" value="" maxlength="6" readonly="readonly" placeholder="------")#display
+			table#keypad
+				tr
+					td: button(onclick="addCode('3')") 3
+						span.braille ⠼⠉
+					td: button(onclick="addCode('2')") 2
+						span.braille ⠼⠃
+					td: button(onclick="addCode('1')") 1
+						span.braille ⠼⠁
+					td: button(onclick="addCode('0')") 0
+						span.braille ⠼⠚
+				tr
+					td: button(onclick="addCode('4')") 4
+						span.braille ⠼⠙
+					td: button(onclick="addCode('5')") 5
+						span.braille ⠼⠑
+					td: button(onclick="addCode('6')") 6
+						span.braille ⠼⠋
+					td: button(onclick="addCode('7')") 7
+						span.braille ⠼⠛
+				tr
+					td: button(onclick="addCode('B')") B
+						span.braille ⠃
+					td: button(onclick="addCode('A')") A
+						span.braille ⠁
+					td: button(onclick="addCode('9')") 9
+						span.braille ⠼⠊
+					td: button(onclick="addCode('8')") 8
+						span.braille ⠼⠓
+				tr
+					td: button(onclick="addCode('C');") C
+						span.braille ⠉
+					td: button(onclick="addCode('D');") D
+						span.braille ⠙
+					td: button(onclick="addCode('E');") E
+						span.braille ⠑
+					td: button(onclick="addCode('F');") F
+						span.braille ⠋
+				tr
+					td(colspan="4"): button(type="reset" onclick="emptyCode();") CLEAR
+						span.braille ⠆⠉⠇
+
+
+
+
 
 	section#next
 		//h2 Unsolved Cases|||for post, slug in public.cases._data|||p: a(href="cases/#{slug}")= post.title
@@ -40,34 +94,6 @@
 		//pre #{ JSON.stringify(public, null, '\t') }
 
 		//.gallery:::for image in public.gallery.small._contents:::img(src="gallery/small/#{ image net}").piece
-
-// styles
-link(rel="stylesheet" href="style/swiper.css")
-
-style.
-	.swiper-container {
-		width: 100%;
-	}
-	.swiper-slide {
-		width: 80%;
-		transition: all 0.25s;
-	}
-	.swiper-slide-active {
-		opacity: 1;
-	}
-	.swiper-slide-next, .swiper-slide-prev {
-		opacity: 0.5;
-	}
-	.swiper-slide img {
-		width: 100%;
-	}
-
-	.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-	  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23e8e8e8'%2F%3E%3C%2Fsvg%3E");
-	}
-	.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-	  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23e8e8e8'%2F%3E%3C%2Fsvg%3E");
-	}
 
 
 script.
