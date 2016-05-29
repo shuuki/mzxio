@@ -6,21 +6,31 @@ INIT
 
 (function($) {
 
+
+
+
 /*
 STICKY NAVIGATION
 */
+
+if (! $("#intro").hasClass("stickyNav")) {
+	$("nav").addClass("fixed");
+}
 
 $(window).scroll(function() {
 	var view = $("body"),
 		breakpoint = $(window).height() - $("nav").height();
 
-	if (view.scrollTop() > breakpoint) {
-		$("body").css("background", "magenta");
+	if (! $("#intro").hasClass("stickyNav")) {
+		$("nav").addClass("fixed");
+	} else if (view.scrollTop() > breakpoint && $("#intro").hasClass("stickyNav")) {
+		$("#intro").css("background", "magenta");
 		$("nav").addClass("fixed");
 	} else {
-		$("body").css("background", "rgb(232,232,232)");
+		$("#intro").css("background", "rgb(232,232,232)");
 		$("nav").removeClass("fixed");
 	}
+
 });
 
 
@@ -29,11 +39,11 @@ FULL HEIGHT SECTIONS
 */
 
 // set sections to window height
-$("section").css("min-height", $(window).height());
+//$("section").css("min-height", $(window).height());
 
 // update section height on resize
 $(window).resize(function() {
-	$("section").css("min-height", $(window).height());
+//	$("section").css("min-height", $(window).height());
 });
 
 
@@ -41,6 +51,7 @@ $(window).resize(function() {
 PACKERY
 */
 
+/*
 // init Packery
 var $grid = $('.gallery').packery({
 	itemSelector: '.piece',
@@ -54,6 +65,8 @@ $grid.imagesLoaded().progress(
 	}
 );
 
+*/
+
 
 /*
 STYLESHEET SWITCHER
@@ -66,35 +79,36 @@ Inspired by Kelvin Luck's jQuery Stylesheet Switcher:
 http://2008.kelvinluck.com/assets/jquery/styleswitch/toggle.html
 */
 
+/*
 
+// load up the current stylesheets
+var styles = $("link[class*='theme']"),
+	styleOn = 0;
 
-	// load up the current stylesheets
-	var styles = $("link[class*='theme']"),
+// main functions
+$.styleSwitch = function() {
+	// disable the current style
+	styles[styleOn].disabled = true;
+
+	// advance the counter
+	styleOn ++;
+	if(styleOn >= styles.length) {
 		styleOn = 0;
+	}
 
-	// main functions
-	$.styleSwitch = function() {
-		// disable the current style
-		styles[styleOn].disabled = true;
-
-		// advance the counter
-		styleOn ++;
-		if(styleOn >= styles.length) {
-			styleOn = 0;
-		}
-
-		// enable the next style
-		if(styles[styleOn].disabled == true) {
-			styles[styleOn].disabled = false
-		}
-	};
+	// enable the next style
+	if(styles[styleOn].disabled == true) {
+		styles[styleOn].disabled = false
+	}
+};
 
 
 // switching actor, listening in for a click on the "#contrast" element
 $("#contrast").bind("click", function(e) {
-	$.styleSwitch();
+$.styleSwitch();
 });
 
+*/
 
 
 /*** SELF ANNIHILATION */
