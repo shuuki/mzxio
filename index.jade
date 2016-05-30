@@ -4,17 +4,18 @@
 
 #longer
 
+	section
+		h1 You are here.
+
 	section#annihilation
 		h2 ARTIST STATEMENT
 		p For at least fifty thousand years, human beings carved familiar shapes into whatever material was close at hand. The artist continues in this grand tradition.
-		p Art seeks being in non-being, thing-ness from no-thing-ness. Life keeps the lights on, sweeps the floors, tells the stories. Life emerged as glitch, a rounding error while some organic molecules sought comfortable repose. Thus the artist embraces glitch and all things transcendent, ordered, numerical, insane. Here, now; past, future; history, imagination: no being is too small, no story irrelevant. Life is the audience, creation is the canvas. The artist peers into spaces between space, seeking seeds of creation. Entropy consumes all. It keeps going. There won't be any turning back. When you look behind you, you'll see it catching up. There is no other way. All may eventually come to ruin and dust, all the same. Venture deep into oblivion. Go as far as you dare. Bring back inspiration. Even in the dying light of the void, the artist writes its name upon the wall.
+		p Art seeks being in non-being, thing-ness from no-thing-ness. Life keeps the lights on, sweeps the floors, tells the stories. Life emerged as glitch, a rounding error while some organic molecules sought comfortable repose. Thus the artist embraces glitch and all things transcendent, ordered, numerical, insane. Here, now; past, future; history, imagination: no being is too small, no story irrelevant. Life is the audience, creation is the canvas. The artist peers into spaces between space, seeking seeds of creation. Entropy consumes all. It keeps going. There won't be any turning back. When you look behind you, you'll see it catching up. There is no other way. All may eventually come to ruin and dust, all the same. Mission: Venture deep into oblivion. Go as far as you dare. Bring back inspiration. Even in the dying light of the void, the artist writes its name upon the wall.
 		p Art is but an affirmation: not dead yet.
-		a(onClick="location.reload()").button Reset
+		p: a(onClick="location.reload()").button Reset
 
-	section#beginning
-		h2 YOU ARE HERE
-
-
+	section#dedication
+		h6.centered for you
 
 	.swiper-container
 		.swiper-wrapper
@@ -30,15 +31,35 @@
 		.swiper-button-prev
 
 
+	section#begin
+		h2 1.
+		!= partial("posts/begin")
+
+	section.interstice
+		blockquote Names can name no lasting name. Nameless: the origin of heaven and earth. Naming: the mother of ten thousand things. Empty of desire, perceive mystery. Filled with desire, perceive manifestations. These have the same source, but different names. Call them both deep— Deep and again deep: The gateway to all mystery.
+			cite 道可道非常道, Tao Te Ching
+			// (Stephen Addiss & Stanley Lombardo Translation)
+		blockquote There was neither death nor immortality, nor was there then the torch of night and day. The One breathed windlessly and self-sustaining. There was that One then, and there was no other. At first there was only darkness wrapped in darkness. All this was only unillumined water. That One which came to be, enclosed in nothing, arose at last, born of the power of heat.
+			cite Nasadiya Sukta, Rigveda
+			// (A. L. Basham Translation)
+		blockquote In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be light: and there was light.
+			cite Genesis, King James Bible
+
+	section#second
+		h2 2.
+		!= partial("posts/second")
+
+	section.interstice
+		blockquote When something new is happening, you have to be down with it if you want to stay around. You ain't got time for no begrudging.
+			cite George Clinton
 
 
 
 
-	section#dedication
-		h4 for you.
+
 
 	section#key
-		form(action="code/" method="get").key
+		form(action="javascript:console.log( 'frob' );" method="get").key
 			p#message ######
 			input(type="text" name="code" value="" maxlength="6" readonly="readonly" placeholder="------")#display
 			table#keypad
@@ -84,16 +105,6 @@
 
 
 
-
-
-	section#next
-		//h2 Unsolved Cases|||for post, slug in public.cases._data|||p: a(href="cases/#{slug}")= post.title
-		//h2 Posts|||for post, slug in public.posts._data|||p: a(href="posts/#{slug}")= post.title
-
-		//h2 Directory
-		//pre #{ JSON.stringify(public, null, '\t') }
-
-		//.gallery:::for image in public.gallery.small._contents:::img(src="gallery/small/#{ image net}").piece
 
 
 script.

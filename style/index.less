@@ -19,6 +19,7 @@
 
 * {
 	box-sizing: border-box;
+	outline: 0;
 }
 
 ::selection {
@@ -40,6 +41,7 @@ body {
 section {
 	margin: 6em auto;
 	max-width: 36em;
+	position: relative;
 }
 
 
@@ -178,7 +180,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: @heading;
 	line-height: 1.25;
 	margin: 18px 0 12px;
-	word-break: break-all;;
 }
 
 h1 {
@@ -190,6 +191,7 @@ h2 {
 	font-size: 3.4em;//64px
 	font-weight: 200;
 	opacity: 0.8;
+	word-break: break-all;
 }
 
 h3 {
@@ -261,13 +263,22 @@ del {
 }
 
 blockquote {
-	margin: 1em 0;
+	margin: 2em 0;
 	border-left: 6px solid fadeout(@main, 75%);
 	padding: 1em;
 	font-style: italic;
 	background: fadeout(@main, 95%);
 	p {
 		margin-bottom: 0;
+	}
+	cite {
+		display: block;
+		font-style: normal;
+		opacity: 0.8;
+		margin-top: 0.5em;
+		&:before {
+			content: " — ";
+		}
 	}
 }
 
@@ -362,6 +373,21 @@ SWIPER LIBRARY
 .swiper-slide {
 	width: 70%;
 	transition: all 0.25s;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
 }
 .swiper-slide-active {
 	opacity: 1;
@@ -369,6 +395,7 @@ SWIPER LIBRARY
 .swiper-slide-next, .swiper-slide-prev {
 	opacity: 0.5;
 }
+
 .swiper-slide img {
 	width: 100%;
 }
@@ -400,12 +427,7 @@ KEYPAD
 // CALIBRATION
 ////////////////////////////////////////////////
 
-* {
-  box-sizing: border-box;
-  outline: 0;
-  transition: all 280ms ease-in;
-  -webkit-font-smoothing: antialiased;
-}
+
 
 ////////////////////////////////////////////////
 // LAYOUT CONTROLS
