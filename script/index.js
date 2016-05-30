@@ -65,11 +65,11 @@ FULL HEIGHT SECTIONS
 // should make this something you can enable if desired
 
 // set sections to window height
-$("section").css("min-height", $(window).height());
+//$("section").css("min-height", $(window).height());
 
 // update section height on resize
 $(window).resize(function() {
-	$("section").css("min-height", $(window).height());
+	//$("section").css("min-height", $(window).height());
 });
 
 
