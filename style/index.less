@@ -41,6 +41,7 @@ body {
 section {
 	padding: 0;
 	margin: 6em auto;
+	width: 70%;
 	max-width: 36em;
 	position: relative;
 }
@@ -75,7 +76,6 @@ nav {
 .fixed {
 	position: fixed !important;
 	top: 0;
-
 }
 
 #logo {
@@ -118,8 +118,6 @@ nav {
 	}
 }
 
-
-
 #intro {
 	//background: @light;
 	position: absolute;
@@ -159,6 +157,9 @@ nav {
 	left: 0;
 	width: 100%;
 }
+
+
+
 
 .gallery {
 //	display: flex;
@@ -363,6 +364,10 @@ UTILITIES
 	transform: translate(-50%, -50%);
 }
 
+.fullWidth {
+	width: 100%;
+}
+
 
 /***
 SWIPER LIBRARY
@@ -561,20 +566,11 @@ MEDIA QUERIES
 	body {
 		font-size: 12pt;
 	}
-	section {
-		max-width: 70%;
-	}
 }
 
 @media screen and (max-width: 480px) {
 	body {
 		font-size: 10pt;
-	}
-	section {
-		max-width: 80%;
-	}
-	.swiper-slide {
-		width: 80%;
 	}
 	#splash {
 		transform: rotate(90deg) translate(0,165%);
