@@ -10,6 +10,7 @@ html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 		// display
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 
+		// CSS
 		// fonts
 		link(rel="stylesheet" href="style/fonts/montserrat/style.css")
 		link(rel="stylesheet" href="style/fonts/mzxio/style.css")
@@ -22,20 +23,22 @@ html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 		link(rel="stylesheet" href="style/index.css").theme
 		//link(rel="stylesheet" href="style/theme-dark.css" media="screen" disabled).theme
 
-		// jade extension block
-		block head
-
-	body
-
-
+		// JS
 		// libraries
 		script(src="script/library/jquery-2.2.0.min.js")
 		script(src="script/library/swiper-3.3.1.jquery.min.js")
 		//script(src="script/library/imagesloaded.pkgd.min.js")
 		//script(src="script/library/packery.pkgd.min.js")
 
-		// scripts
-		script(src="script/index.js")
+
+		// jade extension block
+		block head
+
+	body
 
 		!= partial("_shared/nav")
 		!= yield
+
+
+		// scripts
+		script(src="script/index.js")

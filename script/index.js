@@ -1,24 +1,23 @@
-/*
-INIT
-*/
+/*** INIT */
 
 "use strict";
 
-(function($) {
 
 
 /***
-KEYPAD
-*/
+KEYPAD */
+
+
+
 
 function addCode(key) {
-	var code = document.forms[0].code;
+	var code = $(".key")[0].code;
   if(code.value.length < 6) {
 		code.value = code.value + key;
 	}
   if(code.value.length == 6) {
-    document.getElementById("message").style.opacity = "1";
-    setTimeout(submitForm,1000);
+    //document.getElementById("message").style.opacity = "1";
+  	//setTimeout(submitForm, 1000);
   }
 }
 
@@ -28,7 +27,24 @@ function submitForm() {
 
 function emptyCode() {
 	document.forms[0].code.value = "";
+	document.getElementById("message").style.opacity = "0";
 }
+
+
+
+/*
+function draw() {
+    requestAnimationFrame(draw);
+    // Drawing code goes here
+}
+draw();
+*/
+
+
+
+(function($) {
+
+
 
 
 
@@ -58,18 +74,19 @@ $(window).scroll(function() {
 });
 
 
-/*
+/***
 FULL HEIGHT SECTIONS
 */
 
 // should make this something you can enable if desired
 
 // set sections to window height
-//$("section").css("min-height", $(window).height());
+$(".fullHeight").css("min-height", $(window).height()).css("margin", "0 auto");
 
 // update section height on resize
 $(window).resize(function() {
-	//$("section").css("min-height", $(window).height());
+	$(".fullHeight").css("min-height", $(window).height());
+	// @TODO fix swiper centering
 });
 
 
@@ -143,7 +160,6 @@ $.styleSwitch();
 //document.getElementsByTagName("p"),
 
 var words = $("#annihilation p"),
-	counter = $("#annihilation #counter"),
 	chars = [" ", "!", "?", ".", "-", "/", ":",";", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 function thing() {
