@@ -159,7 +159,7 @@ $.styleSwitch();
 
 //document.getElementsByTagName("p"),
 
-var words = $("#annihilation p"),
+var words = $(".annihilation"),
 	chars = [" ", "!", "?", ".", "-", "/", ":",";", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 function thing() {
