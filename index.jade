@@ -4,19 +4,9 @@
 
 #longer
 
-	section#annihilation
-		h2 ARTIST STATEMENT
-		p For at least fifty thousand years, human beings carved familiar shapes into whatever material they could find. The artist continues in this grand tradition.
-		p Art seeks being in non-being, thing-ness from no-thing-ness. Life keeps the lights on, sweeps the floors, tells the stories. Life emerged as glitch, a rounding error while some organic molecules sought repose. Thus the artist embraces glitch and all things transcendent, ordered, numerical, insane. Here, now; past, future; history, imagination: no being is too small, no story irrelevant. Life is the audience, creation is the canvas. The artist peers into spaces between space, seeking seeds of creation.
-		p All may eventually come to dust, all the same. Entropy consumes. It keeps going. There won't be any turning back. When you look behind you, you'll see it catching up. There is no other way. Venture deep into oblivion. Go as far as you dare. Bring back inspiration. Even in the dying light of the void, the artist writes its name upon the wall.
-		p Art is but an affirmation: not dead yet.
-		a(onClick="location.reload()").button Reset
-
-	section#dedication.fullHeight
-		h6.centered for you.
-
 	section
 		h1 You are here.
+		iframe(src="nsfw/nsfw.html")
 
 	.swiper-container
 		.swiper-wrapper
@@ -54,6 +44,22 @@
 			cite Blue Mars, Kim Stanley Robinson
 		blockquote What did it matter where you lay once you were dead? In a dirty sump or in a marble tower on top of a high hill? You were dead, you were sleeping the big sleep... Oil and water were the same as wind and air to you. You just slept the big sleep, not caring about the nastiness of how you died or where you fell. Me, I was part of the nastiness now.
 			cite The Big Sleep, Raymond Chandler
+
+
+	section#dedication.fullHeight
+		h6.centered for you.
+
+	section#statement
+		h2.annihilation ARTIST STATEMENT
+		p.annihilation For at least fifty thousand years, human beings carved familiar shapes into whatever material they could find. The artist continues in this grand tradition.
+		p.annihilation Art seeks being in non-being, thing-ness from no-thing-ness. Life keeps the lights on, sweeps the floors, tells the stories. Life emerged as glitch, a rounding error while some organic molecules sought repose. Thus the artist embraces glitch and all things transcendent, ordered, numerical, insane. Here, now; past, future; history, imagination: no being is too small, no story irrelevant. Life is the audience, creation is the canvas. The artist peers into spaces between space, seeking seeds of creation.
+		p.annihilation All may eventually come to dust, all the same. Entropy consumes. It keeps going. There won't be any turning back. When you look behind you, you'll see it catching up. There is no other way. Venture deep into oblivion. Go as far as you dare. Bring back inspiration. Even in the dying light of the void, the artist writes its name upon the wall.
+		p.annihilation Art is but an affirmation: not dead yet.
+		a(onClick="location.reload()").button Reset
+
+
+
+
 
 	section#key.fullHeight.fullWidth
 		form(action="javascript:console.log( 'frob' );" method="get").key.centered
@@ -97,7 +103,7 @@
 					td: button(onclick="addCode('F');") F
 						span.braille ⠋
 				tr
-					td(colspan="4"): button(type="reset" onclick="emptyCode();") CLEAR
+					td(colspan="3"): button(type="reset" onclick="emptyCode();") CLEAR
 						span.braille ⠆⠉⠇
 
 
