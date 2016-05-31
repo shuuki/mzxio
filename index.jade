@@ -4,111 +4,34 @@
 
 #longer
 
-	section
-		h1 You are here.
-		iframe(src="nsfw/nsfw.html")
+	section.interstice
+		blockquote In the void, desert, wasteland, an infinite desolate frontier. Where and when? Your choices make this land. Nothingness and potential are there, just out of reach. Life is hidden, revealed only if you look.
+			cite 010000
 
 	.swiper-container
 		.swiper-wrapper
-			for image in public.img.you_are_here._contents
+			for image in public.section.you_are_here._contents
 				.swiper-slide
-					img(src="img/you_are_here/#{image}")
+					//p what happens if.....
+					img(src="section/you_are_here/#{image}")
 		.swiper-button-next
 		.swiper-button-prev
 
-	section#begin
-		h2 1.
-		!= partial("posts/begin")
+	section
+		h1 You are here.
+		iframe(src="section/nsfw")
 
-	section.interstice
-		blockquote Names can name no lasting name. Nameless: the origin of heaven and earth. Naming: the mother of ten thousand things. Empty of desire, perceive mystery. Filled with desire, perceive manifestations. These have the same source, but different names. Call them both deep— Deep and again deep: The gateway to all mystery.
-			cite 道可道非常道, Tao Te Ching
-			// (Stephen Addiss & Stanley Lombardo Translation)
-		blockquote There was neither death nor immortality, nor was there then the torch of night and day. The One breathed windlessly and self-sustaining. There was that One then, and there was no other. At first there was only darkness wrapped in darkness. All this was only unillumined water. That One which came to be, enclosed in nothing, arose at last, born of the power of heat.
-			cite Nasadiya Sukta, Rigveda
-			// (A. L. Basham Translation)
-		blockquote In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be light: and there was light.
-			cite Genesis, King James Bible
-
-	section#nowhere
-		h2 2.
-
-	section#second
-		h2 3.
-		!= partial("posts/second")
-
-	section.interstice
-		blockquote When something new is happening, you have to be down with it if you want to stay around. You ain't got time for no begrudging.
-			cite George Clinton
-		blockquote Spencer offered an offhand explanation, over beer one night. In an expanding universe, Spencer had said, order was not really order, but merely the difference between the actual exhibited and the maximum entropy possible. This difference was what humans perceived as order.
-			cite Blue Mars, Kim Stanley Robinson
-		blockquote What did it matter where you lay once you were dead? In a dirty sump or in a marble tower on top of a high hill? You were dead, you were sleeping the big sleep... Oil and water were the same as wind and air to you. You just slept the big sleep, not caring about the nastiness of how you died or where you fell. Me, I was part of the nastiness now.
-			cite The Big Sleep, Raymond Chandler
-
-
-	section#dedication.fullHeight
-		h6.centered for you.
-
-	section#statement
-		h2.annihilation ARTIST STATEMENT
-		p.annihilation For at least fifty thousand years, human beings carved familiar shapes into whatever material they could find. The artist continues in this grand tradition.
-		p.annihilation Art seeks being in non-being, thing-ness from no-thing-ness. Life keeps the lights on, sweeps the floors, tells the stories. Life emerged as glitch, a rounding error while some organic molecules sought repose. Thus the artist embraces glitch and all things transcendent, ordered, numerical, insane. Here, now; past, future; history, imagination: no being is too small, no story irrelevant. Life is the audience, creation is the canvas. The artist peers into spaces between space, seeking seeds of creation.
-		p.annihilation All may eventually come to dust, all the same. Entropy consumes. It keeps going. There won't be any turning back. When you look behind you, you'll see it catching up. There is no other way. Venture deep into oblivion. Go as far as you dare. Bring back inspiration. Even in the dying light of the void, the artist writes its name upon the wall.
-		p.annihilation Art is but an affirmation: not dead yet.
-		a(onClick="location.reload()").button Reset
-
-
-
-
+	//!= partial("section/contents")
 
 	section#key.fullHeight.fullWidth
-		form(action="javascript:console.log( 'frob' );" method="get").key.centered
-			p#message ######
-			input(type="text" name="code" value="" maxlength="6" readonly="readonly" placeholder="------")#display
-			table#keypad
-				tr
-					td: button(onclick="addCode('3')") 3
-						span.braille ⠼⠉
-					td: button(onclick="addCode('2')") 2
-						span.braille ⠼⠃
-					td: button(onclick="addCode('1')") 1
-						span.braille ⠼⠁
-					td: button(onclick="addCode('0')") 0
-						span.braille ⠼⠚
-				tr
-					td: button(onclick="addCode('4')") 4
-						span.braille ⠼⠙
-					td: button(onclick="addCode('5')") 5
-						span.braille ⠼⠑
-					td: button(onclick="addCode('6')") 6
-						span.braille ⠼⠋
-					td: button(onclick="addCode('7')") 7
-						span.braille ⠼⠛
-				tr
-					td: button(onclick="addCode('B')") B
-						span.braille ⠃
-					td: button(onclick="addCode('A')") A
-						span.braille ⠁
-					td: button(onclick="addCode('9')") 9
-						span.braille ⠼⠊
-					td: button(onclick="addCode('8')") 8
-						span.braille ⠼⠓
-				tr
-					td: button(onclick="addCode('C');") C
-						span.braille ⠉
-					td: button(onclick="addCode('D');") D
-						span.braille ⠙
-					td: button(onclick="addCode('E');") E
-						span.braille ⠑
-					td: button(onclick="addCode('F');") F
-						span.braille ⠋
-				tr
-					td(colspan="3"): button(type="reset" onclick="emptyCode();") CLEAR
-						span.braille ⠆⠉⠇
+		!= partial("section/keypad")
 
+	section#statement.fullHeight
+		!= partial("section/statement")
 
-
-
+	section#dedication.fullHeight
+		h6.centered for you, luminous starstuff. bless you.
+			//#sixwords <2
 
 
 
