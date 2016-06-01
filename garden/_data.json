@@ -1,0 +1,34 @@
+{
+  "beginning": {
+    "code": "000000",
+    "title": "Beginning"
+  },
+  "tools": {
+    "code": "0000ff",
+    "title": "Tools"
+  },
+  "library": {
+    "code": "00ff00",
+    "title": "Library"
+  },
+  "house": {
+    "code": "00ffff",
+    "title": "House"
+  },
+  "fire": {
+    "code": "ff0000",
+    "title": "Fire"
+  },
+  "workshop": {
+    "code": "ff00ff",
+    "title": "Workshop"
+  },
+  "hearth": {
+    "code" : "ffff00",
+    "title": "Hearth"
+  },
+  "end": {
+    "code": "ffffff",
+    "title": "End"
+  }
+}
