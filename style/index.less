@@ -139,7 +139,7 @@ nav {
 	background-size: 120%;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
-	font: 20vh/.85 @heading;
+	font: 20vw/.85 @heading;
 	font-weight: 700;
 	letter-spacing: 0.05em;
 	text-align: center;
@@ -150,8 +150,6 @@ nav {
 	position: absolute;
   left: 50%;
   top: 50%;
-	transform: rotate(90deg) translate(0,165%);
-	transform-origin: top;
 }
 
 #longer {
@@ -591,6 +589,11 @@ MEDIA QUERIES
 @media screen and (max-width: 800px) {
 	body {
 		font-size: 12pt;
+	}
+	#splash {
+		font-size: 20vh;
+		transform: rotate(90deg) translate(0,165%);
+		transform-origin: top;
 	}
 }
 
