@@ -375,10 +375,17 @@ UTILITIES
 
 .fullWidth {
 	width: 100%;
+	max-width: 100%;
 }
 
 .interstice {
 	margin: 8em auto;
+}
+
+.radiant {
+	background-image: url(../img/backgrounds/palette-blur-0.jpg);
+	background-position: 50% 50%;
+	background-size: 100%;
 }
 
 
@@ -464,7 +471,11 @@ KEYPAD
 ////////////////////////////////////////////////
 
 .key {
-	background: #333;
+	background-image: url(../img/backgrounds/palette-blur-0.jpg);
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #333;
 	border-bottom: 0.2rem solid rgba(0,0,0,0.4);
 	border-radius: 0.3rem;
   margin: 0 auto;
@@ -482,7 +493,7 @@ KEYPAD
 
 .key #display,
 .key #message {
-  background-color: #231f20;
+  background-color: rgba(0,0,0,0.65);// #231f20;
   border: 0.2rem solid rgba(242,86,51,0.2);
   border-radius: 0.15rem;
   //box-shadow:
@@ -533,7 +544,7 @@ KEYPAD
 
 .key button {
   transition: all 0ms linear;
-  background-color: #888;
+  background-color: rgba(255,255,255,0.3);
   border: 0;
   border-bottom: 0.2rem solid rgba(0,0,0,0.4);
   border-radius: 0.15rem;
@@ -541,7 +552,7 @@ KEYPAD
 	//	inset -0.5rem -0.5rem 1rem rgba(255,255,255,0.2),
 	//	inset 0.75rem 0.75rem 3rem rgba(255,255,255,0.4),
 	//	0 0 1rem rgba(0,0,0,0.8);
-  color: #231f20;
+  color: rgba(0,0,0,0.7);//#231f20;
   cursor: pointer;
 	font-family: @heading;
   font-size: 1.5rem;
@@ -557,12 +568,13 @@ KEYPAD
   vertical-align: middle;
   width: 100%;
 	&:hover {
-		background-color: #777;
+		background-color: rgba(0,0,0,0.2);
 	}
 	&:focus {
 		position: relative;
 	}
 	&:active {
+		background-color: rgba(0,0,0,0.3);
 		border-bottom: 0.2rem solid rgba(0,0,0,0.6);
 		position: relative;
 		top: 1px;
