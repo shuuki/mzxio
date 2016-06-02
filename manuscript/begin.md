@@ -8,5 +8,6 @@ In the void, a desert, wasteland, infinite desolate frontier. Where and when? Yo
 
 Before the fire, beset by darkness. We take up the fire for ourselves.  Flames reflected in our eyes dull the light of distant stars. Sun traverses sky, horizon to horizon, day upon day. Years pass in shuddering seasons. We rise up and fall again. Wind and water etch their marks upon the face of the earth. We observe cycles, honor ceremonies, sing in ancient ways. Our laughter rings out at the end of sorrow. We carry the fire.
 
-> "There's always still hope, so— I love you."  
-> `Message undeliverable. Signal lost.`
+"There's always still hope, so— I love you."  
+
+`Message undeliverable. Signal lost.`

@@ -1,0 +1,29 @@
+{
+	"begin" : {
+		"type": "chapter",
+		"title" : "It Begins"
+	},
+	"on-creation" : {
+		"type": "interstice",
+		"title" : "On Creation"
+	},
+	"nowhere" : {
+		"type": "chapter",
+		"title" : "Going Nowhere"
+	},
+	"on-starting" : {
+		"type": "interstice",
+		"title" : "On Starting"},
+	"second" : {
+		"type": "chapter",
+		"title" : "Second Day"
+	},
+	"on-death" : {
+		"type": "interstice",
+		"title" : "On Death"
+	},
+	"on-chaos" : {
+		"type": "interstice",
+		"title" : "On Chaos"
+	}
+}

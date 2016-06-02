@@ -1,0 +1,10 @@
+- var chapterNumber = 0
+for chapter, slug in public.manuscript._data  
+  if chapter.type == "chapter"
+    - chapterNumber++
+    section(id="#{slug}")
+      h2 #{chapterNumber}.
+      != partial(slug)
+  else if chapter.type === "interstice"
+    section.interstice
+      != partial(slug)

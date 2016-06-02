@@ -9,23 +9,18 @@
 		h1 You are here.
 		iframe(src="section/nsfw")
 
-	.swiper-container
-		.swiper-wrapper
-			for image in public.section.you_are_here._contents
-				.swiper-slide
-					//p what happens if.....
-					img(src="section/you_are_here/#{image}")
-		.swiper-button-next
-		.swiper-button-prev
+	!= partial("section/slides")
 
-	section.interstice
+	//section.interstice
 		blockquote In the void, desert, wasteland, an infinite desolate frontier. Where and when? Your choices make this land. Nothingness and potential are there, just out of reach. Life is hidden, revealed only if you look.
 			cite 010000
 
-	//!= partial("section/contents")
+	!= partial("manuscript/contents")
 
 	section#key.fullHeight.fullWidth
 		!= partial("section/keypad")
+
+	///section|||for area, slug in public.garden._data|||p: a(href="garden/#{slug}")= area.code
 
 	section#statement.fullHeight
 		!= partial("section/statement")
@@ -33,20 +28,3 @@
 	section#dedication.fullHeight
 		h6.centered.fullWidth for you, luminous starstuff. bless you.
 			//#sixwords <2 rʉɑːn·mɒksiːm
-
-
-
-script.
-	var swiper = new Swiper('.swiper-container', {
-		centeredSlides: true,
-		grabCursor: true,
-		keyboardControl: true,
-		loop: true,
-		nextButton: '.swiper-button-next',
-		prevButton: '.swiper-button-prev',
-		scrollbarHide: true,
-		slidesPerView: 'auto',
-		spaceBetween: 18,
-		//autoplay: 30000,
-		//autoplayDisableOnInteraction: true
-	});

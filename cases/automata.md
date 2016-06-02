@@ -1,4 +1,0 @@
-# AUTOMATA
-
-
-## "The blob lives."
