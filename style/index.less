@@ -50,7 +50,7 @@ section {
 
 nav {
 	box-shadow: 0 0.1em 0 fadeout(@base, 90%);
-	background: @main;//fadeout(@base, 2%);
+	background: fadeout(lighten(@base, 10%),2%);//fadeout(@base, 2%);
 	color: @base;//@main;
 	display: flex;
 	font-size: 1em;
@@ -63,10 +63,14 @@ nav {
 	left: 0;
 	bottom: 0;
 	user-select: none;
+	transform: translateZ(0);
 	a {
 		background: transparent;
-		color: @base;
+		color: fadeout(@light, 20%);
 		text-decoration: none;
+		&:hover, &:active {
+			background: transparent;
+		}
 	}
 	// make fixed top for classic sticky top style
 	// or absolute bottom with .fixed class for fancy scroll-to-top
@@ -119,8 +123,8 @@ nav {
 }
 
 #intro {
-	background: fadeout(@light, 20%);
-	position: absolute;
+	background: fadeout(@light, 70%);
+	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -132,7 +136,7 @@ nav {
 
 #splash {
 	background-color: white;
-	//]background-image: url(backgrounds/sky__nyc_variant_converted_32px.gif);
+	//background-image: url(backgrounds/sky__nyc_variant_converted_32px.gif);
 	background-image: url(backgrounds/tiger-gullet.png);
 	//image-rendering: pixelated;// if you want pixels
 	background-position: 50% 30%;
@@ -153,9 +157,9 @@ nav {
 }
 
 #longer {
-	background: @dark;
+	//background: @dark;
 	color: @light;
-	position: absolute;
+	position: relative;
 	top: 100%;
 	left: 0;
 	width: 100%;
