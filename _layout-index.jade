@@ -30,15 +30,12 @@ html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 		//script(src="script/library/imagesloaded.pkgd.min.js")
 		//script(src="script/library/packery.pkgd.min.js")
 
-
 		// jade extension block
 		block head
 
 	body
-
 		!= partial("_shared/nav")
 		!= yield
-
 
 		// scripts
 		script(src="script/index.js")
