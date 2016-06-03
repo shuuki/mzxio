@@ -1,6 +1,6 @@
 - var chapterNumber = 0
-for chapter, slug in public.manuscript._data  
-  if chapter.type == "chapter"
+for chapter, slug in public.section.manuscript._data  
+  if chapter.type === "chapter"
     - chapterNumber++
     section(id="#{slug}")
       h2 #{chapterNumber}.

@@ -11,16 +11,18 @@
 
 	!= partial("section/slides")
 
-	//section.interstice
+	section.interstice
 		blockquote In the void, desert, wasteland, an infinite desolate frontier. Where and when? Your choices make this land. Nothingness and potential are there, just out of reach. Life is hidden, revealed only if you look.
 			cite 010000
 
-	!= partial("manuscript/contents")
+	!= partial("section/manuscript/contents")
 
-	section#key.fullHeight.fullWidth
+	section#key.fullHeight
 		!= partial("section/keypad")
-
-	///section|||for area, slug in public.garden._data|||p: a(href="garden/#{slug}")= area.code
+		p
+			for area, slug in public.section.garden._data
+				a(href="garden/#{slug}")= area.code
+				| , 
 
 	section#statement.fullHeight
 		!= partial("section/statement")

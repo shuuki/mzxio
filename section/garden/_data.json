@@ -11,6 +11,9 @@
   "house": {
     "code": "00ffff", "title": "House"
   },
+  "entry": {
+    "code": "451451", "title": "Entry"
+  },
   "another": {
     "code": "fabe21", "title": "Another"
   },
