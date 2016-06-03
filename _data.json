@@ -1,0 +1,11 @@
+{
+	"404" : {
+		"layout": "_layout-index"
+	},
+	"index" : {
+		"layout": "_layout-index"
+	},
+	"demo-jade" : {
+		"layout": false
+	}
+}
