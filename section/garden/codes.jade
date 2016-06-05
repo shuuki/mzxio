@@ -1,6 +1,6 @@
--var codes = [];
+- var codes = []
 
 p
   for area, slug in public.section.garden._data
-    -codes.push(area.code);
+    - codes.push(area.code)
   a(href="garden/#{slug}")= codes
