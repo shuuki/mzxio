@@ -14,7 +14,7 @@
 
 // font stack
 @heading: "Montserrat", sans-serif;
-@copy: "Source Sans Pro", sans-serif;
+@copy: "Source Sans Pro", serif;
 @console: "Ubuntu Mono", monospace;
 
 * {
@@ -55,7 +55,6 @@ nav {
 	justify-content: space-between;
 	width: 100%;
 	height: 2em;
-	//transition: all 0.3s;
 	z-index: 99;
 	position: fixed;
 	left: 0;
@@ -64,7 +63,7 @@ nav {
 	transform: translateZ(0);
 	a {
 		background: transparent;
-		color: fadeout(@main, 20%);
+		color: fadeout(@main, 30%);
 		text-decoration: none;
 		&:hover, &:active {
 			background: transparent;
@@ -164,7 +163,7 @@ nav {
 
 #longer {
 	//background: @dark;
-	color: @light;
+	//color: @light;
 	position: relative;
 	top: 100%;
 	left: 0;
@@ -254,7 +253,7 @@ a {
 	&:hover {
 		background: linear-gradient(
 			transparent 90%,
-			fadeout(@main, 30%) 90%
+			@main 90%
 		);
 	}
 	&:active {
