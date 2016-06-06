@@ -47,7 +47,7 @@ section {
 }
 
 nav {
-	box-shadow: 0 0.1em 0 fadeout(@base, 90%);
+	box-shadow: 0 0.1em 0 fadeout(@base, 80%);
 	background: fadeout(lighten(@base, 10%),2%);//fadeout(@base, 2%);
 	color: @base;//@main;
 	display: flex;
@@ -75,13 +75,16 @@ nav {
 			color: @accent;
 		}
 	}
+	.label {
+		display: none;
+	}
 	// make fixed top for classic sticky top style
 	// or absolute bottom with .fixed class for fancy scroll-to-top
 }
 
 .fixed {
-	position: absolute;
-	bottom: 0;
+	//position: absolute;
+	//bottom: 0;
 }
 
 #logo {
@@ -104,7 +107,7 @@ nav {
 	a {
 		&:after {
 			content: "";
-			//transition: all 180ms;
+			transition: all 120ms ease-in-out;
 			background: @base;
 			opacity: 0;
 			height: 1.5em;
@@ -410,7 +413,7 @@ SWIPER LIBRARY
 	font-size: 1rem;
 	max-width: 36em;
 	width: 70%;
-	//transition: all 0.25s;
+	transition: all 180ms ease-in-out;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -440,7 +443,7 @@ SWIPER LIBRARY
 
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next, .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
 	opacity: 0.5;
-	//transition: all 120ms;
+	transition: all 120ms ease-in-out;
 }
 .swiper-button-prev:hover, .swiper-container-rtl .swiper-button-next:hover, .swiper-button-next:hover, .swiper-container-rtl .swiper-button-prev:hover {
 	opacity: 0.8;
@@ -515,9 +518,6 @@ KEYPAD
   background-color: #231f20;//rgba(0,0,0,0.65);
   border: 0.2rem solid lighten(#231f20, 10%);//rgba(242,86,51,0.2);
   border-radius: 0.15rem;
-  //box-shadow:
-	//	inset 0 0 4rem rgba(242,86,51,0.9),
-	//	0 0 8rem rgba(242,86,51,0.6);
   color: #e57d00;
   display: block;
   font-family: @console;
@@ -529,7 +529,6 @@ KEYPAD
   padding: 0;
   position: relative;
   text-align:center;
-  //text-shadow: 0 0 1rem rgba(242,86,51,0.9);
 	user-select: none;
   width: 100%;
 }
@@ -562,15 +561,10 @@ KEYPAD
 }
 
 .key button {
-  //transition: all 0ms linear;
   background-color: #7f8080;//rgba(255,255,255,0.3);
   border: 0;
   border-bottom: 0.2rem solid rgba(0,0,0,0.4);
   border-radius: 0.15rem;
-	//box-shadow:
-	//	inset -0.5rem -0.5rem 1rem rgba(255,255,255,0.2),
-	//	inset 0.75rem 0.75rem 3rem rgba(255,255,255,0.4),
-	//	0 0 1rem rgba(0,0,0,0.8);
   color: rgba(0,0,0,0.7);//#231f20;
   cursor: pointer;
 	font-family: @heading;
@@ -604,7 +598,6 @@ KEYPAD
 	color: rgba(255,255,255,0.5);
 	font-size: 1rem;
 	float: right;
-	//text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 
