@@ -1,22 +1,27 @@
 nav
-	#logo(title="43210"): a(href="/") MZXIO
+	#logo(title="43210"): b: a(href="/") MZXIO
 	#links
 		ul
-			//li: a(href="#" title=""): span.vox-unknown
-			//li: a(title="CHANGE THEME")#contrast: span.vox-contrast
-			//li: a(href="#" title=""): span.vox-inked-left
-			//li: a(href="#" title=""): span.vox-inked-right
-			//li: a(href="#" title=""): span.vox-matter
-			//li: a(href="#" title=""): span.vox-potential
-			//li: a(href="#" title=""): span.vox-information
-			//li: a(href="#" title=""): span.vox-energy
-			//li: a(href="https://twitter.com/mzxio" target="blank" title="MORE OPTIONS"): span.vox-more
+			li
+				a(href="#" onClick="$('#longer').load('front');" title="BEGINNING")
+					span.label BEGINNING
+					span.vox-diamond
 
-			li: a(onClick="$('#longer').load('front');" title="BEGINNING"): span.vox-diamond
+			li
+				a(href="#" onClick="$('#longer').load('demo-jade');" title="DEMO PAGE")
+					span.label DEMO PAGE
+					span.vox-tag
 
-			//li: a(href="#" title="KEYPAD"): span.vox-category
+			li
+				a(href="#" onClick="$('#longer').load('section/info');" title="INFO")
+					span.label INFO
+					span.vox-info
 
-			li: a(onClick="$('#longer').load('demo-jade');" title="DEMO PAGE"): span.vox-tag
-			li: a(onClick="$('#longer').load('section/info');" title="INFO"): span.vox-info
-			li: a(onClick="$('#longer').load('section/manuscript/contents');" title=""): span.vox-fire
-			li: a(onClick="$('#longer').load('section/twitter');" title="MORE OPTIONS"): span.vox-more
+			li
+				a(href="#" onClick="$('#longer').load('section/manuscript/contents');" title="BOOK")
+					span.label BOOK
+					span.vox-fire
+			li
+				a(href="#" onClick="$('#longer').load('section/twitter');" title="MORE OPTIONS")
+					span.label MORE OPTIONS
+					span.vox-more
