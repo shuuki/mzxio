@@ -2,13 +2,17 @@
 FULL HEIGHT SECTIONS
 */
 
-// should make this something you can enable if desired
-
-// set sections to window height
-$(".fullHeight").css("min-height", $(window).height()).css("margin", "0 auto");
-
-// update section height on resize
-$(window).resize(function() {
+// sets elements with fullHeight class to window height
+function fullHeight () {
 	$(".fullHeight").css("min-height", $(window).height());
-	// @TODO fix swiper centering
+};
+
+// set fullHeight size on document ready
+$(document).ready(function() {
+	fullHeight();
+});
+
+// update height on resize
+$(window).resize(function() {
+	fullHeight();
 });
