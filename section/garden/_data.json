@@ -14,6 +14,9 @@
   "entry": {
     "code": "451451", "title": "Entry"
   },
+  "something": {
+    "code": "693db6", "title": "Something"
+  },
   "another": {
     "code": "fabe21", "title": "Another"
   },
