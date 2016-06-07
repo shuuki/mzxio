@@ -54,3 +54,12 @@ sim.stop = function() {
 sim(function() {
 	thing();
 }, 250);
+
+
+/*
+function draw() {
+	requestAnimationFrame(draw);
+	// Drawing code goes here
+}
+draw();
+*/
