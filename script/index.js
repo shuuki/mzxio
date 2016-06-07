@@ -7,4 +7,3 @@ INIT
 (function($) {
 	// fire module when jquery loads
 })(jQuery);
-//$('p').hyphenate('en-gb');
