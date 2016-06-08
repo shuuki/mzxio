@@ -1,261 +1,104 @@
-/*** INIT */
+/*** 
+INIT
+*/
 
 "use strict";
 
 
-
-/***
-KEYPAD */
-
-
-
-
-function addCode(key) {
-	var code = $(".key")[0].code;
-  if(code.value.length < 6) {
-		code.value = code.value + key;
-	}
-  if(code.value.length == 6) {
-    //document.getElementById("message").style.opacity = "1";
-  	//setTimeout(submitForm, 1000);
-  }
-}
-
-function submitForm() {
-	document.forms[0].submit();
-}
-
-function emptyCode() {
-	document.forms[0].code.value = "";
-	document.getElementById("message").style.opacity = "0";
-}
-
-
-
-/*
-function draw() {
-    requestAnimationFrame(draw);
-    // Drawing code goes here
-}
-draw();
+/*** 
+UTILITIES
 */
 
 
-//$('p').hyphenate('en-gb');
-
-(function($) {
-
-
-
-
-
-/*
-STICKY NAVIGATION
-*/
-
-if (! $("#intro").hasClass("stickyNav")) {
-	$("nav").addClass("fixed");
-}
-
-$(window).scroll(function() {
-	var view = $("body"),
-		breakpoint = $(window).height() - $("nav").height();
-
-	if (! $("#intro").hasClass("stickyNav")) {
-		$("nav").addClass("fixed");
-	} else if (view.scrollTop() > breakpoint && $("#intro").hasClass("stickyNav")) {
-		$("#intro").css("background", "magenta");
-		$("nav").addClass("fixed");
-	} else {
-		$("#intro").css("background", "rgb(232,232,232)");
-		$("nav").removeClass("fixed");
-	}
-
-});
-
-
-/***
-FULL HEIGHT SECTIONS
-*/
-
-// should make this something you can enable if desired
-
-// set sections to window height
-$(".fullHeight").css("min-height", $(window).height()).css("margin", "0 auto");
-
-// update section height on resize
-$(window).resize(function() {
+// fullHeight calculator
+function fullHeight () {
 	$(".fullHeight").css("min-height", $(window).height());
-	// @TODO fix swiper centering
-});
-
-
-
-/*
-PACKERY
-*/
-
-/*
-// init Packery
-var $grid = $('.gallery').packery({
-	itemSelector: '.piece',
-  gutter: 0
-});
-
-// lay out Packery after each image loads
-$grid.imagesLoaded().progress(
-	function() {
-	  $grid.packery();
-	}
-);
-
-*/
-
-
-/*
-STYLESHEET SWITCHER
-
-* put class ".theme" on the stylesheets you want to cycle through
-* add an element with id "#contrast" in markup to let you switch styles
-* mark all stylesheets in the sequence except the first as "disabled"
-
-Inspired by Kelvin Luck's jQuery Stylesheet Switcher:
-http://2008.kelvinluck.com/assets/jquery/styleswitch/toggle.html
-*/
-
-/*
-
-// load up the current stylesheets
-var styles = $("link[class*='theme']"),
-	styleOn = 0;
-
-// main functions
-$.styleSwitch = function() {
-	// disable the current style
-	styles[styleOn].disabled = true;
-
-	// advance the counter
-	styleOn ++;
-	if(styleOn >= styles.length) {
-		styleOn = 0;
-	}
-
-	// enable the next style
-	if(styles[styleOn].disabled == true) {
-		styles[styleOn].disabled = false
-	}
 };
 
 
-// switching actor, listening in for a click on the "#contrast" element
-$("#contrast").bind("click", function(e) {
-$.styleSwitch();
-});
-
+/***
+DOCUMENT READY EVENTS
 */
-
-
-/*** SELF ANNIHILATION */
-
-//document.getElementsByTagName("p"),
-
-var words = $(".annihilation"),
-	chars = [" ", "!", "?", ".", "-", "/", ":",";", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-
-function thing() {
-	for (var i = 0; i < words.length; i ++) {
-		var buffer = [],
-			entropy = words[i].innerHTML[Math.floor(Math.random() * words[i].innerHTML.length)]
-		for (var k = 0; k < words[i].innerHTML.length; k++) {
-			if (Math.floor(Math.random() * 10000) == 1) {
-				buffer.push(entropy);
-			} else if (Math.floor(Math.random() * 500000) == 1) {
-				buffer.push(shuffle(chars));
-			} else if (Math.floor(Math.random() * 500000) == 1) {
-				//delete
-			} else {
-				buffer.push(words[i].innerHTML[k]);
-			}
-		}
-		words[i].innerHTML = buffer.join("");
-	}
-}
-
-function shuffle(list) {
-	return list[Math.floor(Math.random() * list.length)];
-};
-
-/*** SIMULATION */
-var simulation,
-	simRunning = false,
-	simTurns = 0,
-	sim = function(actions, interval) {
-	if (simRunning === false) {
-		simulation = setInterval(function() {
-			simRunning = true;
-			simTurns++;
-			actions();
-		}, interval);
-	} else {
-		return;
-	}
-};
-sim.stop = function() {
-	clearInterval(simulation);
-	simRunning = false;
-};
-
-// fire off the SIM
-sim(function() {
-	thing();
-}, 250);
-
-
-
-
-})(jQuery);
-
-
-
-
-
-
-
-
-/*
-// load content with jquery load and url hashes
-// http://code.tutsplus.com/tutorials/how-to-load-in-and-animate-content-with-jquery--net-26
 
 $(document).ready(function() {
 
-	// Check for hash value in URL
-	var hash = window.location.hash.substr(1);
-	var href = $("#nav li a").each(function() {
-		var href = $(this).attr("href");
-		if(hash == href.substr(0, href.length-5)) {
-			var toLoad = hash+".html #content";
-			$("#content").load(toLoad);
+	// check hash value in url against exiting nav links and load if there is a match
+	var hash = window.location.hash.substr(1),
+		href = $("nav links a").each(function() {
+		var container = "#longer",
+			destination = $(this).attr("href");
+		if (hash == destination.substr(0, destination.length)) {
+			$(container).load(hash);
+			$(window).scrollTo(container, 250);
 		}
 	});
 
-	$('#nav li a').click(function(){
-		var toLoad = $(this).attr("href")+" #content";
-		$("#content").hide("fast", loadContent);
-		$("#load").remove();
-		$("#wrapper").append("loading!");
-		$("#load").fadeIn("normal");
-		window.location.hash = $(this).attr("href").substr(0, $(this).attr("href").length-5);
+	// listen for clicks on nav links to navigate site content
+	$("nav links a").click(function() {
+		// container variable points to element that will change
+		// destination grabs the href of link being clicked on
+		var container = "#longer",
+			destination = $(this).attr("href");
+		// set url hash to the href of active link
+		window.location.hash = destination.substr(0, destination.length);
+		// hide container and fire the load event
+		$(container).fadeOut("normal", loadContent)
+		// load new content and fire event to show container
 		function loadContent() {
-			$("#content").load(toLoad,"", showNewContent())
+			$(container).load(destination, "", showNewContent())
 		}
+		// steps to take after loading new container content
 		function showNewContent() {
-			$("#content").show("normal", hideLoader());
+			$(container).fadeIn("normal", function() {
+				fullHeight();
+				$(window).scrollTo(container, 250);
+			});
 		}
-		function hideLoader() {
-			$("#load").fadeOut("normal");
-		}
+		// stop links from actually working and interrupting ajax process
 		return false;
 	});
 
+	// run fullHeight calculations
+	fullHeight();
+
+	// initialize recliner lazy loading
+	$(".lazy").recliner({
+		attrib: "data-src",
+		throttle: 250,
+		threshold: 100,
+		printable: true,
+		live: true
+	});
+
 });
+
+
+/***
+RESIZE EVENTS
 */
+
+$(window).resize(function() {
+
+	// recalculate fullHeight on resize
+	fullHeight();
+
+	// @todo fix swiper centering
+});
+
+
+/***
+SCROLL EVENTS
+*/
+
+$(window).scroll(function() {
+
+	var view = $("body"),
+		breakpoint = $(window).height() - $("nav").height();
+
+	if (view.scrollTop() > breakpoint) {
+		$("#intro").css("background", "magenta");
+	} else {
+		$("#intro").css("background", "rgb(232,232,232)");
+	}
+
+})
