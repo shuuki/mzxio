@@ -3,7 +3,7 @@
     for image in public.section.you_are_here._contents
       .swiper-slide
         //p what happens if.....
-        img(src="section/you_are_here/#{image}")
+        img(data-src="section/you_are_here/#{image}").lazy
   .swiper-button-next
   .swiper-button-prev
 
