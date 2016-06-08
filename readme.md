@@ -1,8 +1,6 @@
 # Boneyard of glitch.
 
-MZXIO is a [website](http://mzx.io/).
-
-Built using [Harp](https://github.com/sintaxi/harp).
+MZXIO is a [website](http://mzx.io/) built using [Harp](https://github.com/sintaxi/harp).
 
 ### Designs
 
