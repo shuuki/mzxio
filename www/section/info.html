@@ -1,1 +1,59 @@
-<section id="statement" class="fullHeight"><h2 class="annihilation">ARTIST STATEMENT</h2><p class="annihilation">For at least fifty thousand years, human beings carved familiar shapes into whatever material they could find. The artist continues in this grand tradition.</p><p class="annihilation">Art seeks being in non-being, thing-ness from no-thing-ness. Life keeps the lights on, sweeps the floors, tells the stories. Life emerged as glitch, a rounding error as organic molecules sought repose. Thus the artist embraces both logic and disorder; the insane, transcendent. Here, now; past, future; history, imagination: no being is too small, no story irrelevant. Life is the audience, creation is the canvas. The artist peers into spaces between space, seeking seeds of creation.</p><p class="annihilation">All may eventually come to dust, all the same. Entropy consumes. It keeps going. There won't be any turning back. When you look behind you, you'll see it catching up. There is no other way. Venture deep into oblivion. Go as far as you dare. Bring back inspiration. Even in the dying light of the void, the artist writes its name upon the wall.</p><p class="annihilation">Art is but an affirmation: not dead yet.</p><a onClick="location.reload()" class="button">Reset</a></section><section id="dedication" class="fullHeight"><h6 class="centered fullWidth">for you</h6><!-- luminous starstuff. bless you.--><!--      #sixwords <2--><!--     mɒksiːm·rʉɑːn--></section>
+<section id="statement" class="fullHeight"><h2 class="annihilation">ARTIST STATEMENT</h2><p class="annihilation">For at least fifty thousand years, human beings carved familiar shapes into whatever material they could find. The artist continues in this grand tradition.</p><p class="annihilation">Art seeks being in non-being, thing-ness from no-thing-ness. Life keeps the lights on, sweeps the floors, tells the stories. Life emerged as glitch, a rounding error as organic molecules sought repose. Thus the artist embraces both logic and disorder; the insane, transcendent. Here, now; past, future; history, imagination: no being is too small, no story irrelevant. Life is the audience, creation is the canvas. The artist peers into spaces between space, seeking seeds of creation.</p><p class="annihilation">All may eventually come to dust, all the same. Entropy consumes. It keeps going. There won't be any turning back. When you look behind you, you'll see it catching up. There is no other way. Venture deep into oblivion. Go as far as you dare. Bring back inspiration. Even in the dying light of the void, the artist writes its name upon the wall.</p><p class="annihilation">Art is but an affirmation: not dead yet.</p><a onClick="location.reload()" class="button">Reset</a><script>/***
+SELF ANNIHILATION
+*/
+
+function shuffle(list) {
+	return list[Math.floor(Math.random() * list.length)];
+};
+
+
+var words = document.querySelectorAll(".annihilation"), 
+	chars = [" ", "!", "?", ".", "-", "/", ":",";", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+function thing() {
+	for (var i = 0; i < words.length; i ++) {
+		var buffer = [],
+			entropy = words[i].innerHTML[Math.floor(Math.random() * words[i].innerHTML.length)]
+		for (var k = 0; k < words[i].innerHTML.length; k++) {
+			if (Math.floor(Math.random() * 10000) == 1) {
+				buffer.push(entropy);
+			} else if (Math.floor(Math.random() * 500000) == 1) {
+				buffer.push(shuffle(chars));
+			} else if (Math.floor(Math.random() * 500000) == 1) {
+				//delete
+			} else {
+				buffer.push(words[i].innerHTML[k]);
+			}
+		}
+		words[i].innerHTML = buffer.join("");
+	}
+}
+
+
+/***
+SIMULATION
+*/
+
+var simulation,
+	simRunning = false,
+	simTurns = 0,
+	sim = function(actions, interval) {
+	if (simRunning === false) {
+		simulation = setInterval(function() {
+			simRunning = true;
+			simTurns++;
+			actions();
+		}, interval);
+	} else {
+		return;
+	}
+};
+sim.stop = function() {
+	clearInterval(simulation);
+	simRunning = false;
+};
+
+// fire off the SIM
+sim(function() {
+	thing();
+}, 250);</script></section><section id="dedication" class="fullHeight"><h6 class="centered fullWidth">for you</h6><!-- luminous starstuff. bless you.--><!--      #sixwords <2--><!--     mɒksiːm·rʉɑːn--></section>
