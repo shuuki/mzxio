@@ -2,9 +2,12 @@
 SELF ANNIHILATION
 */
 
-//document.getElementsByTagName("p"),
+function shuffle(list) {
+	return list[Math.floor(Math.random() * list.length)];
+};
 
-var words = $(".annihilation"),
+
+var words = document.querySelectorAll(".annihilation"), 
 	chars = [" ", "!", "?", ".", "-", "/", ":",";", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 function thing() {
@@ -26,11 +29,11 @@ function thing() {
 	}
 }
 
-function shuffle(list) {
-	return list[Math.floor(Math.random() * list.length)];
-};
 
-/*** SIMULATION */
+/***
+SIMULATION
+*/
+
 var simulation,
 	simRunning = false,
 	simTurns = 0,
