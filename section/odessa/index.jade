@@ -1,0 +1,10 @@
+
+section
+  h1 ODESSA
+  h6 Meditations from late 2015
+
+for entry, slug in public.section.odessa._data  
+  section.interstice
+    hr
+    h2 #{entry.title}
+    != partial(slug)
