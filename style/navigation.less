@@ -1,0 +1,80 @@
+nav {
+	box-shadow: 0 0.1em 0.2em fadeout(@base, 60%);
+	background: fadeout(lighten(@base, 10%),2%);//fadeout(@base, 2%);
+	color: @main;
+	display: flex;
+	font-size: 1em;
+	justify-content: space-between;
+	width: 100%;
+	height: 2em;
+	z-index: 99;
+	position: fixed;
+	left: 0;
+	top: 0;
+	user-select: none;
+	transform: translateZ(0);
+	a {
+		background: transparent;
+		color: darken(@main, 30%);
+		text-decoration: none;
+		&:hover {
+			background: transparent;
+			color: @main;
+		}
+		&:active {
+			background: transparent;
+			color: @accent;
+		}
+	}
+	.label {
+		display: none;
+	}
+	// make fixed top for classic sticky top style
+	// or absolute bottom with .fixed class for fancy scroll-to-top
+}
+
+.fixed {
+	//position: absolute;
+	//bottom: 0;
+}
+
+#logo {
+	cursor: default;
+	line-height: 2em;
+	font-family: "MZXIO";
+	letter-spacing: 0;
+	font-weight: normal;
+}
+
+links {
+	ul {
+		display: inline-block;
+		padding: 0;
+		li {
+			display: inline-block;
+			margin-right: 1em;
+		}
+	}
+	a {
+		&:after {
+			content: "";
+			transition: all 120ms ease-in-out;
+			background: @base;
+			opacity: 0;
+			height: 1.5em;
+			width: 2em;
+			display: inline-block;
+			margin-left: -1.5em;
+			border-radius: 1em;
+			position: relative;
+			top: 0.3em;
+			z-index: -1;
+		}
+		&:hover:after {
+			opacity: 0.5;
+		}
+		&:active:after {
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,174 @@
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @heading;
+	line-height: 1.25;
+	margin: 1em 0 0.5em;
+	word-break: break-word;
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: 800;
+}
+
+h2 {
+	font-size: 3.4em;
+	font-weight: 200;
+	opacity: 0.8;
+}
+
+h3 {
+	font-size: 2.2em;
+	font-weight: 600;
+	opacity: 0.4;
+}
+
+h4 {
+	font-size: 2em;
+	font-weight: 200;
+	opacity: 0.8;
+}
+
+h5 {
+	font-size: 1.2em;
+	font-weight: 600;
+	opacity: 1;
+}
+
+h6 {
+	font-size: 1.2em;
+	font-weight: 800;
+	opacity: 0.4;
+}
+
+
+strong, b {
+	font-weight: bold;
+}
+
+em, i {
+	font-style: italic;
+}
+
+del {
+	text-decoration: strikethrough;
+}
+
+
+
+hr {
+	border: 0.2rem solid;
+	margin: 2em 0;
+	opacity: 0.1;
+}
+
+
+
+a {
+	background: linear-gradient(
+		transparent 90%,
+		fadeout(@main, 70%) 90%
+	);
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {
+		background: linear-gradient(
+			transparent 90%,
+			@main 90%
+		);
+	}
+	&:active {
+		background: linear-gradient(
+			transparent 90%,
+			@accent 90%
+		);
+		color: @accent;
+	}
+}
+
+
+
+blockquote {
+	margin: 2em 0;
+	border-left: 0.4em solid fadeout(@main, 75%);
+	padding: 1em;
+	font-style: italic;
+	background: fadeout(@main, 95%);
+	p {
+		margin-bottom: 0;
+	}
+	cite {
+		display: block;
+		font-style: normal;
+		opacity: 0.7;
+		margin-top: 0.5em;
+		&:before {
+			content: " — ";
+		}
+	}
+}
+
+ul, ol {
+	padding-left: 1.5em;
+	li {
+		line-height: 1.5;
+	}
+}
+
+ul {
+	list-style-type: disc;
+	ul {
+		list-style-type: circle;
+		ul {
+			list-style-type: square;
+		}
+	}
+}
+
+ol {
+	list-style-type: decimal;
+	ol {
+		list-style-type: lower-latin;
+		ol {
+			list-style-type: lower-roman;
+		}
+	}
+}
+
+
+code, pre {
+	color: fadeout(@main, 20%);
+	font-family: @console;
+}
+
+code {
+	background: fadeout(@main, 90%);
+	border-radius: 2pt;
+	padding: 0 0.2em;
+}
+
+pre {
+	background: fadeout(@main, 95%);
+	padding: 1em 1.5em;
+	code {
+		background: transparent;
+		padding: 0;
+	}
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 1em;
+	th {
+		text-align: left;
+		font-weight: bold;
+		padding: 0.5em;
+	}
+	td {
+		padding: 0.5em;
+		border-top: 2pt solid fadeout(@main, 90%);
+	}
+}
