@@ -1,4 +1,4 @@
-
+/*
 @font-face {
 	font-family: 'Montserrat';
 	font-weight: 100;
@@ -10,6 +10,7 @@
 		 url('montserrat-hairline.ttf') format('truetype'),
 		 url('montserrat-hairline.svg#montserrathairline') format('svg');
 }
+*/
 @font-face {
 	font-family: 'Montserrat';
 	font-weight: 200;
@@ -21,6 +22,7 @@
 		 url('montserrat-ultralight.ttf') format('truetype'),
 		 url('montserrat-ultralight.svg#montserratultra_light') format('svg');
 }
+/*
 @font-face {
 	font-family: 'Montserrat';
 	font-weight: 300;
@@ -43,6 +45,7 @@
 		 url('montserrat-regular.ttf') format('truetype'),
 		 url('montserrat-regular.svg#montserratregular') format('svg');
 }
+*/
 @font-face {
 	font-family: 'Montserrat';
 	font-weight: 600;
@@ -54,6 +57,7 @@
 		 url('montserrat-semibold.ttf') format('truetype'),
 		 url('montserrat-semibold.svg#montserratsemi_bold') format('svg');
 }
+/*
 @font-face {
 	font-family: 'Montserrat';
 	font-weight: 700;
@@ -65,7 +69,7 @@
 		 url('montserrat-bold.ttf') format('truetype'),
 		 url('montserrat-bold.svg#montserratbold') format('svg');
 }
-
+*/
 @font-face {
 	font-family: 'Montserrat';
 	font-weight: 800;
@@ -77,6 +81,7 @@
 		 url('montserrat-extrabold.ttf') format('truetype'),
 		 url('montserrat-extrabold.svg#montserratextra_bold') format('svg');
 }
+/*
 @font-face {
 	font-family: 'Montserrat';
 	font-weight: 900;
@@ -88,3 +93,4 @@
 		 url('montserrat-black.ttf') format('truetype'),
 		 url('montserrat-black.svg#montserratblack') format('svg');
 }
+*/
