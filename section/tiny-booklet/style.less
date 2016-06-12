@@ -22,20 +22,20 @@
     box-sizing: border-box;
     display: block;
     overflow: hidden;
+    padding: @print-bleed+@print-margin;
     position: relative;
     width: @print-width;
     min-width: @print-width;
   }
   h1 {
     font-family: @font-cover;
-    font-size: 8rem;
+    font-size: 8em;
     word-break: break-all;
     font-weight: 100;
     text-transform: uppercase;
     line-height: 0.7;
     height: 100%;
     width: 100%;
-    padding: @print-bleed*3;
   }
   img {
     height: 100%;
@@ -52,16 +52,12 @@
   h2 {
     font-family: @font-header;
   }
-  a {
-    display: none;
-  }
-  p, .centered {
+  .centered, p {
       left: 50%;
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
   }
-  // &:nth-of-type(3n+2) { }
 }
 
 //////////////////////////////////
@@ -70,24 +66,24 @@
 
 @media screen {
   body {
-    padding-top: @spread-spacing;
+    padding-top: @print-spread-spacing;
     -webkit-font-smoothing: anti-aliased;
   }
   .book {
-    align-content: flex-start;
+    margin: 0 auto;
+    max-width: @print-spread-width;
     display: flex;
+    align-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: @spread-width;
-    margin: 0 auto;
     justify-content: space-around;
   }
   .page {
     box-shadow:
       inset 0 0 0 @print-bleed @color-ui-guides,
-      inset 0 0 3rem @print-bleed @color-ui-page,
-      0 0.4rem 0.8rem 0 @color-ui-drop;
-    margin-bottom: @spread-spacing;
+      inset 0 0 3em @print-bleed @color-ui-page,
+      0 0.4em 0.8em 0 @color-ui-drop;
+    margin-bottom: @print-spread-spacing;
   }
   img {
     opacity: 0.8;
@@ -105,10 +101,8 @@
     transform: translateY(-50%);
     z-index: 999;
   }
-  .black {
+  .inverted {
     background-color: @color-ink-preview;
-  }
-  .white {
     color: @color-paper-preview;
   }
   .cover {
@@ -131,10 +125,8 @@
     box-shadow: none;
     page-break-after: always;
   }
-  .black {
+  .inverted {
     background-color: @color-ink;
-  }
-  .white {
     color: @color-paper;
   }
   .noprint {
@@ -145,7 +137,7 @@
 @page {
   background-color: @color-paper;
   color: @color-ink;
-  margin: @print-margin;
+  margin: 0; // @print-margin is used elsewhere
   size: @print-width @print-height;
 }
 
@@ -156,10 +148,10 @@
 //  layout  //
 @print-width: 3.75in;
 @print-height: 3.75in;
-@print-margin: 0;
+@print-margin: 0.5in;
 @print-bleed: 0.125in;
-@spread-width: (@print-width*2);
-@spread-spacing: 10vh;
+@print-spread-width: @print-width*2;
+@print-spread-spacing: 10vh;
 
 //  colors  //
 @color-ink: black;
@@ -176,9 +168,9 @@
 @font-cover: @sans;
 @font-header: @serif;
 
-@sans: 'Raleway', sans-serif;
-@serif: 'Merriweather', serif;
+@sans: sans-serif;//'Raleway', sans-serif;
+@serif: serif;//'Merriweather', serif;
 
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400italic,400,900,300italic,300,700,700italic,900italic);
+//@import url(http://fonts.googleapis.com/css?family=Merriweather:400italic,400,900,300italic,300,700,700italic,900italic);
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:800,100);
+//@import url(http://fonts.googleapis.com/css?family=Raleway:800,100);
