@@ -1,10 +1,12 @@
 
 section
   h1 ODESSA
-  h6 Meditations.
 
-for entry, slug in public.section.odessa._data  
+//- var chapterNumber = 0
+for entry, slug in public.section.odessa._data 
+  //- chapterNumber++
   section.interstice
-    hr
-    h2 #{entry.title}
+    //h2 #{chapterNumber}.
+    h3 #{entry.title}
     != partial(slug)
+  hr
