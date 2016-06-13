@@ -82,6 +82,16 @@ $(window).resize(function() {
 	// recalculate fullHeight on resize
 	fullHeight();
 
+
+	// @todo stop reusing this code?
+	var view = $("body"),
+		breakpoint = $(window).height() - $("nav").height();
+
+	if (view.scrollTop() <= breakpoint) {
+		$("nav").css("top", breakpoint);
+	}
+
+
 	// @todo fix swiper centering
 });
 
@@ -97,8 +107,10 @@ $(window).scroll(function() {
 
 	if (view.scrollTop() > breakpoint) {
 		$("#intro").css("background", "magenta");
+		$("nav").removeClass("absolute").css("top", "0");
 	} else {
 		$("#intro").css("background", "rgb(232,232,232)");
+		$("nav").addClass("absolute").css("top", breakpoint);
 	}
 
 })
