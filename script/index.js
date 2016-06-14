@@ -22,6 +22,15 @@ DOCUMENT READY EVENTS
 
 $(document).ready(function() {
 
+	// @todo stop reusing this code?
+	var view = $("body"),
+		breakpoint = $(window).height() - $("nav").height();
+
+	if (view.scrollTop() <= breakpoint) {
+		$("nav").css("top", breakpoint);
+	}
+
+
 	// check hash value in url against exiting nav links and load if there is a match
 	var hash = window.location.hash.substr(1),
 		href = $("nav links a").each(function() {
