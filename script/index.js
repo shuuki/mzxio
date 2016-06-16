@@ -31,7 +31,7 @@ $(document).ready(function() {
 	}
 
 
-	// check hash value in url against exiting nav links and load if there is a match
+	// check hash value in url against existing nav links and load if there is a match
 	var hash = window.location.hash.substr(1),
 		href = $("nav links a").each(function() {
 		var container = "#longer",
