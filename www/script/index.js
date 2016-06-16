@@ -22,10 +22,19 @@ DOCUMENT READY EVENTS
 
 $(document).ready(function() {
 
-	// check hash value in url against exiting nav links and load if there is a match
+	// @todo stop reusing this code?
+	var view = $("body"),
+		breakpoint = $(window).height() - $("nav").height();
+
+	if (view.scrollTop() <= breakpoint) {
+		$("nav").css("top", breakpoint);
+	}
+
+
+	// check hash value in url against existing nav links and load if there is a match
 	var hash = window.location.hash.substr(1),
 		href = $("nav links a").each(function() {
-		var container = "#longer",
+		var container = "#content",
 			destination = $(this).attr("href");
 		if (hash == destination.substr(0, destination.length)) {
 			$(container).load(hash);
@@ -37,7 +46,7 @@ $(document).ready(function() {
 	$("nav links a").click(function() {
 		// container variable points to element that will change
 		// destination grabs the href of link being clicked on
-		var container = "#longer",
+		var container = "#content",
 			destination = $(this).attr("href");
 		// set url hash to the href of active link
 		window.location.hash = destination.substr(0, destination.length);
@@ -82,6 +91,16 @@ $(window).resize(function() {
 	// recalculate fullHeight on resize
 	fullHeight();
 
+
+	// @todo stop reusing this code?
+	var view = $("body"),
+		breakpoint = $(window).height() - $("nav").height();
+
+	if (view.scrollTop() <= breakpoint) {
+		$("nav").css("top", breakpoint);
+	}
+
+
 	// @todo fix swiper centering
 });
 
@@ -97,8 +116,10 @@ $(window).scroll(function() {
 
 	if (view.scrollTop() > breakpoint) {
 		$("#intro").css("background", "magenta");
+		$("nav").removeClass("absolute").css("top", "0");
 	} else {
 		$("#intro").css("background", "rgb(232,232,232)");
+		$("nav").addClass("absolute").css("top", breakpoint);
 	}
 
 })
