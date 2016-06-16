@@ -31,20 +31,25 @@
   body {
     background: white;
     color: black;
+    font-size: 10pt!important;
   }
   .book {
     display: block;
-    font-size: 10pt;
   }
   .page {
     page-break-after: always;
-    page-break-inside: avoid;
   }
   .noprint {
     display: none;
   }
   #content {
     padding: 0;
+  }
+  blockquote {
+    page-break-inside: avoid;
+  }
+  section {
+    page-break-after: always;
   }
 }
 

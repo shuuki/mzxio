@@ -132,7 +132,7 @@ blockquote {
 }
 
 code, pre {
-	color: fadeout(@main, 20%);
+	//color: fadeout(@main, 20%);
 	font-family: @console;
 }
 
@@ -143,8 +143,11 @@ code {
 }
 
 pre {
-	background: fadeout(@main, 95%);
+	background: fadeout(@main, 90%);
 	padding: 1em 1.5em;
+	p {
+		margin: 0;
+	}
 	code {
 		background: transparent;
 		padding: 0;
