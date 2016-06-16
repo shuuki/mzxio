@@ -1,47 +1,43 @@
 doctype
 html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 	head
-		// meta
+		//  meta
 		title #{title}
 		meta(charset="utf-16")
 		meta(description="#{description}")
 		link(rel="icon" type="image/x-icon" href="favicon.ico")
 
-		// display
+		//  display
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 
-		// CSS
-		// fonts
+		//  fonts
 		link(rel="stylesheet" href="style/fonts/montserrat/style.css")
 		link(rel="stylesheet" href="style/fonts/mzxio/style.css")
 		link(rel="stylesheet" href="style/fonts/VOX-2015/style.css")
 
-		// libraries
+		//  style libraries
 		link(rel="stylesheet" href="style/library/swiper-3.3.1.min.css")
 
-		// styles
+		//  styles
+		link(rel="stylesheet" href="style/index.css")
 
-		link(rel="stylesheet" href="style/index.css").theme
+		//  themes
+		//link(rel="stylesheet" href="style/theme-name.css" media="screen" disabled).theme
 
-		//link(rel="stylesheet" href="style/theme-dark.css" media="screen" disabled).theme
+		// priority scripts
+		script(src="script/library/swiper-3.3.1.min.js")
 
-		// JS 
-		// libraries
-
-		script(src="script/library/jquery-2.2.0.min.js")
-
-		// swiper
-		script(src="script/library/swiper-3.3.1.jquery.min.js")
-		
-		script(src="script/library/jquery.scrollTo.min.js")
-		script(src="script/library/recliner.min.js")
-
-		// jade extension block
+		//  extension block
 		block head
 
 	body
 		!= partial("_shared/nav")
 		!= yield
 
-		// scripts
+		// script libraries
+		script(src="script/library/jquery-2.2.0.min.js")
+		script(src="script/library/jquery.scrollTo.min.js")
+		script(src="script/library/recliner.min.js")
+
+		//  scripts
 		script(src="script/index.js")
