@@ -1,12 +1,13 @@
 
-section
-  h1 ODESSA
+.book
 
-//- var chapterNumber = 0
-for entry, slug in public.section.odessa._data 
-  //- chapterNumber++
-  section.interstice
-    //h2 #{chapterNumber}.
-    h3 #{entry.title}
-    != partial(slug)
-  hr
+  .page.cover
+    h1.centered ODESSA
+
+  - var pageNumber = 0
+  for entry, slug in public.section.odessa._data 
+    - pageNumber++
+    .page
+      p #{pageNumber}.
+      h3 #{entry.title}
+      != partial(slug)
