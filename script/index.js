@@ -34,7 +34,7 @@ $(document).ready(function() {
 	// check hash value in url against existing nav links and load if there is a match
 	var hash = window.location.hash.substr(1),
 		href = $("nav links a").each(function() {
-		var container = "#longer",
+		var container = "#content",
 			destination = $(this).attr("href");
 		if (hash == destination.substr(0, destination.length)) {
 			$(container).load(hash);
@@ -46,7 +46,7 @@ $(document).ready(function() {
 	$("nav links a").click(function() {
 		// container variable points to element that will change
 		// destination grabs the href of link being clicked on
-		var container = "#longer",
+		var container = "#content",
 			destination = $(this).attr("href");
 		// set url hash to the href of active link
 		window.location.hash = destination.substr(0, destination.length);
