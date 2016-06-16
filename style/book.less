@@ -1,0 +1,57 @@
+@import "variables";
+
+
+.book {}
+
+.page {
+  //height: @print-height;
+  box-sizing: border-box;
+  display: block;
+  //overflow: hidden;
+  // @todo some serious issues here with text that overflows, should create new pages?
+  padding: @print-bleed+@print-margin;
+  position: relative;
+  width: @print-width;
+  min-width: @print-width;
+}
+
+.cover {
+  height: @print-height;
+}
+
+.bleed {}
+
+.inverted {}
+
+//////////////////////////////////
+//  only for print              //
+//////////////////////////////////
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .book {
+    display: block;
+    font-size: 10pt;
+  }
+  .page {
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .noprint {
+    display: none;
+  }
+}
+
+@media screen {
+  .noscreen {
+    display: none;
+  }
+}
+
+@page {
+  margin: 0; 
+  size: @print-width @print-height;
+}
