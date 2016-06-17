@@ -1,0 +1,10 @@
+body {
+  background: rgb(11,11,11);
+}
+.arc text {
+  font: 14pt sans-serif;
+  text-anchor: middle;
+}
+#content {
+  text-align: center;
+}
