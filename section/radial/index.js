@@ -1,26 +1,28 @@
 
 // make data
 
-function sequence(steps) {
+function sequence(steps, complete) {
 	var days = [];
 	for (var step = 0; step < steps; step++) {
-		days.push({
-			"day": step,
-			"done": false,
-			"title": "untitled"});
+		if (step < complete) {
+			days.push({
+				"day": step,
+				"done": false,
+				"title": "untitled"});
+		} else {
+			days.push({
+				"day": step,
+				"done": true,
+				"title": "untitled"});
+		}
 	}
 	return days;
 }
 
-var data  = sequence(216);
-data[0].done = true;
-data[1].done = true;
-data[2].done = true;
-data[3].done = true;
-data[4].done = true;
-data[5].done = true;
 
+// roll the data
 
+var data  = sequence(216, 1);
 
 
 // d3
