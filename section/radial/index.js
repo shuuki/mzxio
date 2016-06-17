@@ -25,20 +25,20 @@ data[5].done = true;
 
 // d3
 
-var width = 400,
-	height = 400,
+var width = 320,
+	height = 320,
 	radius = Math.min(width, height) / 2;
 
 var color = d3.scale.ordinal()
-	.range(["#fff","#666"]);
+	.range(["rgb(232,232,232)","rgb(42,42,42)"]);
 
 var arc = d3.svg.arc()
 	.outerRadius(radius)
-	.innerRadius(radius - 32);
+	.innerRadius(radius - 30);
 
 var pie = d3.layout.pie()
 	.sort(null)
-	.padAngle(0.01)
+	.padAngle(0.0075)
 	.value(function(d) { return 1; }); //for added fun, can also return d.day, d.done, etc
 
 var svg = d3.select("#content").append("svg")
