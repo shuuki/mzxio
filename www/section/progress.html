@@ -1,5 +1,7 @@
-
-// make data
+<section class="noprint"><h1>Progress.</h1><div id="chart"></div></section><style>#content {
+  text-align: center;
+}
+</style><script src="../script/library/d3.min.js"></script><script>// make data
 
 function sequence(steps, complete) {
 	var days = [];
@@ -7,13 +9,13 @@ function sequence(steps, complete) {
 		if (step < complete) {
 			days.push({
 				"day": step,
-				"done": false,
-				"title": "untitled"});
+				"done": false
+			});
 		} else {
 			days.push({
 				"day": step,
-				"done": true,
-				"title": "untitled"});
+				"done": true
+			});
 		}
 	}
 	return days;
@@ -22,13 +24,13 @@ function sequence(steps, complete) {
 
 // roll the data
 
-var data  = sequence(216, 1);
+var data  = sequence(216, 99);
 
 
 // d3
 
-var width = 320,
-	height = 320,
+var width = 280,
+	height = 280,
 	radius = Math.min(width, height) / 2;
 
 var color = d3.scale.ordinal()
@@ -36,14 +38,14 @@ var color = d3.scale.ordinal()
 
 var arc = d3.svg.arc()
 	.outerRadius(radius)
-	.innerRadius(radius - 30);
+	.innerRadius(radius - 20);
 
 var pie = d3.layout.pie()
 	.sort(null)
 	.padAngle(0.0075)
 	.value(function(d) { return 1; }); //for added fun, can also return d.day, d.done, etc
 
-var svg = d3.select("#content").append("svg")
+var svg = d3.select("#chart").append("svg")
 	.attr("width", width)
 	.attr("height", height)
 	.append("g")
@@ -69,4 +71,4 @@ g.append("text")
 function type(d) {
 	d.day = +d.day;
 	return d;
-}
+}</script>
