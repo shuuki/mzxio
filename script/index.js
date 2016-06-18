@@ -30,7 +30,6 @@ $(document).ready(function() {
 		$("nav").css("top", breakpoint);
 	}
 
-
 	// check hash value in url against existing nav links and load if there is a match
 	var hash = window.location.hash.substr(1),
 		href = $("nav links a").each(function() {
