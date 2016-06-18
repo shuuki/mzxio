@@ -21,7 +21,7 @@ function sequence(steps, complete) {
 
 // roll the data
 
-var data  = sequence(216, 99);
+var data  = sequence(216, 1);
 
 
 // d3

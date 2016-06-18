@@ -36,8 +36,14 @@ $(document).ready(function() {
 		var container = "#content",
 			destination = $(this).attr("href");
 		if (hash == destination.substr(0, destination.length)) {
-			$(container).load(hash);
-			$(window).scrollTo(container, 250);
+			$(container).load(hash, "", showNewContent());
+		}
+		// steps to take after loading new container content
+		function showNewContent() {
+			$(container).fadeIn("normal", function() {
+				fullHeight();
+				//$(window).scrollTo(container, 250);
+			});
 		}
 	});
 
