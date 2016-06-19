@@ -1,0 +1,17 @@
+section
+  h1 Progress report.
+
+#progress
+  - var chapterNumber = 0
+  for thing, slug in public.section.progress._data  
+    - chapterNumber++
+    section
+      p #{thing.title}
+      != partial(slug)
+
+section
+  #chart
+    h4.centered #{chapterNumber} 
+        | of 216
+
+script(src="../script/progress.js")
