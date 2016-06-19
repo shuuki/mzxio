@@ -37,8 +37,8 @@ $(document).ready(function() {
 			destination = $(this).attr("href");
 		if (hash == destination.substr(0, destination.length)) {
 			$(container).load(hash);
-			$(window).scrollTo(container, 250);
 		}
+
 	});
 
 	// listen for clicks on nav links to navigate site content
