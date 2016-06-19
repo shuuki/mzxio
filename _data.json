@@ -1,9 +1,9 @@
 {
 	"404" : {
-		"layout": "_layout-index"
+		"layout": "_layout-default"
 	},
 	"index" : {
-		"layout": "_layout-index"
+		"layout": "_layout-default"
 	},
 	"demo-jade" : {
 		"layout": false
