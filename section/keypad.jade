@@ -1,3 +1,6 @@
+//section#key.fullHeight
+//!= partial("garden/codes")
+
 form(action="javascript:console.log( 'frob' );" method="get").key.centered
   //p#message ######
   // ######
@@ -46,5 +49,28 @@ form(action="javascript:console.log( 'frob' );" method="get").key.centered
       td(colspan="4"): button(type="reset" onclick="emptyCode()") CLEAR
         span.braille ⠆⠉⠇
 
+//script(src="../script/keypad.js")
+script.
+  /***
+  KEYPAD
+  */
 
-script(src="../script/keypad.js")
+  function addCode(key) {
+    var code = $(".key")[0].code;
+    if(code.value.length < 6) {
+      code.value = code.value + key;
+    }
+    if(code.value.length == 6) {
+      //document.getElementById("message").style.opacity = "1";
+      //setTimeout(submitForm, 1000);
+    }
+  }
+
+  function submitForm() {
+    document.forms[0].submit();
+  }
+
+  function emptyCode() {
+    document.forms[0].code.value = "";
+    //document.getElementById("message").style.opacity = "0";
+  }
