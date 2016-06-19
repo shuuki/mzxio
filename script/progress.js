@@ -19,9 +19,11 @@ function sequence(steps, complete) {
 }
 
 
+
+
 // roll the data
 
-var data  = sequence(216, 1);
+var data  = sequence(216, $("#progress").children().length||1);
 
 
 // d3
