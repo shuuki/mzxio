@@ -1,1 +1,23 @@
-<form action="javascript:console.log( 'frob' );" method="get" class="key centered"><!--p#message ######--><!-- ######--><!-- FAILED--><!-- UNLOCK--><input type="text" name="code" value="" maxlength="6" readonly="readonly" placeholder="------" id="display"/><table id="keypad"><tr><td><button onclick="addCode('C')">C<span class="braille">⠉</span></button></td><td><button onclick="addCode('8')">8<span class="braille">⠼⠓</span></button></td><td><button onclick="addCode('4')">4<span class="braille">⠼⠙</span></button></td><td><button onclick="addCode('0')">0<span class="braille">⠼⠚</span></button></td></tr><tr><td><button onclick="addCode('D')">D<span class="braille">⠙</span></button></td><td><button onclick="addCode('9')">9<span class="braille">⠼⠊</span></button></td><td><button onclick="addCode('5')">5<span class="braille">⠼⠑</span></button></td><td><button onclick="addCode('1')">1<span class="braille">⠼⠁</span></button></td></tr><tr><td><button onclick="addCode('E')">E<span class="braille">⠑</span></button></td><td><button onclick="addCode('A')">A<span class="braille">⠁</span></button></td><td><button onclick="addCode('6')">6<span class="braille">⠼⠋</span></button></td><td><button onclick="addCode('2')">2<span class="braille">⠼⠃</span></button></td></tr><tr><td><button onclick="addCode('F')">F<span class="braille">⠋</span></button></td><td><button onclick="addCode('B')">B<span class="braille">⠃</span></button></td><td><button onclick="addCode('7')">7<span class="braille">⠼⠛</span></button></td><td><button onclick="addCode('3')">3<span class="braille">⠼⠉</span></button></td></tr><tr><td colspan="4"><button type="reset" onclick="emptyCode()">CLEAR<span class="braille">⠆⠉⠇</span></button></td></tr></table></form><script src="../script/keypad.js"></script>
+<!--section#key.fullHeight--><!--!= partial("garden/codes")--><form action="javascript:console.log( 'frob' );" method="get" class="key centered"><!--p#message ######--><!-- ######--><!-- FAILED--><!-- UNLOCK--><input type="text" name="code" value="" maxlength="6" readonly="readonly" placeholder="------" id="display"/><table id="keypad"><tr><td><button onclick="addCode('C')">C<span class="braille">⠉</span></button></td><td><button onclick="addCode('8')">8<span class="braille">⠼⠓</span></button></td><td><button onclick="addCode('4')">4<span class="braille">⠼⠙</span></button></td><td><button onclick="addCode('0')">0<span class="braille">⠼⠚</span></button></td></tr><tr><td><button onclick="addCode('D')">D<span class="braille">⠙</span></button></td><td><button onclick="addCode('9')">9<span class="braille">⠼⠊</span></button></td><td><button onclick="addCode('5')">5<span class="braille">⠼⠑</span></button></td><td><button onclick="addCode('1')">1<span class="braille">⠼⠁</span></button></td></tr><tr><td><button onclick="addCode('E')">E<span class="braille">⠑</span></button></td><td><button onclick="addCode('A')">A<span class="braille">⠁</span></button></td><td><button onclick="addCode('6')">6<span class="braille">⠼⠋</span></button></td><td><button onclick="addCode('2')">2<span class="braille">⠼⠃</span></button></td></tr><tr><td><button onclick="addCode('F')">F<span class="braille">⠋</span></button></td><td><button onclick="addCode('B')">B<span class="braille">⠃</span></button></td><td><button onclick="addCode('7')">7<span class="braille">⠼⠛</span></button></td><td><button onclick="addCode('3')">3<span class="braille">⠼⠉</span></button></td></tr><tr><td colspan="4"><button type="reset" onclick="emptyCode()">CLEAR<span class="braille">⠆⠉⠇</span></button></td></tr></table></form><!--script(src="../script/keypad.js")--><script>/***
+KEYPAD
+*/
+
+function addCode(key) {
+  var code = $(".key")[0].code;
+  if(code.value.length < 6) {
+    code.value = code.value + key;
+  }
+  if(code.value.length == 6) {
+    //document.getElementById("message").style.opacity = "1";
+    //setTimeout(submitForm, 1000);
+  }
+}
+
+function submitForm() {
+  document.forms[0].submit();
+}
+
+function emptyCode() {
+  document.forms[0].code.value = "";
+  //document.getElementById("message").style.opacity = "0";
+}</script>
