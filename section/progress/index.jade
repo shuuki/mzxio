@@ -6,7 +6,7 @@ section
   for thing, slug in public.section.progress._data  
     - chapterNumber++
     section
-      p: b #{thing.title}
+      h5 #{chapterNumber}. #{thing.title}
       != partial(slug)
 
 section
