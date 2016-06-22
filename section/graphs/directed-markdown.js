@@ -1,7 +1,5 @@
 
-
 /*
-
 
 - builds directed graph
 - one chain per line 
@@ -9,7 +7,8 @@
 - exactly one value on left
 - one or more values on the right
 - strips out spaces 
-- uses markdown syntax
+- uses syntax similar to markdown
+
 
 
 // you write this in markdown:
@@ -45,9 +44,23 @@ consequence---third
 
 // ready to be fed into d3
 
+wishlist:
+- add extra data to nodes using [] syntax
+- something like (node)[content]
+- add weight or value to nodes? use black body curve 
+- add weight to edges? maybe use opacity
+
+
+is---you,or
+you---is,ain't
+or---is
+ain't---my
+my---baby
+
+
+
+
 */
-
-
 
 /**
  * DIRECTED MARKDOWN
@@ -72,7 +85,7 @@ dm.parse = function(source) {
         divider = current.indexOf("---");
 
       if (divider === -1 || divider > 0 && current.length < 5 ) continue;
-      // @todo 
+      // @todo this isn't exactly accurate
 
       var node = current.slice(0, divider),
         connections = current.slice(divider+3, current.length);
@@ -84,24 +97,31 @@ dm.parse = function(source) {
       if (temp.indexOf(node) < 0) temp.push(node);
 
       for (var k = 0; k < connection.length; k++) {
+
         if (temp.indexOf(connection[k]) < 0) temp.push(connection[k]);  
+
         plan.links.push({
           "source": temp.indexOf(node),
           "target": temp.indexOf(connection[k])
         });
+
       }
-      //console.log(current);
+      //debug: console.log(current);
     }
 
     for (var n = 0; n < temp.length; n++) {
-      plan.nodes.push({"name": temp[n]})
+
+      plan.nodes.push({
+        "name": temp[n]
+      });
+
     }
 
   return plan;
 }
 
 
-// test :
+// test:
 // processed version of example markdown:
 
 //var what = "start---first,choice\nfirst---choice, second\nsecond---third\nchoice---consequence\nconsequence---third"
