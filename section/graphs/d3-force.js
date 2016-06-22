@@ -1,42 +1,37 @@
 
-
 var drawGraph = function(graph) {
-  
-  
+
+  d3.select("svg").remove()
+
   var width = document.documentElement.clientWidth,
     height = document.documentElement.clientHeight/2;
 
-  var color = d3.scale.category20();
+  var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
 
   var force = d3.layout.force()
-      .linkDistance(60)
-      .charge(-300)
-      .size([width, height]);
+    .linkDistance(60)
+    .charge(-300)
+    .size([width, height])
+    .nodes(graph.nodes)
+    .links(graph.links)
+    .start();
 
-  var svg = d3.select("body").append("svg")
-      .attr("width", width)
-      .attr("height", height);
-  
-  force
-      .nodes(graph.nodes)
-      .links(graph.links)
-      .start();
+  svg.append("defs").selectAll("marker")
+    .data(["end"])
+    .enter().append("marker")
+      .attr("id", String)
+      .attr("viewBox", "0 -5 10 10")
+      .attr("refX", 14)
+      .attr("refY", 0)
+      .attr("markerWidth", 6)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+    .append("path")
+      .attr("d", "M 0 -4 L 8 0 L0 4  Z")
+      .style("opacity", "1");
 
-      svg.append("defs").selectAll("marker")
-          .data(["end"])
-        .enter().append("marker")
-          .attr("id", String)
-          .attr("viewBox", "0 -5 10 10")
-          .attr("refX", 15)
-          .attr("refY", 0)
-          .attr("markerWidth", 6)
-          .attr("markerHeight", 6)
-          .attr("orient", "auto")
-        .append("path")
-          .attr("d", "M 0 -4 L 8 0 L0 4  Z")
-          .style("stroke", "#999")
-          .style("fill", "#999")
-          .style("opacity", "1");
 
 
   var link = svg.selectAll(".link")

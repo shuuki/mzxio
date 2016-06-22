@@ -1,8 +1,10 @@
 style.
   body {
     background-color: #222;
+    font-family: sans-serif;
     color: white;
     margin: 0;
+    //-webkit-font-smoothing: antialiased;
   }
   textarea {
     background-color: #111;
@@ -16,18 +18,23 @@ style.
     padding: 1em;
     margin: 0 auto;
   }
-  .node {
-  fill: red;
-    stroke: #999;
-    stroke-width: 2pt;
+  circle {
+    fill: #f81242;
+    stroke-width: 0;
   }
-  .node:hover circle {
-    fill: orange;
+  path {
+    fill: #b27b86;
+    stroke-width: 0;
+  }
+  
+  circle:hover {
+    fill: #ff5c7e;
   }
   .link {
-    stroke: #999;
-    stroke-width: 2pt;
+    stroke: #b27b86;
+    stroke-width: 1.5pt;
   }
+
   button {
     background-color: gray;
     border: none;
@@ -41,15 +48,13 @@ style.
     background-color: white;
   }
   svg {
-    //background: gray;
-    //color: white;
-    font-family: sans-serif;
-    user-select: none;
+    font-family: inherit;
   }
 
 
 h1 graphs.
-button(onClick="drawGraph( dm.parse(document.querySelectorAll('textarea')[0].value) );") grab it
+button(onClick="drawGraph( dm.parse(document.querySelectorAll('textarea')[0].value) );") graph it
+
 
 textarea.
   here---there
@@ -59,4 +64,4 @@ textarea.
 
 script(src="../../script/library/d3.min.js")
 script(src="directed-markdown.js")
-script(src="force-directed-2.js")
+script(src="d3-force.js")
