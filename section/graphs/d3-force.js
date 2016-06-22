@@ -6,7 +6,7 @@ var drawGraph = function(graph) {
   var width = document.documentElement.clientWidth,
     height = document.documentElement.clientHeight/2;
 
-  var svg = d3.select("body").append("svg")
+  var svg = d3.select("#graph").append("svg")
     .attr("width", width)
     .attr("height", height);
 
