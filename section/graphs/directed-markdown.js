@@ -66,12 +66,15 @@ dm.parse = function(source) {
         match = /\s*,\s*/,
         connection = connections.split(match);
 
+      // @todo discard empty lines !!!!
+
       if (temp.indexOf(node) < 0 ) temp.push(node)
 
       for (var k = 0; k < connection.length; k++) {
-
-        plan.links.push({ "source": node, "target": connection[k] });
         if (temp.indexOf(connection[k]) < 0 ) temp.push(connection[k])   
+
+        plan.links.push({ "source": temp.indexOf(node), "target": temp.indexOf(connection[k]) });
+
 
       }
       //console.log(current);
@@ -86,4 +89,4 @@ dm.parse = function(source) {
 
 
 // test :
-// dm.parse(what)
+var how = dm.parse(what);
