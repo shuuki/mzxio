@@ -1,0 +1,10 @@
+{
+  "graph": {
+    "name": "Graph"  },
+  "progress": {
+    "name": "Progress"
+  },
+  "statement": {
+    "name": "Artist Statement"
+  }
+}
