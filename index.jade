@@ -1,11 +1,10 @@
 != partial("_nav")
 
 #intro.fullHeight.noPrint
-	#category
-		ul
-			//li: span.vox-information
-			for thing, slug in public.section._data
-				li: a(href="section/#{slug}") #{thing.name}
+	section#category
+		h6 Directory
+		for thing, slug in public.section._data
+			p: a(href="section/#{slug}") #{thing.name}
 	#splash MZXIO	
 	//Σ
 

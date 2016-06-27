@@ -1,10 +1,12 @@
 {
-  "graph": {
-    "name": "Graph"  },
+  "here": {
+    "name": "You are here"  },
+  "graphs": {
+    "name": "Graphs"  },
   "progress": {
     "name": "Progress"
   },
   "statement": {
-    "name": "Artist Statement"
+    "name": "Artist statement"
   }
 }
