@@ -3,9 +3,12 @@
     for image in public.section.you_are_here._contents
       .swiper-slide
         //p what happens if.....
-        img(src="section/you_are_here/#{image}")
+        img(data-src="section/you_are_here/#{image}").swiper-lazy
+        .swiper-lazy-preloader.swiper-lazy-preloader-white
   .swiper-button-next
   .swiper-button-prev
+
+
 
 script.
   var swiper = new Swiper('.swiper-container', {
@@ -18,6 +21,8 @@ script.
     scrollbarHide: true,
     slidesPerView: 'auto',
     spaceBetween: 18,
+    preloadImages: false,
+    lazyLoading: true,
     //autoplay: 30000,
     //autoplayDisableOnInteraction: true
   });

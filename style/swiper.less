@@ -1,5 +1,6 @@
 .swiper-container {
 	width: 100%;
+	height: 100%;
 }
 .swiper-slide {
 	background-color: black;
@@ -7,6 +8,7 @@
 	font-size: 1rem;
 	max-width: 36em;
 	width: 70%;
+	text-align: center;
 	transition: all 180ms ease-in-out;
 
   /* Center slide text vertically */
@@ -60,4 +62,38 @@
 }
 .swiper-button-next:active, .swiper-container-rtl .swiper-button-prev:active {
 	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23feeb17'%2F%3E%3C%2Fsvg%3E");
+}
+
+
+
+
+.swiper-lazy-preloader {
+	background-color: magenta;
+	border-radius: 50%;
+	color: white;
+	line-height: 2em;
+	height: 2em;
+	width: 2em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	text-align: center;
+	transform: translate(-50%,-50%);
+	animation: swiper-preloader-breathe 4s steps(30, end) infinite;
+	  z-index: 10;
+}
+
+.swiper-lazy-preloader:after {
+	display: none;
+}
+
+
+@keyframes swiper-preloader-breathe {
+	50% {
+		opacity: 0.2;
+	}
+  100% {
+    opacity: 0.9;
+  }
 }
