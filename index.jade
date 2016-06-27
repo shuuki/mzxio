@@ -1,9 +1,12 @@
+!= partial("_nav")
 
 #intro.fullHeight.noPrint
-	//ul///for thing, slug in public.section._data///li: a(href="section/#{slug}") #{thing.name}
-	#splash MZXIO
-
-	
+	#category
+		ul
+			//li: span.vox-information
+			for thing, slug in public.section._data
+				li: a(href="section/#{slug}") #{thing.name}
+	#splash MZXIO	
 	//Σ
 
 #content.fullHeight
