@@ -1,11 +1,12 @@
+
 section
   h1 Progress.
 
 section#progress
-    - var count = 0
-    for entry in public.section.progress._data  
-      - count++
-      p(id=entry.time) #{count}. #{entry.title}
+  - var count = 0
+  for entry in public.section.progress._data  
+    - count++
+    p(id=entry.time) #{count}. #{entry.title}
 
 section.interstice
   #chart
