@@ -1,13 +1,24 @@
 != partial("_nav")
 
+
+
 #intro.fullHeight.noPrint
 	section#category
 		h6 Directory
 		for thing, slug in public.section._data
-			p: b  #{thing.name}
+			p: b #{thing.name}
 			//p: a(href="section/#{slug}") #{thing.name}
+
+		ul: each value, key in public.section
+				if (['_contents', '_data'].indexOf(key) == -1)
+						li: a(href="section/#{ key }")= key
+
 	#splash MZXIO	
 	//Σ
+
+
+
+
 
 #content.fullHeight
 	!= partial("section/front")
