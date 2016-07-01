@@ -4,10 +4,10 @@
   .page.cover
     h1.centered ODESSA
 
-  - var pageNumber = 0
+  - var count = 0
   for entry, slug in public.section.odessa._data 
-    - pageNumber++
+    - count++
     .page
-      p #{pageNumber}.
+      p #{count}.
       h3 #{entry.title}
       != partial(slug)
