@@ -1,4 +1,4 @@
-<section><h1>Progress.</h1></section><section id="progress"><p id="20160618">1. Wouldn't that be somethin'?</p><p id="20160619">2. No patience. Gluttonous.</p><p id="20160620">3. Surrealists' so and so.</p><p id="20160621">4. Making things on phones.</p><p id="20160622">5. Don't look at the elephant.</p><p id="20160623">6. Parting kisses at the corner.</p><p id="20160624">7. Pulling at threads, ripping the tear.</p><p id="20160625">8. Swift river currents.</p><p id="20160626">9. Putting things in order.</p><p id="20160627">10. I miss that stupid couch.</p><p id="20160628">11. How did it come to this?</p><p id="20160628">12. At the end of the world, be polite. Also, fight back.</p><p id="20160629">13. I don't remember my destiny now. It was good.</p><p id="20160630">14. Roads from here go to there.</p><p id="20160701">15. Too many voices. Too many sounds.</p></section><section class="interstice"><div id="chart"><div class="centered"><h4>6.5% </h4><p><b>15 of 216</b></p></div></div></section><script>// make data
+// make data
 
 function sequence(steps, complete) {
   var days = [];
@@ -69,4 +69,3 @@ function type(d) {
   d.day = +d.day;
   return d;
 }
-</script>

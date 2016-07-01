@@ -1,4 +1,4 @@
-<section id="statement" class="fullHeight"><h1 class="annihilation">Artist statement.</h1><p><a onClick="location.reload()" class="button">Reset</a></p><p class="annihilation">For at least fifty thousand years, human beings carved familiar shapes into whatever material they could find. The artist continues in this grand tradition.</p><p class="annihilation">Art seeks being in non-being, thing-ness from no-thing-ness. Life keeps the lights on, sweeps the floors, tells the stories. Life emerged as glitch, a rounding error as organic molecules sought repose. Thus the artist embraces both logic and disorder; the insane, transcendent. Here, now; past, future; history, imagination: no being is too small, no story irrelevant. Life is the audience, creation is the canvas. The artist peers into spaces between space, seeking seeds of creation.</p><p class="annihilation">All may eventually come to dust, all the same. Entropy consumes. It keeps going. There won't be any turning back. When you look behind you, you'll see it catching up. There is no other way. Venture deep into oblivion. Go as far as you dare. Bring back inspiration. Even in the dying light of the void, the artist writes its name upon the wall.</p><p class="annihilation">Art is but an affirmation: not dead yet. </p></section><!--script(src="../script/annihilation.js")--><script>/***
+/***
 SELF ANNIHILATION
 */
 
@@ -56,4 +56,4 @@ sim.stop = function() {
 // fire off the SIM
 sim(function() {
   thing();
-}, 250);</script>
+}, 250);
