@@ -1,47 +1,16 @@
 
+
+
 nav.noPrint
 	logo(title="43210"): a(href="/") MZXIO
 	links
 		ul
-			li
-				a(href="section/here" title="HERE")
-					span.label HERE
-					span.vox-inked-right
-					//span.vox-diamond
-			//li
-				a(href="section/graphs" title="GRAPHS")
-					span.label GRAPHS
-					span.vox-potential
-			//li
-				a(href="section/demo-jade" title="DEMO JADE")
-					span.label DEMO JADE
-					span.vox-category
-			//li
-				a(href="section/sitemap" title="SITEMAP")
-					span.label SITEMAP
-					span.vox-tag
-			//li
-				a(href="section/keypad" title="KEYPAD")
-					span.label KEYPAD
-					span.vox-category
-			//li
-				a(href="section/manuscript/contents" title="BOOK")
-					span.label BOOK
-					span.vox-fire
-			//li
-				a(href="section/odessa" title="ODESSA")
-					span.label ODESSA
-					span.vox-unknown
-			li
-				a(href="section/progress" title="PROGRESS")
-					span.label PROGRESS
-					span.vox-inked-left
-			//li
-				a(href="section/twitter" title="MORE OPTIONS")
-					span.label MORE OPTIONS
-					span.vox-twitter
-					//span.vox-more
-			li
-				a(href="section/statement" title="STATEMENT")
-					span.label STATEMENT
-					span.vox-info
+			mixin bar(url, title, icon)
+				li
+					a(href=url title=title)
+						span.label=title
+						span(class=icon)
+
+			+bar("section/here", "HERE", "vox-inked-right")
+			+bar("section/progress", "PROGRESS", "vox-inked-left")
+			+bar("section/statement", "ARTIST STATEMENT", "vox-info")
