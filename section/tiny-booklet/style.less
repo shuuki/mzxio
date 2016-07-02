@@ -13,10 +13,6 @@
   * {
     box-sizing: border-box;
   }
-  body {
-    font-size: 10pt;
-    line-height: 1.45;
-  }
   .page {
     height: @print-height;
     box-sizing: border-box;
@@ -65,10 +61,6 @@
 //////////////////////////////////
 
 @media screen {
-  body {
-    padding-top: @print-spread-spacing;
-    -webkit-font-smoothing: anti-aliased;
-  }
   .book {
     margin: 0 auto;
     max-width: @print-spread-width;
@@ -87,19 +79,6 @@
   }
   img {
     opacity: 0.8;
-  }
-  a {
-    display: block;
-    position: fixed;
-    top: 10%;
-    left: 0;
-    background-color: @color-ink;
-    padding: @print-bleed;
-    color: @color-paper;
-    text-decoration: none;
-    font-family: @font-header;
-    transform: translateY(-50%);
-    z-index: 999;
   }
   .inverted {
     background-color: @color-ink-preview;
@@ -129,7 +108,7 @@
     background-color: @color-ink;
     color: @color-paper;
   }
-  .noprint {
+  .noprint, .noPrint {
     display: none;
   }
 }
