@@ -1,18 +1,15 @@
-head
-  meta(name="viewport" content="width=device-width, initial-scale=1")
-
 style
   include graphs.css
 
-h1 graphs.
+h1 Graphs.
 
+button(onClick="drawGraph( dm.parse(document.querySelectorAll('textarea')[0].value) );") graph it
 
 textarea.
   here --- there, everywhere
   there --- everywhere
   everywhere --- crossroads
   crossroads --- somewhere, nowhere
-button(onClick="drawGraph( dm.parse(document.querySelectorAll('textarea')[0].value) );") graph it
 
 
 #graph

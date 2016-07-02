@@ -1,0 +1,16 @@
+circle {
+  fill: #f81242;
+  stroke-width: 0;
+}
+path {
+  fill: #b27b86;
+  stroke-width: 0;
+}
+
+circle:hover {
+  fill: #ff5c7e;
+}
+.link {
+  stroke: #b27b86;
+  stroke-width: 1.5pt;
+}
