@@ -1,6 +1,6 @@
 doctype
 html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
-	head			
+	head
 		block meta
 			title #{title}
 			meta(charset="utf-16")
@@ -9,10 +9,18 @@ html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 			meta(name="viewport" content="width=device-width, initial-scale=1")
 
 		block preload
+			//script(src="../../script/library/jquery-2.2.0.min.js")
 
 		block styles
 			//link(rel="stylesheet" href="../../style/index.css")
 
 	body
+		#loader(style="position: fixed; top: 0; right: 0;") ...
 		include _nav
 		!= yield
+		
+		script.
+			document.addEventListener("DOMContentLoaded", function(event) {
+				console.log("loaded")
+				document.querySelectorAll("#loader")[0].style.display = "none";
+			});
