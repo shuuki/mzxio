@@ -68,19 +68,19 @@
 
 
 .swiper-lazy-preloader {
-	background-color: magenta;
+	background-color: rgb(232,232,232);
 	border-radius: 50%;
 	color: white;
 	line-height: 2em;
-	height: 2em;
-	width: 2em;
+	height: 1em;
+	width: 1em;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	margin: 0;
 	text-align: center;
 	transform: translate(-50%,-50%);
-	animation: swiper-preloader-breathe 4s steps(30, end) infinite;
+	animation: swiper-preloader-breathe 0.5s steps(30, end) infinite;
 	  z-index: 10;
 }
 
@@ -92,8 +92,7 @@
 @keyframes swiper-preloader-breathe {
 	50% {
 		opacity: 0.2;
+		width: 0.9em;
+		height: 0.9em
 	}
-  100% {
-    opacity: 0.9;
-  }
 }
