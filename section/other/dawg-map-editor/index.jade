@@ -1,0 +1,135 @@
+body(onload='newMap();')
+
+#editor
+
+	#field
+		#intro
+			.glyph.dawgverse-dawg
+		form(name='doggie')
+			table#map
+			#controls
+				button(type='button' onsubmit='return false' onclick='saveMap(this.form);') Save
+				//button(type='button' onsubmit='return false' onclick='newMap();') New
+				//button(type='') Load
+				button(type='reset' onclick='clearForm();') Clear
+			textarea(name='scratch' rows='12' cols='22' onclick='this.select();')#scratchpad
+		//table#navigation
+			tr
+				td(colspan='3'): button.glyph ↑
+			tr
+				td: button.glyph ←
+				td // map here							
+				td: button.glyph →
+			tr
+				td(colspan='3'): button.glyph ↓
+
+	#reference
+		table
+			tbody
+				tr
+					td(colspan='3'): small Instructions: click on a map tile on the grid to select it. Type the key corresponding to the glyph you want to place.
+			thead
+				tr
+					td Tile Name
+					td Key
+					td Glyph
+			tbody
+				tr
+					td cement
+					td D
+					td: span.glyph D
+				tr
+					td dead-tree
+					td h
+					td: span.glyph h
+				tr
+					td tracks
+					td ?
+					td: span.glyph ?
+				tr
+					td more-bones
+					td %
+					td: span.glyph %
+				tr
+					td bones
+					td &
+					td: span.glyph &
+				tr
+					td stuff
+					td $
+					td: span.glyph $
+				tr
+					td sand
+					td .
+					td: span.glyph .
+				tr
+					td dirt
+					td ;
+					td: span.glyph ;
+				tr
+					td short-grass
+					td ,
+					td: span.glyph ,
+				tr
+					td tall-grass
+					td /
+					td: span.glyph /
+				tr
+					td reeds
+					td i
+					td: span.glyph i
+				tr
+					td aspen
+					td H
+					td: span.glyph H
+				tr
+					td juniper
+					td Y
+					td: span.glyph Y
+				tr
+					td oak
+					td L
+					td: span.glyph L
+				tr
+					td pine
+					td T
+					td: span.glyph T
+				tr
+					td spruce
+					td A
+					td: span.glyph A
+				tr
+					td block-5
+					td @
+					td: .glyph @
+				tr
+					td dawg
+					td Q
+					td: .glyph Q
+				tr
+					td block-4
+					td e
+					td: .glyph e
+				tr
+					td block-3
+					td c
+					td: .glyph c
+				tr
+					td block-2
+					td d
+					td: .glyph d
+				tr
+					td block-1
+					td b
+					td: .glyph b
+				tr
+					td block-0
+					td f
+					td: .glyph f
+				tr
+					td block-null
+					td a
+					td: .glyph a
+				tr
+					td(colspan='3')
+						a(href='mailto:max@somethingformed.com') let me know if something's missing.
