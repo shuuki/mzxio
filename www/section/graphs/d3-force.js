@@ -57,7 +57,7 @@ var drawGraph = function(graph) {
       .text(function(d) { return d.name; })
       .attr("font-family", "inherit")
       .attr("font-size", "0.5em")
-      .attr("fill", "white")
+      //.attr("fill", "white")
       .attr("dy", "0.35em")
       .attr("dx", "2em");
 

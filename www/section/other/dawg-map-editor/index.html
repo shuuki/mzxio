@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>dawg map editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/reset.css">
+
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    
+<body onload="newMap();"></body>
+<div id="editor">
+  <div id="field">
+    <div id="intro">
+      <div class="glyph dawgverse-dawg"></div>
+    </div>
+    <form name="doggie">
+      <table id="map"></table>
+      <div id="controls">
+        <button type="button" onsubmit="return false" onclick="saveMap(this.form);">Save</button>
+        <!--button(type='button' onsubmit='return false' onclick='newMap();') New-->
+        <!--button(type='') Load-->
+        <button type="reset" onclick="clearForm();">Clear</button>
+      </div>
+      <textarea name="scratch" rows="12" cols="22" onclick="this.select();" id="scratchpad"></textarea>
+    </form>
+    <!--table#navigation
+    tr
+    	td(colspan='3'): button.glyph ↑
+    tr
+    	td: button.glyph ←
+    	td // map here							
+    	td: button.glyph →
+    tr
+    	td(colspan='3'): button.glyph ↓
+    
+    -->
+  </div>
+  <div id="reference">
+    <table>
+      <tbody>
+        <tr>
+          <td colspan="3"><small>Instructions: click on a map tile on the grid to select it. Type the key corresponding to the glyph you want to place.</small></td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr>
+          <td>Tile Name</td>
+          <td>Key</td>
+          <td>Glyph</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>cement</td>
+          <td>D</td>
+          <td><span class="glyph">D</span></td>
+        </tr>
+        <tr>
+          <td>dead-tree</td>
+          <td>h</td>
+          <td><span class="glyph">h</span></td>
+        </tr>
+        <tr>
+          <td>tracks</td>
+          <td>?</td>
+          <td><span class="glyph">?</span></td>
+        </tr>
+        <tr>
+          <td>more-bones</td>
+          <td>%</td>
+          <td><span class="glyph">%</span></td>
+        </tr>
+        <tr>
+          <td>bones</td>
+          <td>&</td>
+          <td><span class="glyph">&</span></td>
+        </tr>
+        <tr>
+          <td>stuff</td>
+          <td>$</td>
+          <td><span class="glyph">$</span></td>
+        </tr>
+        <tr>
+          <td>sand</td>
+          <td>.</td>
+          <td><span class="glyph">.</span></td>
+        </tr>
+        <tr>
+          <td>dirt</td>
+          <td>;</td>
+          <td><span class="glyph">;</span></td>
+        </tr>
+        <tr>
+          <td>short-grass</td>
+          <td>,</td>
+          <td><span class="glyph">,</span></td>
+        </tr>
+        <tr>
+          <td>tall-grass</td>
+          <td>/</td>
+          <td><span class="glyph">/</span></td>
+        </tr>
+        <tr>
+          <td>reeds</td>
+          <td>i</td>
+          <td><span class="glyph">i</span></td>
+        </tr>
+        <tr>
+          <td>aspen</td>
+          <td>H</td>
+          <td><span class="glyph">H</span></td>
+        </tr>
+        <tr>
+          <td>juniper</td>
+          <td>Y</td>
+          <td><span class="glyph">Y</span></td>
+        </tr>
+        <tr>
+          <td>oak</td>
+          <td>L</td>
+          <td><span class="glyph">L</span></td>
+        </tr>
+        <tr>
+          <td>pine</td>
+          <td>T</td>
+          <td><span class="glyph">T</span></td>
+        </tr>
+        <tr>
+          <td>spruce</td>
+          <td>A</td>
+          <td><span class="glyph">A</span></td>
+        </tr>
+        <tr>
+          <td>block-5</td>
+          <td>@</td>
+          <td>
+            <div class="glyph">@</div>
+          </td>
+        </tr>
+        <tr>
+          <td>dawg</td>
+          <td>Q</td>
+          <td>
+            <div class="glyph">Q</div>
+          </td>
+        </tr>
+        <tr>
+          <td>block-4</td>
+          <td>e</td>
+          <td>
+            <div class="glyph">e</div>
+          </td>
+        </tr>
+        <tr>
+          <td>block-3</td>
+          <td>c</td>
+          <td>
+            <div class="glyph">c</div>
+          </td>
+        </tr>
+        <tr>
+          <td>block-2</td>
+          <td>d</td>
+          <td>
+            <div class="glyph">d</div>
+          </td>
+        </tr>
+        <tr>
+          <td>block-1</td>
+          <td>b</td>
+          <td>
+            <div class="glyph">b</div>
+          </td>
+        </tr>
+        <tr>
+          <td>block-0</td>
+          <td>f</td>
+          <td>
+            <div class="glyph">f</div>
+          </td>
+        </tr>
+        <tr>
+          <td>block-null</td>
+          <td>a</td>
+          <td>
+            <div class="glyph">a</div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3"><a href="mailto:max@somethingformed.com">let me know if something's missing.</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+    
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
