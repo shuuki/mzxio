@@ -1,31 +1,19 @@
+// this load order is bad, needs to come in before index css
 
-append preload
-  script(src="script/library/swiper-3.3.1.min.js")
+link(rel="stylesheet" href="../../style/library/swiper-3.3.1.min.css")
+script(src="../../script/library/swiper-3.3.1.min.js")
+
 
 .swiper-container
   .swiper-wrapper
     for image in public.section.here.gallery._contents
       .swiper-slide
         //p what happens if.....
-        img(data-src="section/here/gallery/#{image}").swiper-lazy
+        img(src="../../section/here/gallery/#{image}").swiper-lazy
         .swiper-lazy-preloader.swiper-lazy-preloader-white
   .swiper-button-next
   .swiper-button-prev
 
 
-script.
-  var swiper = new Swiper('.swiper-container', {
-    centeredSlides: true,
-    grabCursor: true,
-    keyboardControl: true,
-    loop: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    scrollbarHide: true,
-    slidesPerView: 'auto',
-    spaceBetween: 18,
-    preloadImages: false,
-    lazyLoading: true,
-    //autoplay: 30000,
-    //autoplayDisableOnInteraction: true
-  });
+script
+  include swiper-defaults.js
