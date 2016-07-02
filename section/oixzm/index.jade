@@ -1,8 +1,45 @@
-p Key: 0 = O, 1 = I, 2 = X, 3 = Z, 4 = M
+h1 Oiximal.
+
 
 form#conversion(action="javascript: convert();")
 	input#toConvert(type="number" size="6")
-	p: button(type="submit") convert
+	button(type="submit") convert
 
 section
 	#converted
+
+
+section
+	h3 Key
+
+	p Use the box to convert dec to oix. Or use oix(count) in console for more options.
+
+	table
+		tr
+			td 0
+			td O
+			td
+		tr
+			td 1
+			td I
+			td
+		tr
+			td 2
+			td X
+			td V, L
+		tr
+			td 3
+			td Z
+			td N, K
+		tr
+			td 4
+			td M
+			td W, Σ
+		tr
+			td Decimal
+			td Oiximal
+			td Alternate
+
+
+script
+	include oixzm.js
