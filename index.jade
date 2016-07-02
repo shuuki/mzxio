@@ -1,26 +1,25 @@
-
 #intro.fullHeight.noPrint
+
+	h1#splash ΣNX•IO
+		//117.5
+
 	section#category
-		h6 Directory
+		h3 Directory
 		ul: each value, key in public.section
 			if (['_contents', '_data'].indexOf(key) == -1)
 				li: a(href="section/#{key}")= key
 
-	#splash MZXIO	
-	//Σ
+
 
 #content.fullHeight
 	//h4.centered (this space intentionally left blank)
 
 	.centered
 		//h4 MZXIO
-		//p: b Art by Roen Stern
-			// a(href="https://twitter.com/mzxio" target="_blank") @mzxio
-			// p in association with 
-			// a(href="http://somethingformed.com") Something Formed Media	
-		//p: small (MZXIO = 43210)
+			//a(href="https://twitter.com/mzxio" target="_blank") @mzxio
+			p in association with 
+				a(href="http://somethingformed.com") SF*	
 
 		#dedication(style="opacity: 0.4;")
 			h5 for you 
-				//			luminous starstuff, bless you. 
-				//																		 #sixwords <2
+				//			luminous starstuff, bless you. #sixwords <2
