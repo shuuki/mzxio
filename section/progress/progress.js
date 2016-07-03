@@ -21,7 +21,7 @@ function sequence(steps, complete) {
 
 // roll the data
 
-var data  = sequence(216, $("#progress").children().length||1);
+var data  = sequence(216, document.querySelectorAll("#progress")[0].children.length||1);
 
 
 // d3
@@ -31,7 +31,7 @@ var width = 280,
   radius = Math.min(width, height) / 2;
 
 var color = d3.scale.ordinal()
-  .range(["rgb(232,232,232)","rgb(42,42,42)"]);
+  .range(["black", "white"]);//(["rgb(42,42,42)","rgb(232,232,232)"]);
 
 var arc = d3.svg.arc()
   .outerRadius(radius)

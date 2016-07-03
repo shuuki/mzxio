@@ -9,7 +9,7 @@ section#progress
     p(id=entry.time) #{count}. #{entry.title}
 
 section.interstice
-  #chart
+  #chart.centered
     - var done = ((count-1)/216*100).toFixed(1)
     .centered
       h4 #{done}% 
