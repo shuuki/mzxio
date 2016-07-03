@@ -1,17 +1,16 @@
 circle {
-  fill: black;
+  fill: #feeb17;
   /*fill: #f81242;*/
   stroke-width: 0;
+}
+circle:hover {
+  fill: gray;
+  /*fill: #ff5c7e;*/
 }
 path {
   fill: silver;
   /*fill: #b27b86;*/
   stroke-width: 0;
-}
-
-circle:hover {
-  fill: gray;
-  /*fill: #ff5c7e;*/
 }
 .link {
   stroke: silver;

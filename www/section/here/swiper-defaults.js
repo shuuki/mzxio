@@ -8,9 +8,8 @@ var swiper = new Swiper('.swiper-container', {
   scrollbarHide: true,
   slidesPerView: 'auto',
   spaceBetween: 18
-  //,
   //preloadImages: false,
-  //lazyLoading: true,
+  //lazyLoading: true
   //autoplay: 30000,
   //autoplayDisableOnInteraction: true
 });

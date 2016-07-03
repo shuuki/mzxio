@@ -1,6 +1,110 @@
-<!DOCTYPE html><html itemscope itemtype="http://schema.org/CreativeWork" lang="en"><head><title>MZXIO</title><meta charset="utf-16"><meta description="ART WEBSITE"><link rel="icon" type="image/x-icon" href="favicon.ico"><meta name="viewport" content="width=device-width, initial-scale=1"><!--script(src="../../script/library/jquery-2.2.0.min.js")--><!--link(rel="stylesheet" href="../../style/index.css")--></head><body><div id="loader" style="position: fixed; top: 0; right: 0;">...</div><nav class="noPrint"><logo title="43210"><a href="/">MZXIO</a></logo><links><!--ul+bar("section/here", "HERE", "vox-inked-right")
+<!DOCTYPE html><html itemscope itemtype="http://schema.org/CreativeWork" lang="en"><head><title>MZXIO</title><meta charset="utf-16"><meta description="ART WEBSITE"><link rel="icon" type="image/x-icon" href="favicon.ico"><meta name="viewport" content="width=device-width, initial-scale=1"><style>#loader { height: 1em; width: 1em; text-align: center; position: fixed; top: 0; right: 0; background: magenta;}
+</style><script>document.addEventListener("DOMContentLoaded", function(event) {
+	console.log("loaded")
+	document.querySelectorAll("#loader")[0].style.display = "none";
+});
+</script><link rel="stylesheet" href="../../style/base.css"><link rel="stylesheet" href="../../style/index.css"><!--script(src="../../script/library/jquery-2.2.0.min.js")-->
+</head><body><div id="loader">...</div><nav class="noPrint"><logo title="43210"><a href="/">MZXIO</a></logo><links><!--ul+bar("section/here", "HERE", "vox-inked-right")
 +bar("section/progress", "PROGRESS", "vox-inked-left")
-+bar("section/statement", "ARTIST STATEMENT", "vox-info")--></links></nav><section><h1>You are here.</h1><!--iframe(src="section/nsfw")--></section><!-- this load order is bad, needs to come in before index css--><link rel="stylesheet" href="../../style/library/swiper-3.3.1.min.css"><script src="../../script/library/swiper-3.3.1.min.js"></script><div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide"><!--p what happens if.....--><img src="../../section/here/gallery/n2gooouyx61tro3g4o1_1280.jpg" class="swiper-lazy"><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div><div class="swiper-slide"><!--p what happens if.....--><img src="../../section/here/gallery/n2gooouyx61tro3g4o2_1280.jpg" class="swiper-lazy"><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div><div class="swiper-slide"><!--p what happens if.....--><img src="../../section/here/gallery/n2gooouyx61tro3g4o3_1280.jpg" class="swiper-lazy"><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div><div class="swiper-slide"><!--p what happens if.....--><img src="../../section/here/gallery/n2gp78dofg1tro3g4o1_1280.jpg" class="swiper-lazy"><div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div></div></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div></div><script>var swiper = new Swiper('.swiper-container', {
++bar("section/statement", "ARTIST STATEMENT", "vox-info")--></links></nav><section><h1>You are here.</h1><!--iframe(src="section/nsfw")--></section><div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide"><!--p what happens if.....--><img data-src="../../section/here/gallery/n2gooouyx61tro3g4o1_1280.jpg" class="swiper-lazy"><!--.swiper-lazy-preloader.swiper-lazy-preloader-white--></div><div class="swiper-slide"><!--p what happens if.....--><img data-src="../../section/here/gallery/n2gooouyx61tro3g4o2_1280.jpg" class="swiper-lazy"><!--.swiper-lazy-preloader.swiper-lazy-preloader-white--></div><div class="swiper-slide"><!--p what happens if.....--><img data-src="../../section/here/gallery/n2gooouyx61tro3g4o3_1280.jpg" class="swiper-lazy"><!--.swiper-lazy-preloader.swiper-lazy-preloader-white--></div><div class="swiper-slide"><!--p what happens if.....--><img data-src="../../section/here/gallery/n2gp78dofg1tro3g4o1_1280.jpg" class="swiper-lazy"><!--.swiper-lazy-preloader.swiper-lazy-preloader-white--></div></div><div class="swiper-button-next swiper-button-white"></div><div class="swiper-button-prev swiper-button-white"></div></div><style>.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	background-color: black;
+	line-height: 1.326;
+	font-size: 1rem;
+	max-width: 36em;
+	width: 70%;
+	text-align: center;
+	transition: opacity 180ms ease-in-out;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+}
+.swiper-slide-active {
+	opacity: 1;
+}
+.swiper-slide-next, .swiper-slide-prev {
+	opacity: 0.5;
+}
+
+.swiper-slide img {
+	width: 100%;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next, .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+	opacity: 0.5;
+	transition: all 120ms ease-in-out;
+}
+.swiper-button-prev:hover, .swiper-container-rtl .swiper-button-next:hover, .swiper-button-next:hover, .swiper-container-rtl .swiper-button-prev:hover {
+	opacity: 0.8;
+}
+.swiper-button-prev:active, .swiper-container-rtl .swiper-button-next:active, .swiper-button-next:active, .swiper-container-rtl .swiper-button-prev:active {
+	opacity: 1;
+}
+
+// default button svg
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23e8e8e8'%2F%3E%3C%2Fsvg%3E");
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23e8e8e8'%2F%3E%3C%2Fsvg%3E");
+}
+
+// alternate button color svg
+.swiper-button-prev:active, .swiper-container-rtl .swiper-button-next:active {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23feeb17'%2F%3E%3C%2Fsvg%3E");
+}
+.swiper-button-next:active, .swiper-container-rtl .swiper-button-prev:active {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23feeb17'%2F%3E%3C%2Fsvg%3E");
+}
+
+
+
+
+.swiper-lazy-preloader {
+	background-color: rgb(232,232,232);
+	border-radius: 50%;
+	color: white;
+	line-height: 2em;
+	height: 1em;
+	width: 1em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	text-align: center;
+	transform: translate(-50%,-50%);
+	animation: swiper-preloader-breathe 0.5s steps(30, end) infinite;
+	  z-index: 10;
+}
+
+.swiper-lazy-preloader:after {
+	display: none;
+}
+
+
+@keyframes swiper-preloader-breathe {
+	50% {
+		opacity: 0.2;
+		width: 0.9em;
+		height: 0.9em
+	}
+}
+</style><script>var swiper = new Swiper('.swiper-container', {
   centeredSlides: true,
   grabCursor: true,
   keyboardControl: true,
@@ -9,14 +113,12 @@
   prevButton: '.swiper-button-prev',
   scrollbarHide: true,
   slidesPerView: 'auto',
-  spaceBetween: 18
-  //,
-  //preloadImages: false,
-  //lazyLoading: true,
+  spaceBetween: 18,
+  preloadImages: false,
+  lazyLoading: true
   //autoplay: 30000,
   //autoplayDisableOnInteraction: true
-});
-</script><section class="interstice"><blockquote> <p>In the void, desert, frontier. </p><p>Where and when? An infinite desolate nothing.</p><p>Your choices make this land. Potential is there, just out of reach. Life is hidden, revealed if you search.</p><!-- 451451--><!--/ IOZMXIZOI--><cite>— IMO XM XOI</cite></blockquote></section><script>document.addEventListener("DOMContentLoaded", function(event) {
-	console.log("loaded")
-	document.querySelectorAll("#loader")[0].style.display = "none";
-});</script></body></html>
+});</script><section class="interstice"><blockquote>In the void, desert, frontier. Where and when? An infinite desolate nothing. Your choices make this land. Potential is there, just out of reach. Life is hidden, revealed if you search.<!-- 451451--><!--/ IOZMXIZOI--><cite>IMO XM XOI</cite></blockquote></section><script>//
+
+console.log("base")
+</script></body></html>
