@@ -1,13 +1,15 @@
-h1 Oiximal.
+section
+	h1 Oiximal.
 
-
-form#conversion(action="javascript: convert();")
-	input#toConvert(type="number" size="6")
-	button(type="submit") convert
+	form#conversion(action="javascript: convert();")
+		input#toConvert(type="number" size="6")
+		button(type="submit") convert
 
 section
-	#converted
+	code#converted
 
+script
+	include oixzm.js
 
 section
 	h3 Key
@@ -15,6 +17,10 @@ section
 	p Use the box to convert dec to oix. Or use oix(count) in console for more options.
 
 	table
+		tr
+			td Decimal
+			td Oiximal
+			td Alternate
 		tr
 			td 0
 			td O
@@ -35,11 +41,3 @@ section
 			td 4
 			td M
 			td W, Σ
-		tr
-			td Decimal
-			td Oiximal
-			td Alternate
-
-
-script
-	include oixzm.js
