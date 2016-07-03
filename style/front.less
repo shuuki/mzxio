@@ -1,7 +1,7 @@
 @import "variables";
 
 #intro {
-	background-color: rgba(42,42,42,0.9);
+	//background-color: rgba(42,42,42,0.9);
 	//background-image: url(images/palette-blur-0.jpg);
 	//background-color: fadeout(@light, 95%);
 	//background-image: url("images/IMG_9861-01.jpg");
@@ -10,7 +10,7 @@
 	//image-rendering: pixelated;// if you want pixels
 	background-position: 50% 30%;
 	background-size: cover;
-	image-rendering: pixelated;// if you want pixels
+	//image-rendering: pixelated;// if you want pixels
 	position: relative;
 	top: 0;
 	left: 0;
@@ -23,7 +23,7 @@
 
 #splash {
 	background-color: white;
-	opacity: 0.1;
+	opacity: 0.08;
 	background-image: linear-gradient(270deg, #11426f, #088082 23.8%, #2c8482 28.5%, #3a8182 28.5%, #608080 41.8%, #697d80 41.8%, #7f8080 51.8%, #867d80 51.8%, #8e7f84 54.9%, #998280 58.1%, #9e7e80 58.1%, #b68080 68.7%, #be7b7f 68.7%, #bf7c80 71.9%, #db887c 82.2%, #fdbd84);
 	// gradient scanner
 	//background-image: url("images/IMG_2021.gif");
@@ -35,18 +35,22 @@
 	background-size: 120%;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
-	font: 20vw/.85 @heading;
-	font-weight: 800;
+	//font: 20vw/.85 @heading;
+	font-size: 10vh;
+	//font-weight: 800;
+	display: inline-block;
 	letter-spacing: 0.05em;
-	text-align: center;
-	text-transform: uppercase;
+	margin: 0;
+	line-height: 1;
+	//text-align: center;
+	//text-transform: uppercase;
 	white-space: nowrap;
 	z-index: -1;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate(-50%, -50%);
-	transition: background 300ms ease-in-out;
+	transform: translate(-50%, -50%);// rotate(90deg);
+	//transition: background 300ms ease-in-out;
 	user-select: none;
 }
 

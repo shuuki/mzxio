@@ -1,28 +1,66 @@
 @import "variables";
 
+input {
+  background: fadeout(@main, 95%);
+  border: none;
+  border-left: 0.4em solid fadeout(@main, 75%);
+  color: inherit;
+  font-size: 1em;
+  font-family: @console;
+  outline: none;
+  padding: 0.5em;
+  &:hover {
+    border-color: @main;
+  }  
+  &:focus {
+    border-color: @accent;
+  }
+}
+
+
 textarea {
-  background-color: #111;
+  margin: 2em 0;
+	padding: 1em;
+
+	background: fadeout(@main, 95%);
   color: inherit;
   width: 100%;
-  height: 16em;
+  min-height: 9em;
   resize: none;
   font-size: 1em;
   font-family: @console;
   border: none;
+  border-left: 0.4em solid fadeout(@main, 75%);
+  overflow-y: auto;
   outline: none;
   padding: 1em;
   margin: 0 auto;
+  &:hover {
+    border-color: @main;
+  }  
+  &:focus {
+    border-color: @accent;
+  }
 }
 
 button {
-  background-color: silver;
+  background-color: fadeout(@main, 70%);
   border: none;
   font-size: 1em;
+  font-weight: bold;
+  padding: 0 0.5em;
+  line-height: 2;
+  user-select: none;
   outline: none;
 }
 button:hover {
-  background-color: yellow;
+  background-color: @main;
+  color: @base;
 }
 button:active {
-  background-color: white;
+  background-color: @accent;
+}
+
+iframe {
+  border: none;
 }

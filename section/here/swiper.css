@@ -9,7 +9,7 @@
 	max-width: 36em;
 	width: 70%;
 	text-align: center;
-	transition: all 180ms ease-in-out;
+	transition: opacity 180ms ease-in-out;
 
   /* Center slide text vertically */
   display: -webkit-box;
