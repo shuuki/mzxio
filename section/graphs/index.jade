@@ -1,18 +1,18 @@
-style
-  include graphs.css
+section
+  h1 Graphs.
 
-h1 Graphs.
+  button(onClick="drawGraph( dm.parse(document.querySelectorAll('textarea')[0].value) );") graph it
 
-
-textarea.
-  here --- there, everywhere
-  there --- everywhere
-  everywhere --- crossroads
-  crossroads --- somewhere, nowhere
-
-button(onClick="drawGraph( dm.parse(document.querySelectorAll('textarea')[0].value) );") graph it
+  textarea.
+    here --- there, everywhere
+    there --- everywhere
+    everywhere --- crossroads
+    crossroads --- somewhere, nowhere
 
 #graph
+
+style
+  include graphs.css
 
 script
   include ../../script/library/d3.min.js
