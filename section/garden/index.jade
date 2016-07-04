@@ -1,0 +1,11 @@
+- var codes = [], output = ""
+
+for area, slug in public.section.garden._data
+  - codes.push(area.code)
+  - output += area.code + " "
+
+
+section
+  h1 Codes.
+
+  p= output
