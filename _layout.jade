@@ -9,7 +9,7 @@ html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 			meta(name="viewport" content="width=device-width, initial-scale=1")
 
 		style.
-			#loader { height: 1em; width: 1em; text-align: center; position: fixed; top: 0; right: 0; background: magenta;}
+			#loader { height: 1em; width: 1em; text-align: center; position: fixed; top: 0; right: 0; background: magenta; z-index: 10; }
 
 		script.
 			document.addEventListener("DOMContentLoaded", function(event) {
@@ -20,10 +20,13 @@ html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 		block styles
 			link(rel="stylesheet" href="../../style/base.css")
 			link(rel="stylesheet" href="../../style/index.css")
+			
 
 		block preload
 			//script(src="../../script/library/jquery-2.2.0.min.js")
-
+			link(rel="stylesheet" href="../../style/library/swiper-3.3.1.min.css")
+			script(src="../../script/library/swiper-3.3.1.min.js")
+			
 
 	body
 		#loader ...
