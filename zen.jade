@@ -1,0 +1,33 @@
+input(type="button" value="Click Me" id="button")
+input(type="text" value="This is some text" id="text")
+
+table
+  tr
+    td: input(type="button" value="0" class="pad" id="")
+    td: input(type="button" value="1" class="pad" id="")
+    td: input(type="button" value="2" class="pad" id="")
+    td: input(type="button" value="3" class="pad" id="")
+  tr
+    td: input(type="button" value="4" class="pad" id="")
+    td: input(type="button" value="5" class="pad" id="")
+    td: input(type="button" value="6" class="pad" id="")
+    td: input(type="button" value="7" class="pad" id="")
+  tr
+    td: input(type="button" value="8" class="pad" id="")
+    td: input(type="button" value="9" class="pad" id="")
+    td: input(type="button" value="A" class="pad" id="")
+    td: input(type="button" value="B" class="pad" id="")
+  tr
+    td: input(type="button" value="C" class="pad" id="")
+    td: input(type="button" value="D" class="pad" id="")
+    td: input(type="button" value="E" class="pad" id="")
+    td: input(type="button" value="F" class="pad" id="")
+
+
+script.
+  document.getElementById("button").addEventListener('click', function () {
+    
+    var text = document.getElementById('text');
+    text.value = (text.value + ' after clicking');
+    console.log(text.value)
+  });
