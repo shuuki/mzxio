@@ -1,40 +1,4 @@
 {
-  "here": {
-    "name": "You are here",
-    "category": ""
-  },
-  "graphs": {
-    "name": "Graphs",
-    "category": ""
-  },
-  "progress": {
-    "name": "Progress",
-    "category": ""
-  },
-  "statement": {
-    "name": "Artist statement",
-    "category": ""
-  },
-  "odessa": {
-    "name": "Odessa",
-    "category": ""
-  },
-  "garden": {
-    "name": "Garden",
-    "category": ""
-  },
-  "blobs": {
-    "name": "Blob engine",
-    "category": ""
-  },
-  "": {
-    "name": "",
-    "category": ""
-  },
-  "": {
-    "name": "",
-    "category": ""
-  },
   "": {
     "name": "",
     "category": ""
