@@ -25,9 +25,14 @@ table
 
 
 script.
-  document.getElementById("button").addEventListener('click', function () {
-    
-    var text = document.getElementById('text');
-    text.value = (text.value + ' after clicking');
-    console.log(text.value)
-  });
+  var buttons = document.getElementsByClassName('pad');
+  var text = document.getElementById('text');
+
+  for (b in buttons) {
+    if (buttons.hasOwnProperty(b)) {
+      buttons[b].addEventListener("click", function() {
+        console.log(this.value);
+        text.value = (text.value + this.value);
+      }, false);
+    }
+  }
