@@ -1,0 +1,10 @@
+.book {
+  .page {
+    .cover {}
+    .bleed {}
+    .inverted {}
+  }
+}
+
+.noprint {}
+.noscreen {}
