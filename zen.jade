@@ -1,28 +1,29 @@
-input(type="button" value="Click Me" id="button")
-input(type="text" value="This is some text" id="text")
+input(type="text" value="" id="text")
 
 table
   tr
-    td: input(type="button" value="0" class="pad" id="")
-    td: input(type="button" value="1" class="pad" id="")
-    td: input(type="button" value="2" class="pad" id="")
-    td: input(type="button" value="3" class="pad" id="")
+    td: input(type="button" value="0" class="pad")
+    td: input(type="button" value="1" class="pad")
+    td: input(type="button" value="2" class="pad")
+    td: input(type="button" value="3" class="pad")
   tr
-    td: input(type="button" value="4" class="pad" id="")
-    td: input(type="button" value="5" class="pad" id="")
-    td: input(type="button" value="6" class="pad" id="")
-    td: input(type="button" value="7" class="pad" id="")
+    td: input(type="button" value="4" class="pad")
+    td: input(type="button" value="5" class="pad")
+    td: input(type="button" value="6" class="pad")
+    td: input(type="button" value="7" class="pad")
   tr
-    td: input(type="button" value="8" class="pad" id="")
-    td: input(type="button" value="9" class="pad" id="")
-    td: input(type="button" value="A" class="pad" id="")
-    td: input(type="button" value="B" class="pad" id="")
+    td: input(type="button" value="8" class="pad")
+    td: input(type="button" value="9" class="pad")
+    td: input(type="button" value="A" class="pad")
+    td: input(type="button" value="B" class="pad")
   tr
-    td: input(type="button" value="C" class="pad" id="")
-    td: input(type="button" value="D" class="pad" id="")
-    td: input(type="button" value="E" class="pad" id="")
-    td: input(type="button" value="F" class="pad" id="")
-
+    td: input(type="button" value="C" class="pad")
+    td: input(type="button" value="D" class="pad")
+    td: input(type="button" value="E" class="pad")
+    td: input(type="button" value="F" class="pad")
+  tr
+    td(colspan="2"): input(type="button" value="clear" class="pad")
+    td(colspan="2"): input(type="button" value="enter" class="pad")
 
 script.
   var buttons = document.getElementsByClassName('pad');
@@ -31,8 +32,14 @@ script.
   for (b in buttons) {
     if (buttons.hasOwnProperty(b)) {
       buttons[b].addEventListener("click", function() {
-        console.log(this.value);
-        text.value = (text.value + this.value);
+        //console.log(this.value);
+        if (this.value === "clear") { text.value = ""; }
+        else if (this.value === "enter") { text.value = ""; }
+        else { text.value = (text.value + this.value); }
       }, false);
     }
   }
+
+  document.getElementById("button").addEventListener('click', function () {
+    console.log(text.value)
+  });
