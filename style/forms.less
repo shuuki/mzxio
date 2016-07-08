@@ -1,6 +1,6 @@
 @import "variables";
 
-input {
+input[type="text"] {
   background: fadeout(@main, 95%);
   border: none;
   border-left: 0.4em solid fadeout(@main, 75%);
@@ -43,7 +43,7 @@ textarea {
   }
 }
 
-button {
+button, input[type="button"] {
   background-color: fadeout(@main, 70%);
   border: none;
   font-size: 1em;
@@ -52,14 +52,15 @@ button {
   line-height: 2;
   user-select: none;
   outline: none;
+  &:hover {
+    background-color: @main;
+    color: @base;
+  }
+  &:active {
+    background-color: @accent;
+  }
 }
-button:hover {
-  background-color: @main;
-  color: @base;
-}
-button:active {
-  background-color: @accent;
-}
+
 
 iframe {
   border: none;
