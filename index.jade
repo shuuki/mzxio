@@ -5,15 +5,15 @@
 		//117.5
 
 	#category
-		//h3 Directory
+		h3 INDEX
 
 		ul
 			each value, key in public.section
 				if (['_contents', '_data'].indexOf(key) == -1)				
-					li: a(href="section/#{key}")= key
+					li: a(href="section/#{key}")= key 
 					each thing, other in public.section[key]
 						if (['_contents', '_data'].indexOf(other) == -1)
-							p: a(href="section/#{key}/#{other}")= "- " + other
+							p: a(href="section/#{key}/#{other}")= other 
 							
 
 

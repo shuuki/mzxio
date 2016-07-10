@@ -1,7 +1,8 @@
 @import "variables";
 
 #intro {
-	background-color: rgba(45,14,51,0.3);
+	background-color: rgba(12,12,12,0.95);
+	//background-color: rgba(45,14,51,0.3);
 	//background-image: url(images/palette-blur-0.jpg);
 	//background-color: fadeout(@light, 95%);
 	//background-image: url("images/IMG_2021.gif");
@@ -40,7 +41,7 @@
 	letter-spacing: 0.05em;
 	display: inline-block;
 	margin: 0;
-	opacity: 0.218;
+	opacity: 0.812;
 	line-height: 1;
 	white-space: nowrap;
 	z-index: -1;
@@ -51,22 +52,37 @@
 	user-select: none;
 }
 
+
+
 #category {
-	padding: 6em 2em;
-	width: 100%;
+	padding: 4em 2em;
 	position: relative;
+	text-transform: uppercase;
+	width: 100%;
+	transition: all 0.3s;
 	ul {
 		//display: inline-block;
-		//padding: 0;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
 		li {
 			//line-height: 1.5;
 			//display: block;
 			//margin-right: 1em;
-			text-transform: uppercase;
+			
 			font-weight: bold;
 		}
 	}
 	p {
 		margin: 0;
+		margin-left: 1em;
 	}
+}
+
+.collapsed {
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	opacity: 0;
+	overflow: hidden;
 }
