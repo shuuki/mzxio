@@ -31,7 +31,7 @@ var width = 280,
   radius = Math.min(width, height) / 2;
 
 var color = d3.scale.ordinal()
-  .range(["black", "white"]);//(["rgb(42,42,42)","rgb(232,232,232)"]);
+  .range(["white", "black"]);//(["rgb(42,42,42)","rgb(232,232,232)"]);
 
 var arc = d3.svg.arc()
   .outerRadius(radius)
