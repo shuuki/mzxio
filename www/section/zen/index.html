@@ -8,12 +8,33 @@
 +bar("section/statement", "ARTIST STATEMENT", "vox-info")--></links></nav><style>table td {
   border: none;
 }
+input[type=text],
 input[type=button] {
  width: 100%;
+ user-select: none;
+}
+#color {
+  padding: 1em;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  transition: background-color 0.3s;
+}
+#colorCode {
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
 }
 
-</style><table><tr><td colspan="4"><input type="text" value="" id="text" readonly="readonly" placeholder="------"></td></tr><tr><td><input type="button" value="C" class="pad"></td><td><input type="button" value="8" class="pad"></td><td><input type="button" value="4" class="pad"></td><td><input type="button" value="0" class="pad"></td></tr><tr><td><input type="button" value="D" class="pad"></td><td><input type="button" value="9" class="pad"></td><td><input type="button" value="5" class="pad"></td><td><input type="button" value="1" class="pad"></td></tr><tr><td><input type="button" value="E" class="pad"></td><td><input type="button" value="A" class="pad"></td><td><input type="button" value="6" class="pad"></td><td><input type="button" value="2" class="pad"></td></tr><tr><td><input type="button" value="F" class="pad"></td><td><input type="button" value="B" class="pad"></td><td><input type="button" value="7" class="pad"></td><td><input type="button" value="3" class="pad"></td></tr><tr><td colspan="2"><input type="button" value="clear" class="pad"></td><td colspan="2"><input type="button" value="enter" class="pad"></td></tr></table><script>var buttons = document.getElementsByClassName('pad');
-var text = document.getElementById('text');
+</style><div class="fullHeight"><table class="centered"><tr><td colspan="4"><input type="text" value="" id="text" readonly="readonly" placeholder="------"></td></tr><tr><td><input type="button" value="C" class="pad"></td><td><input type="button" value="8" class="pad"></td><td><input type="button" value="4" class="pad"></td><td><input type="button" value="0" class="pad"></td></tr><tr><td><input type="button" value="D" class="pad"></td><td><input type="button" value="9" class="pad"></td><td><input type="button" value="5" class="pad"></td><td><input type="button" value="1" class="pad"></td></tr><tr><td><input type="button" value="E" class="pad"></td><td><input type="button" value="A" class="pad"></td><td><input type="button" value="6" class="pad"></td><td><input type="button" value="2" class="pad"></td></tr><tr><td><input type="button" value="F" class="pad"></td><td><input type="button" value="B" class="pad"></td><td><input type="button" value="7" class="pad"></td><td><input type="button" value="3" class="pad"></td></tr><tr><td colspan="2"><input type="button" value="clear" class="pad"></td><td colspan="2"><input type="button" value="enter" class="pad"></td></tr></table></div><div id="color"></div><code id="colorCode"></code><!-- failed--><!-- unlock--><script>var buttons = document.getElementsByClassName('pad'),
+  text = document.getElementById('text'),
+  color = document.getElementById('color'),
+  colorCode = document.getElementById('colorCode');
 
 for (b in buttons) {
   if (buttons.hasOwnProperty(b)) {
@@ -23,22 +44,48 @@ for (b in buttons) {
 
       if (this.value === "clear") {
 
+        color.style.backgroundColor = "transparent";
+        colorCode.innerHTML = "";
         text.value = "";
 
       } else if (this.value === "enter") {
 
-        if (text.value.length > 0) {
+        if (text.value.length < 6) {
+
           console.log(text.value);
+          colorCode.innerHTML = "";
+          text.value = "";
+
+        } else if (text.value.length === 6) {
+
+          color.style.backgroundColor = "#"+text.value;
+          colorCode.innerHTML = "#"+text.value;
+          //text.value = "";
+
         } else {
+
           console.log("but nah");
+
         }
 
       } else {
 
         if (text.value.length < 6) {
+
           text.value = (text.value + this.value);
+
+        } else if (text.value.length === 6) {
+
+          var shifted = text.value.split("").splice(1, 6);
+          shifted.push(this.value);
+          shifted = shifted.join("");
+          text.value = shifted;
+          console.log(shifted);
+
         } else {
+
           console.log("nope")
+
         }
         
       }
