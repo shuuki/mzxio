@@ -47,7 +47,6 @@ for (b in buttons) {
           shifted.push(this.value);
           shifted = shifted.join("");
           text.value = shifted;
-
           console.log(shifted);
 
         } else {
