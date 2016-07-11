@@ -2,10 +2,10 @@
 
 input[type="text"],
 input[type="number"] {
-  background: fadeout(@main, 95%);
+  background-color: fadeout(@base, 50%);
   border: none;
   border-left: 0.4em solid fadeout(@main, 75%);
-  color: inherit;
+  color: @main;
   font-size: 1em;
   font-family: @console;
   outline: none;
@@ -44,8 +44,13 @@ textarea {
   }
 }
 
-button, input[type="button"] {
-  background-color: fadeout(@main, 70%);
+::placeholder {
+  color: fadeout(@main, 50%);
+}
+
+button,
+input[type="button"] {
+  background-color: fadeout(@main, 50%);
   border: none;
   font-size: 1em;
   font-weight: bold;
