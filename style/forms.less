@@ -2,7 +2,7 @@
 
 input[type="text"],
 input[type="number"] {
-  background-color: fadeout(@base, 50%);
+  background-color: fadeout(@base, 70%);
   border: none;
   border-left: 0.4em solid fadeout(@main, 75%);
   color: @main;
@@ -13,16 +13,18 @@ input[type="number"] {
   &:hover {
     border-color: @main;
   }  
-  &:focus {
+  &:active {
     border-color: @accent;
   }
 }
 
+::placeholder {
+  color: fadeout(@main, 50%);
+}
 
 textarea {
   margin: 2em 0;
 	padding: 1em;
-
 	background: fadeout(@main, 95%);
   color: inherit;
   width: 100%;
@@ -37,21 +39,20 @@ textarea {
   padding: 1em;
   margin: 0 auto;
   &:hover {
-    border-color: @main;
+    //border-color: @main;
   }  
-  &:focus {
+  &:active {
     border-color: @accent;
   }
 }
 
-::placeholder {
-  color: fadeout(@main, 50%);
-}
+
 
 button,
 input[type="button"] {
-  background-color: fadeout(@main, 50%);
+  background-color: fadeout(@main, 70%);
   border: none;
+  color: @base;
   font-size: 1em;
   font-weight: bold;
   padding: 0 0.5em;
@@ -60,11 +61,15 @@ input[type="button"] {
   outline: none;
   &:hover {
     background-color: @main;
-    color: @base;
   }
-  &:active {
+  &:active,
+  &:focus:active {
     background-color: @accent;
   }
+  &:focus {
+    background-color: fadeout(@main, 70%);
+  }
+
 }
 
 
