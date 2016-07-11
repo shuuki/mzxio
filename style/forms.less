@@ -12,8 +12,12 @@ input[type="number"] {
   padding: 0.5em;
   &:hover {
     border-color: @main;
-  }  
-  &:active {
+  }
+  &:focus {
+    border-color: fadeout(@main, 75%);
+  }
+  &:active,
+  &:focus:active {
     border-color: @accent;
   }
 }
@@ -62,14 +66,13 @@ input[type="button"] {
   &:hover {
     background-color: @main;
   }
+  &:focus {
+    background-color: fadeout(@main, 70%);
+  }
   &:active,
   &:focus:active {
     background-color: @accent;
   }
-  &:focus {
-    background-color: fadeout(@main, 70%);
-  }
-
 }
 
 
