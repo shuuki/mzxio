@@ -27,3 +27,22 @@ document.getElementById("download").addEventListener("click", function() {
 
 //data:application/octet-stream
 //escape(data)
+
+
+
+document.getElementById("text").addEventListener("input", function() {
+
+	var chars = document.getElementById("chars");
+	var words = document.getElementById("words");
+	
+	if (this.value.length > 0) {
+		chars.innerHTML = this.value.split("").length+" chars";
+		words.innerHTML = this.value.match(/\S+/g).length+" words";
+	} else {
+		chars.innerHTML = "-";
+		words.innerHTML = "-";
+	}
+	
+}, false)
+
+// input or change

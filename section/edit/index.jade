@@ -1,4 +1,15 @@
 
 section
   h1 Edit.
-  textarea
+
+  button#download download
+  code#chars -
+  span 
+  code#words -
+  input(type="text" placeholder="title")#title
+  .subset
+    textarea(placeholder="text")#text
+
+
+script
+  include download.js
