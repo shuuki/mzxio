@@ -2,14 +2,15 @@
 
 input[type="text"],
 input[type="number"] {
-  background-color: fadeout(@base, 70%);
+  background: fadeout(@main, 95%);
   border: none;
   border-left: 0.4em solid fadeout(@main, 75%);
-  color: @main;
+  color: inherit;
   font-size: 1em;
   font-family: @console;
   outline: none;
   padding: 0.5em;
+  width: 100%;
   &:hover {
     border-color: @main;
   }
@@ -28,7 +29,7 @@ input[type="number"] {
 
 textarea {
   margin: 2em 0;
-	padding: 1em;
+	padding: 0.5em;
 	background: fadeout(@main, 95%);
   color: inherit;
   width: 100%;
@@ -40,12 +41,15 @@ textarea {
   border-left: 0.4em solid fadeout(@main, 75%);
   overflow-y: auto;
   outline: none;
-  padding: 1em;
   margin: 0 auto;
   &:hover {
-    //border-color: @main;
-  }  
-  &:active {
+    border-color: @main;
+  }
+  &:focus {
+    border-color: fadeout(@main, 75%);
+  }
+  &:active,
+  &:focus:active {
     border-color: @accent;
   }
 }
