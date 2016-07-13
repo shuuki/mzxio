@@ -7,7 +7,19 @@ mixin bar(url, title, icon)
 nav.noPrint
 	logo(title="43210"): a(href="/") MZXIO
 	links
-		//ul
-			+bar("section/here", "HERE", "vox-inked-right")
-			+bar("section/progress", "PROGRESS", "vox-inked-left")
-			+bar("section/statement", "ARTIST STATEMENT", "vox-info")
+		ul
+			li
+				a#more
+					span(class="vox-more")
+
+			//+bar("", "CONTRAST", "vox-contrast")
+			//+bar("", "MORE", "vox-more")
+			//+bar("section/here", "HERE", "vox-inked-right")
+			//+bar("section/progress", "PROGRESS", "vox-inked-left")
+			//+bar("section/statement", "ARTIST STATEMENT", "vox-info")
+
+
+script.
+	document.getElementById("more").addEventListener("click", function() {
+		document.getElementById("index").classList.toggle("collapsed")
+	}, false)
