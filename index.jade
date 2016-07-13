@@ -1,8 +1,4 @@
-#intro.fullHeight.noPrint
-
-	h1#splash ΣNX·IO
-		//ΣNX·IO
-		//117.5
+#index
 
 	#category
 		h3 INDEX
@@ -10,22 +6,7 @@
 		ul
 			each value, key in public.section
 				if (['_contents', '_data'].indexOf(key) == -1)				
-					li: a(href="section/#{key}")= key 
-					each thing, other in public.section[key]
-						if (['_contents', '_data'].indexOf(other) == -1)
-							p: a(href="section/#{key}/#{other}")= other 
-							
-
-
-#content.fullHeight
-	//h4.centered (this space intentionally left blank)
-
-	//.centered
-		//h4 MZXIO
-			//a(href="https://twitter.com/mzxio" target="_blank") @mzxio
-			p in association with 
-				a(href="http://somethingformed.com") SF*	
-
-		//#dedication(style="opacity: 0.4;")
-			h5 for you 
-				//			luminous starstuff, bless you. #sixwords <2
+					li: a(href="section/#{key}").top= key 
+						each thing, other in public.section[key]
+							if (['_contents', '_data'].indexOf(other) == -1)
+								li: a(href="section/#{key}/#{other}")= other 
