@@ -30,8 +30,12 @@ html(itemscope itemtype="http://schema.org/CreativeWork" lang="en")
 
 	body
 		#loader ...
-		block navigatory
-			include _nav
+
+		include _shared/nav
+
+		#index.collapsed.fixed
+			include _shared/category.jade
+
 		!= yield
 		
 

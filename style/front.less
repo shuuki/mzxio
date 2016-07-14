@@ -1,17 +1,9 @@
 @import "variables";
 
 #index {
-	background-color: rgba(0,0,0,0.8);
-	width: 100%;
-	height: 100%;
+	background-color: @base;
 	min-height: 100vh;
-	position: fixed;
 	transition: all 0.3s;
-	overflow: auto;
-	//top: 0;
-	//left: 0;
-	z-index:1;
-
 }
 
 #category {
@@ -37,19 +29,31 @@
 		}
 	}
 }
+.fixed {
+  width: 100%;
+  height: 100%;
 
+  position: fixed;
+
+  overflow: auto;
+
+  top: 0;
+  left: 0;
+  z-index:1;
+}
 
 
 
 
 #intro {
 	background-color: rgba(45,14,51,0.5);
+	//background-image: linear-gradient(0deg, #11426f, #088082 23.8%, #2c8482 28.5%, #3a8182 28.5%, #608080 41.8%, #697d80 41.8%, #7f8080 51.8%, #867d80 51.8%, #8e7f84 54.9%, #998280 58.1%, #9e7e80 58.1%, #b68080 68.7%, #be7b7f 68.7%, #bf7c80 71.9%, #db887c 82.2%, #fdbd84);// gradient scanner
 	min-height: 100vh;
 	//position: relative;
 	//top: 0;
 	//left: 0;
-	//width: 100%;
-	//height: 100%;
+	width: 100%;
+	height: 100%;
 	//transition: background 300ms ease-in-out;
 	z-index: -1;
 	//overflow: hidden;
@@ -57,16 +61,17 @@
 
 
 #splash {
-	background-color: white;
-	background-image: linear-gradient(270deg, #11426f, #088082 23.8%, #2c8482 28.5%, #3a8182 28.5%, #608080 41.8%, #697d80 41.8%, #7f8080 51.8%, #867d80 51.8%, #8e7f84 54.9%, #998280 58.1%, #9e7e80 58.1%, #b68080 68.7%, #be7b7f 68.7%, #bf7c80 71.9%, #db887c 82.2%, #fdbd84);// gradient scanner
+	//background-color: white;
+	//background-image: linear-gradient(270deg, #11426f, #088082 23.8%, #2c8482 28.5%, #3a8182 28.5%, #608080 41.8%, #697d80 41.8%, #7f8080 51.8%, #867d80 51.8%, #8e7f84 54.9%, #998280 58.1%, #9e7e80 58.1%, #b68080 68.7%, #be7b7f 68.7%, #bf7c80 71.9%, #db887c 82.2%, #fdbd84);// gradient scanner
 	//background-image: url(images/tiger-gullet.png);
 	//image-rendering: pixelated;// if you want pixels
 	background-position: 50% 30%;
 	background-size: 120%;
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
+	//-webkit-text-fill-color: transparent;
+	//-webkit-background-clip: text;
 	font: 16vh/0.85 @heading;
 	font-weight: 800;
+	color: rgba(12,12,12,0.9);
 	letter-spacing: 0.05em;
 	display: inline-block;
 	margin: 0;
