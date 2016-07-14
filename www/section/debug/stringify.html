@@ -3,9 +3,16 @@
 	console.log("loaded")
 	document.querySelectorAll("#loader")[0].style.display = "none";
 });
-</script><link rel="stylesheet" href="../../style/base.css"><link rel="stylesheet" href="../../style/index.css"><!--script(src="../../script/library/jquery-2.2.0.min.js")--><!--link(rel="stylesheet" href="../../style/library/swiper-3.3.1.min.css")--><!--script(src="../../script/library/swiper-3.3.1.min.js")--></head><body><div id="loader">...</div><nav class="noPrint"><logo title="43210"><a href="/">MZXIO</a></logo><links><!--ul+bar("section/here", "HERE", "vox-inked-right")
-+bar("section/progress", "PROGRESS", "vox-inked-left")
-+bar("section/statement", "ARTIST STATEMENT", "vox-info")--></links></nav><h1>Debug.</h1><pre>{
+</script><link rel="stylesheet" href="../../style/base.css"><link rel="stylesheet" href="../../style/index.css"><!--script(src="../../script/library/jquery-2.2.0.min.js")--><!--link(rel="stylesheet" href="../../style/library/swiper-3.3.1.min.css")--><!--script(src="../../script/library/swiper-3.3.1.min.js")--></head><body><div id="loader">...</div><nav class="noPrint"><logo title="43210"><a href="/">MZXIO</a></logo><links><ul><li><a title="INDEX" id="more"><span class="label">INDEX</span><span class="vox-more"></span></a></li><!--+bar("", "CONTRAST", "vox-contrast")--><!--+bar("", "MORE", "vox-more")--><!--+bar("section/here", "HERE", "vox-inked-right")--><!--+bar("section/progress", "PROGRESS", "vox-inked-left")--><!--+bar("section/statement", "ARTIST STATEMENT", "vox-info")-->
+</ul></links></nav><script>document.getElementById("more").addEventListener("click", function() {
+	document.getElementById("index").classList.toggle("collapsed")
+}, false)</script><div id="index" class="fixed collapsed"><div id="category"><!--h3 INDEX--><!--ul//each value, key in public.section
+  //if (['_contents', '_data'].indexOf(key) == -1)				
+    //li: a(href="section/").top= key 
+      //each thing, other in public.section[key]
+        //if (['_contents', '_data'].indexOf(other) == -1)
+          //li: a(href="section//")= other 
+--><h3>EXPERIMENTS</h3><ul><li><a href="../../section/edit">Unno Edit</a></li><li><a href="../../section/graphs">Graphdown</a></li><li><a href="../../section/zen">Zen RGB</a></li></ul><h3>WRITING</h3><ul><li><a href="../../section/progress">Progress</a></li></ul></div></div><h1>Debug.</h1><pre>{
 	&quot;_contents&quot;: [
 		&quot;404.html&quot;,
 		&quot;NAH_data.json&quot;,
@@ -54,6 +61,9 @@
 		},
 		&quot;edit&quot;: {
 			&quot;_contents&quot;: [
+				&quot;download.html&quot;,
+				&quot;download.js&quot;,
+				&quot;editor notes&quot;,
 				&quot;index.html&quot;
 			]
 		},
@@ -348,6 +358,18 @@
 				&quot;24&quot;: {
 					&quot;title&quot;: &quot;Dreams held the words. Lost now.&quot;,
 					&quot;time&quot;: &quot;20160710&quot;
+				},
+				&quot;25&quot;: {
+					&quot;title&quot;: &quot;At a council of war, know why everyone is there.&quot;,
+					&quot;time&quot;: &quot;20160711&quot;
+				},
+				&quot;26&quot;: {
+					&quot;title&quot;: &quot;What is the last thing anyone remembers?&quot;,
+					&quot;time&quot;: &quot;20160712&quot;
+				},
+				&quot;27&quot;: {
+					&quot;title&quot;: &quot;Like the tide coming in.&quot;,
+					&quot;time&quot;: &quot;20160713&quot;
 				}
 			}
 		},

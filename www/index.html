@@ -3,16 +3,23 @@
 	console.log("loaded")
 	document.querySelectorAll("#loader")[0].style.display = "none";
 });
-</script><link rel="stylesheet" href="../../style/base.css"><link rel="stylesheet" href="../../style/index.css"><!--script(src="../../script/library/jquery-2.2.0.min.js")--><!--link(rel="stylesheet" href="../../style/library/swiper-3.3.1.min.css")--><!--script(src="../../script/library/swiper-3.3.1.min.js")--></head><body><div id="loader">...</div><nav class="noPrint"><logo title="43210"><a href="/">MZXIO</a></logo><links><!--ul+bar("section/here", "HERE", "vox-inked-right")
-+bar("section/progress", "PROGRESS", "vox-inked-left")
-+bar("section/statement", "ARTIST STATEMENT", "vox-info")--></links></nav><div id="intro" class="fullHeight noPrint"><h1 id="splash">ΣNX·IO<!--ΣNX·IO--><!--117.5--></h1><div id="category"><h3>INDEX</h3><ul><li><a href="section/cards">cards</a></li><li><a href="section/debug">debug</a></li><li><a href="section/edit">edit</a></li><li><a href="section/garden">garden</a></li><li><a href="section/graphs">graphs</a></li><li><a href="section/here">here</a></li><p><a href="section/here/gallery">gallery</a></p><li><a href="section/keypad">keypad</a></li><li><a href="section/nsfw">nsfw</a></li><li><a href="section/oiximal">oiximal</a></li><li><a href="section/other">other</a></li><p><a href="section/other/dawg-map-editor">dawg-map-editor</a></p><p><a href="section/other/markov-chains">markov-chains</a></p><p><a href="section/other/obliterator">obliterator</a></p><p><a href="section/other/zalgo">zalgo</a></p><li><a href="section/progress">progress</a></li><li><a href="section/statement">statement</a></li><li><a href="section/tiny-booklet">tiny-booklet</a></li><li><a href="section/written">written</a></li><p><a href="section/written/odessa">odessa</a></p><p><a href="section/written/unknown">unknown</a></p><li><a href="section/zen">zen</a></li></ul></div></div><div id="content" class="fullHeight"><!--h4.centered (this space intentionally left blank)--><!--.centered//h4 MZXIO
-	//a(href="https://twitter.com/mzxio" target="_blank") @mzxio
-	p in association with 
-		a(href="http://somethingformed.com") SF*	
-
-//#dedication(style="opacity: 0.4;")
-	h5 for you 
-		//			luminous starstuff, bless you. #sixwords <2--></div><script>//
+</script><link rel="stylesheet" href="../../style/base.css"><link rel="stylesheet" href="../../style/index.css"><!--script(src="../../script/library/jquery-2.2.0.min.js")--><!--link(rel="stylesheet" href="../../style/library/swiper-3.3.1.min.css")--><!--script(src="../../script/library/swiper-3.3.1.min.js")--></head><body><div id="loader">...</div><nav class="noPrint"><logo title="43210"><a href="/">MZXIO</a></logo><links><ul><li><a title="INDEX" id="more"><span class="label">INDEX</span><span class="vox-more"></span></a></li><!--+bar("", "CONTRAST", "vox-contrast")--><!--+bar("", "MORE", "vox-more")--><!--+bar("section/here", "HERE", "vox-inked-right")--><!--+bar("section/progress", "PROGRESS", "vox-inked-left")--><!--+bar("section/statement", "ARTIST STATEMENT", "vox-info")-->
+</ul></links></nav><script>document.getElementById("more").addEventListener("click", function() {
+	document.getElementById("index").classList.toggle("collapsed")
+}, false)</script><div id="index" class="fixed collapsed"><div id="category"><!--h3 INDEX--><!--ul//each value, key in public.section
+  //if (['_contents', '_data'].indexOf(key) == -1)				
+    //li: a(href="section/").top= key 
+      //each thing, other in public.section[key]
+        //if (['_contents', '_data'].indexOf(other) == -1)
+          //li: a(href="section//")= other 
+--><h3>EXPERIMENTS</h3><ul><li><a href="../../section/edit">Unno Edit</a></li><li><a href="../../section/graphs">Graphdown</a></li><li><a href="../../section/zen">Zen RGB</a></li></ul><h3>WRITING</h3><ul><li><a href="../../section/progress">Progress</a></li></ul></div></div><div id="content"><div id="intro"><h1 id="splash">ΣNXIO<!--ΣNX·IO--><!--117.5--></h1><!--#dedicationh5 for you 
+  //			luminous starstuff, bless you. #sixwords <2--></div><div id="category"><!--h3 INDEX--><!--ul//each value, key in public.section
+  //if (['_contents', '_data'].indexOf(key) == -1)				
+    //li: a(href="section/").top= key 
+      //each thing, other in public.section[key]
+        //if (['_contents', '_data'].indexOf(other) == -1)
+          //li: a(href="section//")= other 
+--><h3>EXPERIMENTS</h3><ul><li><a href="../../section/edit">Unno Edit</a></li><li><a href="../../section/graphs">Graphdown</a></li><li><a href="../../section/zen">Zen RGB</a></li></ul><h3>WRITING</h3><ul><li><a href="../../section/progress">Progress</a></li></ul></div></div><script>//
 
 console.log("base")
 </script></body></html>

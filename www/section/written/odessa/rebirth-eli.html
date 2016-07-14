@@ -3,9 +3,16 @@
 	console.log("loaded")
 	document.querySelectorAll("#loader")[0].style.display = "none";
 });
-</script><link rel="stylesheet" href="../../style/base.css"><link rel="stylesheet" href="../../style/index.css"><!--script(src="../../script/library/jquery-2.2.0.min.js")--><!--link(rel="stylesheet" href="../../style/library/swiper-3.3.1.min.css")--><!--script(src="../../script/library/swiper-3.3.1.min.js")--></head><body><div id="loader">...</div><nav class="noPrint"><logo title="43210"><a href="/">MZXIO</a></logo><links><!--ul+bar("section/here", "HERE", "vox-inked-right")
-+bar("section/progress", "PROGRESS", "vox-inked-left")
-+bar("section/statement", "ARTIST STATEMENT", "vox-info")--></links></nav><p>always fucking beginning again.</p>
+</script><link rel="stylesheet" href="../../style/base.css"><link rel="stylesheet" href="../../style/index.css"><!--script(src="../../script/library/jquery-2.2.0.min.js")--><!--link(rel="stylesheet" href="../../style/library/swiper-3.3.1.min.css")--><!--script(src="../../script/library/swiper-3.3.1.min.js")--></head><body><div id="loader">...</div><nav class="noPrint"><logo title="43210"><a href="/">MZXIO</a></logo><links><ul><li><a title="INDEX" id="more"><span class="label">INDEX</span><span class="vox-more"></span></a></li><!--+bar("", "CONTRAST", "vox-contrast")--><!--+bar("", "MORE", "vox-more")--><!--+bar("section/here", "HERE", "vox-inked-right")--><!--+bar("section/progress", "PROGRESS", "vox-inked-left")--><!--+bar("section/statement", "ARTIST STATEMENT", "vox-info")-->
+</ul></links></nav><script>document.getElementById("more").addEventListener("click", function() {
+	document.getElementById("index").classList.toggle("collapsed")
+}, false)</script><div id="index" class="fixed collapsed"><div id="category"><!--h3 INDEX--><!--ul//each value, key in public.section
+  //if (['_contents', '_data'].indexOf(key) == -1)				
+    //li: a(href="section/").top= key 
+      //each thing, other in public.section[key]
+        //if (['_contents', '_data'].indexOf(other) == -1)
+          //li: a(href="section//")= other 
+--><h3>EXPERIMENTS</h3><ul><li><a href="../../section/edit">Unno Edit</a></li><li><a href="../../section/graphs">Graphdown</a></li><li><a href="../../section/zen">Zen RGB</a></li></ul><h3>WRITING</h3><ul><li><a href="../../section/progress">Progress</a></li></ul></div></div><p>always fucking beginning again.</p>
 <p>always with the blank page.</p>
 <p>fresh start.</p>
 <p>some shit.</p>
