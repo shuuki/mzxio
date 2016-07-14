@@ -2,7 +2,7 @@
 
 nav {
 	//box-shadow: 0 0.1em 0.2em fadeout(@base, 60%);
-	background-color: rgba(42,42,42,0.9);//fadeout(lighten(@base, 10%),2%);//fadeout(@base, 2%);
+	background-color: rgba(12,12,12,0.9);//fadeout(lighten(@base, 10%),2%);//fadeout(@base, 2%);
 	color: @main;
 	display: flex;
 	font-size: 12pt;
@@ -32,13 +32,6 @@ nav {
 	.label {
 		display: none;
 	}
-	// make fixed top for classic sticky top style
-	// or absolute bottom with .fixed class for fancy scroll-to-top
-}
-
-// add absolute as a class to avoid scroll jank on mobile
-.absolute {
-	position: absolute;
 }
 
 logo {
@@ -82,6 +75,40 @@ links {
 		}
 		&:active:after {
 			opacity: 1;
+		}
+	}
+}
+
+
+
+#index {
+	background-color: @base;
+	min-height: 100vh;
+	transition: all 0.3s ease-in-out;
+	z-index: 1;
+	overflow: auto;
+}
+
+#category {
+	padding: 2em;
+	position: relative;
+	ul {
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			//margin-left: 1em;
+			a {
+				font-weight: bold;
+				text-transform: uppercase;				
+			}
+			.top {
+				font-weight: bold;
+				//margin-left: -1em;
+			}
 		}
 	}
 }
