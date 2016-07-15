@@ -78,7 +78,8 @@ var deck = [
 
 
 
-
+// from mike bostock
+// via https://www.frankmitchell.org/2015/01/fisher-yates/
 
 function shuffle(array) {
   var m = array.length, t, i;
