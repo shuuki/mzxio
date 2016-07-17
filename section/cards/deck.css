@@ -5,7 +5,7 @@
 }
 .card {
   padding: 1em;
-  background-color: #aaa;
+  background-color: #fff;
   margin: 1em;
   margin-left: -8em;
   color: black;
@@ -15,16 +15,17 @@
   height: 12em;
   width: 8em;
   display: flex;
-  border-radius: 1em;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  border-radius: 0.9em;
+  align-items: flex-start;
+  justify-content: flex-start;;
   position: relative;
   top: 0;
-  //transition: all 0.1s ease-in-out;
+  transition: transform 90ms ease-in-out;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .card:hover {
-  top: -0.5em;
+  transform: translate(-0.2em, -0.8em);
   //z-index: 99;
   
 }
@@ -35,8 +36,27 @@
 }
 .art {}
 .description {}
+
+.stone, .heart {
+  color: red;
+}
+
+.bone { background-image: url("img/bonez.jpg"); }
+
+.flower { background-image: url("img/flowerz.jpg"); }
+
+.heart { background-image: url("img/heartz.jpg"); }
+
+.stone { background-image: url("img/stonez.jpg"); }
+
 .flip {
-  background-image: linear-gradient(45deg, #242225, #262626 0.7%, #3e3f41 0.7%, #2b282a 1.7%, #575759 3.6%, #3f3f3f 4.2%, #5e5e5e 4.4%, #232022 6.3%, #454545 7.9%, #161616 8.3%, #4e4f4f 9%, #2f2e2e 11.9%, #686868 12.5%, #3f3f3f 12.5%, #2e2d30 22.4%, #151418 22.4%, #1f1e20 27.4%, #404042 27.4%, #252327 27.6%, #424243 29.9%, #252525 29.9%, #494749 33.4%, #29272a 33.4%, #302e2d 39.6%, #4e4b4c 39.6%, #454147 40.6%, #262328 40.6%, #232323 44.8%, #3c3c3c 44.8%, #131313 45%, #19181a 49.1%, #414143 49.1%, #2d2c32 56.6%, #555259 56.6%, #19191a 57%, #383838 61.1%, #595959 61.1%, #242424 64.7%, #424242 64.7%, #3f3f3f 65.1%, #242424 65.1%, #413d3f 69.2%, #222122 69.2%, #3f3f3f 71.7%, #1a1a1a 71.7%, #464547 71.9%, #222224 74.2%, #49494c 74.2%, #222 76.9%, #403f40 76.9%, #373634 84.1%, #161615 84.1%, #3d3e3d 84.5%, #1d1f1f 84.7%, #40403e 86.6%, #342e33 89.5%, #140e15 89.5%, #363636 91.4%, #201f1f, #3f3c3d 91.8%, #4c4c4b 94.7%, #262624 94.7%, #1a1917 95.1%, #414243 95.1%, #292929);
   color: transparent;
   border: none;
+
+  background-image: linear-gradient(45deg, #242225, #262626 0.7%, #3e3f41 0.7%, #2b282a 1.7%, #575759 3.6%, #3f3f3f 4.2%, #5e5e5e 4.4%, #232022 6.3%, #454545 7.9%, #161616 8.3%, #4e4f4f 9%, #2f2e2e 11.9%, #686868 12.5%, #3f3f3f 12.5%, #2e2d30 22.4%, #151418 22.4%, #1f1e20 27.4%, #404042 27.4%, #252327 27.6%, #424243 29.9%, #252525 29.9%, #494749 33.4%, #29272a 33.4%, #302e2d 39.6%, #4e4b4c 39.6%, #454147 40.6%, #262328 40.6%, #232323 44.8%, #3c3c3c 44.8%, #131313 45%, #19181a 49.1%, #414143 49.1%, #2d2c32 56.6%, #555259 56.6%, #19191a 57%, #383838 61.1%, #595959 61.1%, #242424 64.7%, #424242 64.7%, #3f3f3f 65.1%, #242424 65.1%, #413d3f 69.2%, #222122 69.2%, #3f3f3f 71.7%, #1a1a1a 71.7%, #464547 71.9%, #222224 74.2%, #49494c 74.2%, #222 76.9%, #403f40 76.9%, #373634 84.1%, #161615 84.1%, #3d3e3d 84.5%, #1d1f1f 84.7%, #40403e 86.6%, #342e33 89.5%, #140e15 89.5%, #363636 91.4%, #201f1f, #3f3c3d 91.8%, #4c4c4b 94.7%, #262624 94.7%, #1a1917 95.1%, #414243 95.1%, #292929);
+  background-image: linear-gradient(17.631789571111767deg, #f1f3ec, #b8bbb5 6.2%, #b7b6b4 23.7%, #ebeae5 23.7%, #e5e4e0 24.4%, #b9b8b3 24.4%, #bcbbb8 25.5%, #e6e6e4 25.5%, #c3c5bf 31.4%, #7f827e 37.4%, #b5b7b1 38.8%, #edefeb 38.8%, #abada7 41.1%, #c1c4c0 42.9%, #7a7d76 45.5%, #f0f0eb 46.6%, #f8faf5 51.1%, #616863 55.9%, #8b928d 57%, #cbd1cc 57%, #707370 57.7%, #7c7f7c 60%, #ced1ce 60%, #cbcecb 60.7%, #8b8e8b 60.7%, #61635e 64.4%, #989a95 64.4%, #c1c3c0 65.1%, #616461 67%, #8d908d 67.7%, #424843 70.7%, #82827f 72.9%, #c3c5c0 72.9%, #ecebe6 75.5%, #b0afaa 75.5%, #7e7d79 75.9%, #cfd1cc 77%, #5d625c 78.5%, #ddddd9, #585a55 80.7%, #2b2e2c 83.3%, #585856 84.4%, #383b38 86.2%, #b9bcb6, #bbb8b3 90%, #716f69 90%, #434742 91.4%, #81827f 91.4%, #3d3d3d 92.2%, #252a28 93.3%, #5a615d 93.3%, #595d5c 96.6%, #3b3d3c 96.6%, #787b7a 97.4%, #1e2120 98.1%);
+
+  background-image: url("img/back.jpg");
+  background-size: 103% 102%;
+  background-position: -2px -2px;
 }
