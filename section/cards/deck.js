@@ -24,79 +24,79 @@ function shuffle(array) {
 var deck = [
 	{ name: "Trickster" },
   { name: "Death" },
-	// bones
-	{ name: "One of Bones", peek: "1 B", pip: "1"  },
-	{ name: "Two of Bones", peek: "2 B", pip: "2"  },
-	{ name: "Three of Bones", peek: "3 B", pip: "3"  },
-	{ name: "Four of Bones", peek: "4 B", pip: "4"  },
-	{ name: "Five of Bones", peek: "5 B", pip: "5"  },
-	{ name: "Six of Bones", peek: "6 B", pip: "6"  },
-	{ name: "Seven of Bones", peek: "7 B", pip: "7"  },
-	{ name: "Eight of Bones", peek: "8 B", pip: "8"  },
-	{ name: "Nine of Bones", peek: "9 B", pip: "9"  },
-	{ name: "Ace of Bones", peek: "A B", pip: "10"  },
-	{ name: "Jack of Bones", peek: "J B", pip: "11"  },
-	{ name: "Queen of Bones", peek: "Q B", pip: "12"  },
-	{ name: "King of Bones", peek: "K B", pip: "13"  },
-	// flowers
-	{ name: "One of Flowers", peek: "", pip: "" },
-	{ name: "Two of Flowers", peek: "", pip: "" },
-	{ name: "Three of Flowers", peek: "", pip: "" },
-	{ name: "Four of Flowers", peek: "", pip: "" },
-	{ name: "Five of Flowers", peek: "", pip: "" },
-	{ name: "Six of Flowers", peek: "", pip: "" },
-	{ name: "Seven of Flowers", peek: "", pip: "" },
-	{ name: "Eight of Flowers", peek: "", pip: "" },
-	{ name: "Nine of Flowers", peek: "", pip: "" },
-	{ name: "Ace of Flowers", peek: "", pip: "" },
-	{ name: "Jack of Flowers", peek: "", pip: "" },
-	{ name: "Queen of Flowers", peek: "", pip: "" },
-	{ name: "King of Flowers", peek: "", pip: "" },
+
+	{ name: "One of Bones", suit: "bone", pip: "1"  },
+	{ name: "Two of Bones", suit: "bone", pip: "2"  },
+	{ name: "Three of Bones", suit: "bone", pip: "3"  },
+	{ name: "Four of Bones", suit: "bone", pip: "4"  },
+	{ name: "Five of Bones", suit: "bone", pip: "5"  },
+	{ name: "Six of Bones", suit: "bone", pip: "6"  },
+  { name: "Seven of Bones", suit: "bone", pip: "7"  },
+	{ name: "Eight of Bones", suit: "bone", pip: "8"  },
+	{ name: "Nine of Bones", suit: "bone", pip: "9"  },
+	{ name: "Ace of Bones", suit: "bone", pip: "A"  },
+	{ name: "Jack of Bones", suit: "bone", pip: "J"  },
+	{ name: "Queen of Bones", suit: "bone", pip: "Q"  },
+	{ name: "King of Bones", suit: "bone", pip: "K"  },
+
+	{ name: "One of Stones", suit: "stone", pip: "1" },
+	{ name: "Two of Stones", suit: "stone", pip: "2" },
+	{ name: "Three of Stones", suit: "stone", pip: "3" },
+	{ name: "Four of Stones", suit: "stone", pip: "4" },
+	{ name: "Five of Stones", suit: "stone", pip: "5" },
+	{ name: "Six of Stones", suit: "stone", pip: "6" },
+	{ name: "Seven of Stones", suit: "stone", pip: "7" },
+	{ name: "Eight of Stones", suit: "stone", pip: "8" },
+	{ name: "Nine of Stones", suit: "stone", pip: "9" },
+	{ name: "Ace of Stones", suit: "stone", pip: "A" },
+	{ name: "Jack of Stones", suit: "stone", pip: "J" },
+	{ name: "Queen of Stones", suit: "stone", pip: "Q" },
+	{ name: "King of Stones", suit: "stone", pip: "K" },
 	// fruits
-	{ name: "Ace of Fruits", peek: "", pip: "" },
-	{ name: "Two of Fruits", peek: "", pip: "" },
-	{ name: "Three of Fruits", peek: "", pip: "" },
-	{ name: "Four of Fruits", peek: "", pip: "" },
-	{ name: "Five of Fruits", peek: "", pip: "" },
-	{ name: "Six of Fruits", peek: "", pip: "" },
-	{ name: "Seven of Fruits", peek: "", pip: "" },
-	{ name: "Eight of Fruits", peek: "", pip: "" },
-	{ name: "Nine of Fruits", peek: "", pip: "" },
-	{ name: "Ten of Fruits", peek: "", pip: "" },
-	{ name: "Jack of Fruits", peek: "", pip: "" },
-	{ name: "Queen of Fruits", peek: "", pip: "" },
-	{ name: "King of Fruits", peek: "", pip: "" },
-	// hearts
-	{ name: "Ace of Hearts", peek: "", pip: "" },
-	{ name: "Two of Hearts", peek: "", pip: "" },
-	{ name: "Three of Hearts", peek: "", pip: "" },
-	{ name: "Four of Hearts", peek: "", pip: "" },
-	{ name: "Five of Hearts", peek: "", pip: "" },
-	{ name: "Six of Hearts", peek: "", pip: "" },
-	{ name: "Seven of Hearts", peek: "", pip: "" },
-	{ name: "Eight of Hearts", peek: "", pip: "" },
-	{ name: "Nine of Hearts", peek: "", pip: "" },
-	{ name: "Ten of Hearts", peek: "", pip: "" },
-	{ name: "Jack of Hearts", peek: "", pip: "" },
-	{ name: "Queen of Hearts", peek: "", pip: "" },
-	{ name: "King of Hearts", peek: "", pip: "" },
-	// arcana
-  { name: "Star", peek: "", pip: "" },
-  { name: "World", peek: "", pip: "" },
-  { name: "Sun", peek: "", pip: "" },
-  { name: "Moon", peek: "", pip: "" },
-  { name: "Priest", peek: "", pip: "" },
-  { name: "Temperance", peek: "", pip: "" },
-  { name: "Strength", peek: "", pip: "" },
-  { name: "Dream", peek: "", pip: "" },
-  { name: "Hermit", peek: "", pip: "" },
-  { name: "Tower", peek: "", pip: "" },
-  { name: "Chariot", peek: "", pip: "" },
-  { name: "Desire", peek: "", pip: "" },
-  { name: "Judgement", peek: "", pip: "" },
-  { name: "Devil", peek: "", pip: "" },
-  { name: "Hanged Man", peek: "", pip: "" },
-  { name: "Chance", peek: "", pip: "" },
+	{ name: "Ace of Flowers", suit: "flower", pip: "1" },
+	{ name: "Two of Flowers", suit: "flower", pip: "2" },
+	{ name: "Three of Flowers", suit: "flower", pip: "3" },
+	{ name: "Four of Flowers", suit: "flower", pip: "4" },
+	{ name: "Five of Flowers", suit: "flower", pip: "5" },
+	{ name: "Six of Flowers", suit: "flower", pip: "6" },
+	{ name: "Seven of Flowers", suit: "flower", pip: "7" },
+	{ name: "Eight of Flowers", suit: "flower", pip: "8" },
+	{ name: "Nine of Flowers", suit: "flower", pip: "9" },
+	{ name: "Ten of Flowers", suit: "flower", pip: "A" },
+	{ name: "Jack of Flowers", suit: "flower", pip: "J" },
+	{ name: "Queen of Flowers", suit: "flower", pip: "Q" },
+	{ name: "King of Flowers", suit: "flower", pip: "K" },
+
+	{ name: "Ace of Hearts", suit: "heart", pip: "1" },
+	{ name: "Two of Hearts", suit: "heart", pip: "2" },
+	{ name: "Three of Hearts", suit: "heart", pip: "3" },
+	{ name: "Four of Hearts", suit: "heart", pip: "4" },
+	{ name: "Five of Hearts", suit: "heart", pip: "5" },
+	{ name: "Six of Hearts", suit: "heart", pip: "6" },
+	{ name: "Seven of Hearts", suit: "heart", pip: "7" },
+	{ name: "Eight of Hearts", suit: "heart", pip: "8" },
+	{ name: "Nine of Hearts", suit: "heart", pip: "9" },
+	{ name: "Ten of Hearts", suit: "heart", pip: "A" },
+	{ name: "Jack of Hearts", suit: "heart", pip: "J" },
+	{ name: "Queen of Hearts", suit: "heart", pip: "Q" },
+	{ name: "King of Hearts", suit: "heart", pip: "K" },
+
+  { name: "Star", suit: "arcana", pip: "1" },
+  { name: "World", suit: "arcana", pip: "2" },
+  { name: "Sun", suit: "arcana", pip: "3" },
+  { name: "Moon", suit: "arcana", pip: "4" },
+  { name: "Priest", suit: "arcana", pip: "5" },
+  { name: "Temperance", suit: "arcana", pip: "6" },
+  { name: "Strength", suit: "arcana", pip: "7" },
+  { name: "Dream", suit: "arcana", pip: "8" },
+  { name: "Hermit", suit: "arcana", pip: "9" },
+  { name: "Tower", suit: "arcana", pip: "10" },
+  { name: "Chariot", suit: "arcana", pip: "11" },
+  { name: "Desire", suit: "arcana", pip: "12" },
+  { name: "Judgement", suit: "arcana", pip: "13" },
+  { name: "Devil", suit: "arcana", pip: "14" },
+  { name: "Hanged Man", suit: "arcana", pip: "15" },
+  { name: "Chance", suit: "arcana", pip: "16" },
 ]
 
 
@@ -126,14 +126,20 @@ function addElement(text) {
   // create a new div element 
   // and give it some content 
   var newDiv = document.createElement("div");
-  newDiv.classList.add("card", "flip") 
+  newDiv.classList.add("card", "flip", text.suit) 
   
-  var newContent = document.createTextNode(text); 
+
+  // text.name
+  // text.suit
+  // text.pip
+
+  
+  var newContent = document.createTextNode(text.pip); 
   newDiv.appendChild(newContent); //add the text node to the newly created div. 
+
 
   // add the newly created element and its content into the DOM 
   var currentDiv = document.getElementById("table"); 
-
   currentDiv.insertAdjacentElement("beforeend", newDiv); 
 }
 
@@ -143,7 +149,8 @@ function addElement(text) {
 
 shuffle(deck).forEach(function(value) {
   
-  addElement(value.name)
+  addElement(value)
+  //console.log(value)
   
 
 })
