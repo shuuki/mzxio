@@ -172,14 +172,21 @@ shuffle(deck).forEach(function(text) {
 })
 
 
+
+
 var cards = document.getElementsByClassName("card");
 
 for (c in cards) {
   if (cards.hasOwnProperty(c)) {
-    cards[c].addEventListener("click", function() {
-      
-      this.classList.toggle("flip")
 
+    cards[c].style.transform = "rotate("+c/2+"deg)";
+
+    cards[c].style.transformOrigin = -c/2.5+"em";
+
+    cards[c].addEventListener("click", function() {
+      this.classList.toggle("flip")
     }, false)
+
+
   }
 }
