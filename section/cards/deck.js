@@ -97,6 +97,15 @@ var deck = [
   { name: "Devil", suit: "arcana", pip: "14" },
   { name: "Hanged Man", suit: "arcana", pip: "15" },
   { name: "Chance", suit: "arcana", pip: "16" },
+  { name: "???", suit: "arcana", pip: "17" },
+  { name: "???", suit: "arcana", pip: "18" },
+  { name: "???", suit: "arcana", pip: "19" },
+  { name: "???", suit: "arcana", pip: "20" },
+  { name: "???", suit: "arcana", pip: "21" },
+  { name: "???", suit: "arcana", pip: "22" },
+  { name: "???", suit: "arcana", pip: "23" },
+  { name: "???", suit: "arcana", pip: "24" }
+
 ]
 
 
