@@ -125,33 +125,40 @@ var deck = [
 function addElement(text) { 
   // create a new div element 
   // and give it some content 
-  var newDiv = document.createElement("div");
-  newDiv.classList.add("card", "flip", text.suit) 
-  
 
   // text.name
   // text.suit
   // text.pip
 
-  
-  var newContent = document.createTextNode(text.pip); 
-  newDiv.appendChild(newContent); //add the text node to the newly created div. 
+  var table = document.getElementById("table"),
+    card = document.createElement("div"),
+    cardName = document.createElement("div"),
+    cardPip = document.createElement("div"),
+    cardNameText = document.createTextNode(text.name),
+    cardPipText = document.createTextNode(text.pip);
 
+  card.classList.add("card", "flip", text.suit);
+  card.appendChild(cardPip);
+  card.appendChild(cardName);
 
-  // add the newly created element and its content into the DOM 
-  var currentDiv = document.getElementById("table"); 
-  currentDiv.insertAdjacentElement("beforeend", newDiv); 
+  cardName.classList.add("text");
+  cardName.appendChild(cardNameText);
+
+  cardPip.classList.add("pip");
+  cardPip.appendChild(cardPipText);
+
+  table.insertAdjacentElement("beforeend", card); 
+
 }
 
 
 
 
 
-shuffle(deck).forEach(function(value) {
+shuffle(deck).forEach(function(text) {
   
-  addElement(value)
-  //console.log(value)
-  
+  addElement(text)
+  //console.log(text)
 
 })
 
