@@ -1,4 +1,14 @@
 
+section.fullHeight
+  - var count = 0
+  for entry in public.section.progress._data  
+    - count++
+  #chart.centered
+    - var done = ((count-1)/216*100).toFixed(1)
+    .centered
+      h4 #{done}% 
+      p: b #{count} of 216
+
 section
   h1 Progress.
 
@@ -6,14 +16,11 @@ section#progress
   - var count = 0
   for entry in public.section.progress._data  
     - count++
-    p(id=entry.time) #{count}. #{entry.title}
+    div(id=entry.time)
+      h6 #{count}.
+      p #{entry.title}
 
-section.interstice
-  #chart.centered
-    - var done = ((count-1)/216*100).toFixed(1)
-    .centered
-      h4 #{done}% 
-      p: b #{count} of 216
+
 
 script
   include ../../script/library/d3.min.js
