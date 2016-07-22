@@ -2,7 +2,7 @@ section
   h1 Unknown.
 
 - var chapterNumber = 0
-for chapter, slug in public.section.written.unknown._data  
+for chapter, slug in public.section.library.unknown._data  
   if chapter.type === "chapter"
     - chapterNumber++
     section(id="#{slug}")
