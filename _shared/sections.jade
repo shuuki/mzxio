@@ -1,0 +1,8 @@
+ul
+  h6 INDEX
+  each value, key in public.section
+    if (['_contents', '_data'].indexOf(key) == -1)				
+      li: a(href="../../section/#{key}").top= key 
+        each thing, other in public.section[key]
+          if (['_contents', '_data'].indexOf(other) == -1)
+            li.nested: a(href="../../section/#{key}/#{other}")= other 

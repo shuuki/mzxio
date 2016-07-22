@@ -1,29 +1,29 @@
 #category
-  //h3 INDEX
 
   ul
+    h6 LIBRARY
+    li: a(href="../../section/progress") Progress
+    li: a(href="../../section/statement") Statement
+    //li: a(href="../../section/here") Here 
+
+
+  ul
+    h6 TOOLS
+    li: a(href="../../section/edit") Edit
+    li: a(href="../../section/graphs") Graph
+    li: a(href="../../section/oiximal") Calculator
+    li: a(href="../../section/zen") RGBz
+
+  ul
+    h6 GAMES
+    li: a(href="../../section/cards") Cards 
+    li: a(href="../../section/") 
+
+  ul
+    h6 INDEX
     each value, key in public.section
       if (['_contents', '_data'].indexOf(key) == -1)				
-        li: a(href="section/#{key}").top= key 
-          //each thing, other in public.section[key]
-            //if (['_contents', '_data'].indexOf(other) == -1)
-              //li: a(href="section/#{key}/#{other}")= other 
-
-  h3 EXPERIMENTS
-  ul
-    li
-      a(href="../../section/edit") Unno Edit
-    li
-      a(href="../../section/graphs") Graphdown
-    li
-      a(href="../../section/oiximal") Oiximal
-
-    li
-      a(href="../../section/zen") Zen RGB
-
-  h3 WRITINGS
-  ul
-    li
-      a(href="../../section/progress") Progress
-    li
-      a(href="../../section/statement") Statement
+        li: a(href="../../section/#{key}").top= key 
+          each thing, other in public.section[key]
+            if (['_contents', '_data'].indexOf(other) == -1)
+              li.nested: a(href="../../section/#{key}/#{other}")= other 
