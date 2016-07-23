@@ -146,7 +146,7 @@ function addElement(text) {
     cardNameText = document.createTextNode(text.name),
     cardPipText = document.createTextNode(text.pip);
 
-  card.classList.add("card",  text.suit);
+  card.classList.add("card", "flip", text.suit);
   card.appendChild(cardPip);
   card.appendChild(cardName);
 
