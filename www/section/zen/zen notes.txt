@@ -1,0 +1,6 @@
+
+
+save as png?
+needs backspace
+automatically add zeros if input is less than 6 digits
+.dismiss close button

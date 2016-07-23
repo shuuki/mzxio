@@ -1,0 +1,15 @@
+https://twitter.com/intent/tweet
+?text=this%20is%20funny
+&url=http://mzx.io
+&hashtags=progress
+&via=mzxio
+&related=mzxio,somethingformed
+
+
+encodeURIComponent(unencoded).replace(/'/g,"%27").replace(/"/g,"%22")
+decodeURIComponent(encoded.replace(/\+/g,  " "));
+
+
+https://dev.twitter.com/web/tweet-button/web-intent
+
+http://meyerweb.com/eric/tools/dencoder/
