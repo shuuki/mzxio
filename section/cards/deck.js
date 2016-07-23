@@ -157,7 +157,7 @@ function addElement(text) {
   cardPip.appendChild(cardPipText);
 
   table.insertAdjacentElement("beforeend", card); 
-
+  table.style.transform = "rotate(-20deg)";
 }
 
 
@@ -181,9 +181,10 @@ for (c in cards) {
 
     cards[c].style.transform = "rotate("+c/2+"deg)";
 
-    cards[c].style.transformOrigin = -c/2.5+"em";
+    cards[c].style.transformOrigin = -c + "px";
 
     cards[c].addEventListener("click", function() {
+      this.classList.toggle("slide")
       this.classList.toggle("flip")
     }, false)
 
