@@ -2,28 +2,57 @@
 
   ul
     h6 LIBRARY
-    li: a(href="../../section/progress") Progress
-    li: a(href="../../section/statement") Statement
+    li
+      a(href="../../section/progress") Progress
+      p Adding one sentence every day for 216 days.
+    li
+      a(href="../../section/statement") Artist Statement
+      p Writing on the wall, slowly disappearing.
     //li: a(href="../../section/here") Here 
+    
 
 
   ul
     h6 TOOLS
-    li: a(href="../../section/edit") Edit
-    li: a(href="../../section/graphs") Graph
-    li: a(href="../../section/oiximal") Calculator
-    li: a(href="../../section/zen") RGBz
+    li
+      a(href="../../section/edit") Edit
+      p Text editor with file export and word count.
+    li
+      a(href="../../section/graphs") Graph
+      p Easy syntax for drawing simple graphs.
+    //li: a(href="../../section/oiximal") Calculator
+    li
+      a(href="../../section/zen") RGBz
+      p  keypad for learning hex RGB colors.
+    
 
-  ul
+  //ul
     h6 GAMES
     li: a(href="../../section/cards") Cards 
     li: a(href="../../section/") 
+
+  .description
+    h6 ABOUT
+    
+    p
+      | MZXIO is an artwork-in-progress, the 
+      b boneyard of glitch. 
+    p
+      | Aspires to grow into an operating system. First, a sandbox. Many tools. Learning, adding, transcending, and finally leaving something behind.  Spirits of sizzling crackling C͎̝̱R̗̖T̞͓̤ sunburns, blasted with magnetic noise. 
+    p
+      b TOOLS 
+      | are designed for interoperability and adding to workflows. 
+      b OTHER 
+      | mostly holds forks of open source tools found elsewhere. Proceed carefully, they may be buggy. 
+      b NOTHING 
+      | is quite finished, much work remains. Could take years. Small steps every day. 
+
 
   ul
     h6 INDEX
     each value, key in public.section
       if (['_contents', '_data'].indexOf(key) == -1)				
-        li: a(href="../../section/#{key}").top= key 
+        li: a(href="../../section/#{key}").top= "/"+key 
           each thing, other in public.section[key]
             if (['_contents', '_data'].indexOf(other) == -1)
-              li.nested: a(href="../../section/#{key}/#{other}")= other 
+              li.nested: a(href="../../section/#{key}/#{other}")= "/"+other 

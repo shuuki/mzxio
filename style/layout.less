@@ -52,16 +52,24 @@ iframe {
 }
 
 #category {
-	background-color: lighten(@base, 20%);
+	background-color: lighten(@base, 10%);
 	min-height: 100vh;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: flex-start;
 	justify-content: space-between;
-	padding: 4em 1em;
+	padding: 4em 2em;
 	position: relative;
-	
+	.description {
+		max-width: 20em;
+		padding: 0.5em;
+	}
+	h6 {
+		background-color: black;
+		padding: 0.5em;
+		display: inline-block;
+	}
 	ul {
 		list-style-type: none;
 		display: flex;
@@ -69,7 +77,9 @@ iframe {
 		align-items: flex-start;
 		justify-content: flex-start;
 		margin: 0;
-		padding: 0em;
+		padding: 0.5em;
+		min-width: 10em;
+		max-width: 20%;
 		li {
 			display: inline-block;line-height: 1.67;
 			&.nested {
