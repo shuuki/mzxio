@@ -48,8 +48,8 @@ document.getElementById('generate').onclick = function() {
 	var currentWord = '_START';
 	var str = '';
 
-	// Generate 300 words of text
-	for (var i = 0; i < 1000; i++) {
+	// Generate 500 words of text
+	for (var i = 0; i < 500; i++) {
 
 		// Follow a random node, append it to the string, and move to that node
 		var rand = Math.floor(Math.random() * cache[currentWord].length);
