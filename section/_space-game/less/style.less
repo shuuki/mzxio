@@ -1,0 +1,142 @@
+@import url(http://oxru.in/remote/dawg/fonts/library.css);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "volter goldfish", monospace;
+	font-size: 9px;
+	letter-spacing: 0;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+#bridge {
+	width: 640px;
+	height: 480px;
+	background: magenta;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 4em auto;
+
+	div {
+		text-align: center;
+	}
+}
+
+.dos {
+	background-color: blue;
+	color: white;
+	border: 4px double yellow;
+}
+
+#map {
+	background: #111;
+	border: 4px inset silver;
+	color: #eee;
+	height: 320px;
+	width: 320px;
+}
+
+#log {
+	background-color: #999;
+	width: 320px;
+	height: 60px;
+}
+
+#nav {
+	background-color: #ddd;
+	width: 160px;
+	height: 160px;
+}
+
+#sys {
+	background-color: #ddd;
+	width: 320px;
+	height: 100px;
+}
+
+#shp {
+	background-color: #ddd;
+	width: 160px;
+	height: 160px;
+}
+
+#tac {
+	background-color: #bbb;
+	width: 160px;
+	height: 160px;
+}
+
+#trg {
+	background-color: #aaa;
+	width: 160px;
+	height: 160px;
+}
+
+#sen {
+	background-color: #999;
+	width: 160px;
+	height: 160px;
+}
+
+#com {
+	background-color: #aaa;
+	width: 160px;
+	height: 160px;
+}
+
+button {
+	background: #ccc;
+	border: 2px outset;
+	font-size: inherit;
+	font-family: inherit;
+	margin: 2px;
+	height: 32px;
+	//width: 48px;
+	outline: 0;
+	&:active {
+		border-style: inset;
+	}
+}
+
+#throttle {
+	transform: rotate(270deg);
+	width: 64px;
+}
+/* hiding this for now cuz it's a big rabbit hole
+
+input[type="range"] {
+	background: transparent;
+	width: 100%;
+	-webkit-appearance: none;
+	
+	&:focus {
+		outline: none;
+	}
+	::-ms-track {
+		width: 100%;
+		cursor: pointer;
+		background: transparent;
+		border-color: transparent;
+		color: transparent;
+	}
+	&::-webkit-slider-thumb {
+		background: #ccc;
+		height: 16px;
+		width: 16px;
+		border: 2px outset #eee;
+		-webkit-appearance: none;
+	}
+	::-webkit-slider-runnable-track {
+		border: 2px inset #eee;
+		background: red;
+	}
+	//::-moz-range-thumb
+}
+*/

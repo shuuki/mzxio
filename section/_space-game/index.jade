@@ -1,0 +1,81 @@
+#bridge
+	
+
+	#trg Targeting
+		//p show current targeted entity
+
+	#sen Sensors
+		p
+			button SCAN
+			hr
+			input(type="radio")
+			| PASSIVE
+			br
+			input(type="radio")
+			| ACTIVE
+		// options for scanning and exploring
+		// passive vs active scan 
+
+	#com Communication
+		p
+			// hail toggles other options, turns into close
+			// close disables all options, back to hail
+			button HAIL
+			hr
+			button(disabled) HELP
+			button(disabled) WARN
+			br
+			button(disabled) THREAT
+			button(disabled) TRADE
+
+	#sys Systems
+		// accumulators for jump
+		// charging in the sun
+		
+	#map Map
+		// views of current position
+		// system, sector, galaxy
+		p
+			button SYS
+			button SEC
+			button GAL
+	#log Log
+		p
+			| time: thing
+			br
+			| time: thing 
+
+	#shp Ship
+		p
+			button F
+			br
+			button P
+			button ^
+			button S
+			br
+			button A
+
+	#tac Tactical
+		p
+			button ARM
+			hr
+			button(disabled) GAT
+			button(disabled) MIS
+			br
+			button(disabled) EMP
+			button(disabled) DRN
+		//options for weapons and fighting
+		//gatling, emp, missile/torpedo
+
+
+	#nav Navigation
+		p
+			button JUMP
+			button THRS
+		input(type="range")#throttle
+		p
+			button  <
+			button HEADING
+			button >
+
+

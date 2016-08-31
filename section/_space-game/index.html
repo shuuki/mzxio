@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>space game ui</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    
+<div id="bridge">
+  <div id="trg">Targeting
+    <!--p show current targeted entity-->
+  </div>
+  <div id="sen">Sensors
+    <p>
+      <button>SCAN</button>
+      <hr/>
+      <input type="radio"/>PASSIVE<br/>
+      <input type="radio"/>ACTIVE
+    </p>
+    <!-- options for scanning and exploring-->
+    <!-- passive vs active scan -->
+  </div>
+  <div id="com">Communication
+    <p>
+      <!-- hail toggles other options, turns into close-->
+      <!-- close disables all options, back to hail-->
+      <button>HAIL</button>
+      <hr/>
+      <button disabled="disabled">HELP</button>
+      <button disabled="disabled">WARN</button><br/>
+      <button disabled="disabled">THREAT</button>
+      <button disabled="disabled">TRADE</button>
+    </p>
+  </div>
+  <div id="sys">Systems
+    <!-- accumulators for jump-->
+    <!-- charging in the sun-->
+  </div>
+  <div id="map">Map
+    <!-- views of current position-->
+    <!-- system, sector, galaxy-->
+    <p>
+      <button>SYS</button>
+      <button>SEC</button>
+      <button>GAL</button>
+    </p>
+  </div>
+  <div id="log">Log
+    <p>time: thing<br/>time: thing </p>
+  </div>
+  <div id="shp">Ship
+    <p>
+      <button>F</button><br/>
+      <button>P</button>
+      <button>^</button>
+      <button>S</button><br/>
+      <button>A</button>
+    </p>
+  </div>
+  <div id="tac">Tactical
+    <p>
+      <button>ARM</button>
+      <hr/>
+      <button disabled="disabled">GAT</button>
+      <button disabled="disabled">MIS</button><br/>
+      <button disabled="disabled">EMP</button>
+      <button disabled="disabled">DRN</button>
+    </p>
+    <!--options for weapons and fighting-->
+    <!--gatling, emp, missile/torpedo-->
+    
+  </div>
+  <div id="nav">Navigation
+    <p>
+      <button>JUMP</button>
+      <button>THRS</button>
+    </p>
+    <input type="range" id="throttle"/>
+    <p>
+      <button> <</button>
+      <button>HEADING</button>
+      <button>></button>
+    </p>
+  </div>
+</div>
+    
+    
+    
+    
+    
+  </body>
+</html>
