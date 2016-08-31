@@ -1,9 +1,11 @@
 #intro
 
-  h1#splash ΣNXIO
-    //ΣNX·IO
-    //117.5
-
-  #dedication
-    h6 for you 
-      //			luminous starstuff, bless you. #sixwords <2
+  #category
+    ul
+      h3 ΣNX·IO
+      each value, key in public.section
+        if (['_contents', '_data'].indexOf(key) == -1)				
+          li.top: a(href="#{docroot}/section/#{key}")= ""+key 
+            each thing, other in public.section[key]
+              if (['_contents', '_data'].indexOf(other) == -1)
+                li.nested: a(href="#{docroot}/section/#{key}/#{other}")= ""+other 

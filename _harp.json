@@ -1,7 +1,8 @@
 {
 	"globals" : {
 		"title" : "MZXIO",
-		"description" : "ART WEBSITE"
+		"description" : "ART WEBSITE",
+		"docroot" : "../../.."
 	},
 	"service" : {
 		"analytics": "UA-73314906-1"
