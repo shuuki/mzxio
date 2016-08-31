@@ -1,3 +1,3 @@
-# Boneyard of glitch.
+# BONEYARD OF GLITCH.
 
-MZXIO is a [website](http://mzx.io/) built using [Harp](https://github.com/sintaxi/harp). A set of artistic tools and projects.
+MZXIO is a [WEBSITE](http://mzx.io/) built using [HARP](https://github.com/sintaxi/harp), showcasing ARTISTIC CREATIONS and DESIGNED EPHEMERA.
