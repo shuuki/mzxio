@@ -51,7 +51,6 @@ Sim.init = function() {
 
 }
 
-
 //var fps = 30;
 
 Sim.update = function() {
@@ -84,6 +83,7 @@ Sim.render = function() {
 }
 
 
+
 /**  keyboard events */
 
 var Key = {
@@ -114,9 +114,16 @@ var Key = {
 
 
 
+/**  utilities */
 
-
-
+var Util = {
+	degToRad: function(degrees) {
+		return degrees * (Math.PI/180)
+	},
+	radToDeg: function(radians) {
+		return radians * (180/Math.PI)
+	}
+};
 
 
 
@@ -214,34 +221,24 @@ Ship.prototype.update = function() {
 
 Ship.prototype.draw = function(context) {
 
-	// clear path: turn off for drawing
-	context.beginPath();
-
-	context.lineWidth = 2;
-
 	let shipAngle = 0.8,
 		shipSize = 10;
 
+	// clear path: turn off for drawing
+	//context.beginPath();
+
+	context.lineWidth = 2;
 	context.arc(this.x, this.y, shipSize, (this.Direction-Math.PI-shipAngle), (this.Direction-Math.PI+shipAngle), false);
 	context.arc(this.x, this.y, shipSize, this.Direction, this.Direction, false);
 	context.arc(this.x, this.y, shipSize, (this.Direction-Math.PI-shipAngle), (this.Direction-Math.PI+shipAngle), false);
 
 	//context.fillRect(this.x - 2, this.y - 2, 4, 4);
 	//context.arc(this.x, this.y, 4, 0, 2 * Math.PI, false);
+
 	context.fillText(Util.radToDeg(this.Direction).toFixed(2), 10, 40);
 
 	//context.fill();
 	context.stroke();
 	context.closePath();
 
-}
-
-
-var Util = {
-	degToRad: function(degrees) {
-		return degrees * (Math.PI/180)
-	},
-	radToDeg: function(radians) {
-		return radians * (180/Math.PI)
-	}
 }
