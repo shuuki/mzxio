@@ -89,15 +89,15 @@ Sim.render = function() {
 var Key = {
 	pressed: {},
 
-	left: 37,
-	up: 38,
-	right: 39,
-	down: 40,
-	
-	w: 87,
-	s: 83,
-	a: 65,
-	d: 68,
+	LEFT: 37,
+	UP: 38,
+	RIGHT: 39,
+	DOWN: 40,
+
+	W: 87,
+	S: 83,
+	A: 65,
+	D: 68,
 
 	isDown: function(keyCode) {
 		return this.pressed[keyCode];
@@ -153,17 +153,29 @@ Ship.prototype.update = function() {
 
 
 	// Linear Movement (Keys Up, Down)	
-	//if (Key.isDown(Key.up)) this.ySpeed -= Acceleration;
-	//if (Key.isDown(Key.down)) this.ySpeed += Acceleration; 	
-	//if (Key.isDown(Key.left)) this.xSpeed -= Acceleration;
-	//if (Key.isDown(Key.right))this.xSpeed += Acceleration;
+	//if (Key.isDown(Key.UP)) this.ySpeed -= Acceleration;
+	//if (Key.isDown(Key.DOWN)) this.ySpeed += Acceleration; 	
+	//if (Key.isDown(Key.LEFT)) this.xSpeed -= Acceleration;
+	//if (Key.isDown(Key.RIGHT))this.xSpeed += Acceleration;
 
-	if (Key.isDown(Key.up)) {
+	if (Key.isDown(Key.A)) {
+		this.xSpeed += Math.cos(this.Direction-(Math.PI/2))*Acceleration;
+		this.ySpeed += Math.sin(this.Direction-(Math.PI/2))*Acceleration;	
+	}
+	if (Key.isDown(Key.D)) {
+		this.xSpeed -= Math.cos(this.Direction-(Math.PI/2))*Acceleration;
+		this.ySpeed -= Math.sin(this.Direction-(Math.PI/2))*Acceleration;	
+	}
+
+
+
+
+	if (Key.isDown(Key.UP) || Key.isDown(Key.W)) {
 			this.xSpeed += Math.cos(this.Direction)*Acceleration;
 			this.ySpeed += Math.sin(this.Direction)*Acceleration;	
 	}
 
-	if (Key.isDown(Key.down)) {
+	if (Key.isDown(Key.DOWN) || Key.isDown(Key.S)) {
 			this.xSpeed -= Math.cos(this.Direction)*Acceleration;
 			this.ySpeed -= Math.sin(this.Direction)*Acceleration;	
 	}
@@ -190,8 +202,8 @@ Ship.prototype.update = function() {
 	this.y += this.ySpeed;
 
 	// Rotation Movement (Keys Left, Right)
-	if (Key.isDown(Key.left)) this.TurnSpeed -= TurnAcceleration;
-	if (Key.isDown(Key.right)) this.TurnSpeed += TurnAcceleration;
+	if (Key.isDown(Key.LEFT)) this.TurnSpeed -= TurnAcceleration;
+	if (Key.isDown(Key.RIGHT)) this.TurnSpeed += TurnAcceleration;
 
 		// Limit TurnSpeed
 	if (this.TurnSpeed > TurnMax) this.TurnSpeed = TurnMax;
@@ -225,7 +237,7 @@ Ship.prototype.draw = function(context) {
 		shipSize = 10;
 
 	// clear path: turn off for drawing
-	//context.beginPath();
+	context.beginPath();
 
 	context.lineWidth = 2;
 	context.arc(this.x, this.y, shipSize, (this.Direction-Math.PI-shipAngle), (this.Direction-Math.PI+shipAngle), false);
