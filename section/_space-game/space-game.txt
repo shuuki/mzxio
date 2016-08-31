@@ -1,0 +1,73 @@
+
+
+fly around a little galaxy
+
+
+Turn-based
+
+
+
+Ship:
+- Sails
+- Power Cells
+- Accumulators
+- Engines
+- Weapons
+- Transciever 
+- Sensors
+- Cargo
+- Life Support (only if carrying living cargo)
+
+
+Sector:
+- systems
+- mapped on x,y grid 
+
+System:
+- stars
+	- type
+- planets
+	- rocky or gas
+- moons
+- asteroids, structures, anomalies
+
+
+Win:
+
+- find rare artifact
+
+Lose:
+
+- get killed by a space monster
+- run out of power somewhere you can't recharge
+- get stuck unable to repair your ship
+
+
+Entities:
+
+- monsters
+	- attacks on sight
+	- doesn't communicate
+
+- pirates
+	- may attack randomly
+	- attacks if threatened
+	- chance for trade
+
+- traders
+	- may flee if threatened
+	- trades 
+
+
+What size do you want the map to be?
+	(sets sector dimensions)
+How difficult do you want the game to be?
+	(sets number of entities)
+
+generate the galaxy:
+	1. make grid to height and width of size
+	2. go over grid spaces and make systems
+		1. choose star count first, then planets, etc
+	3. seed entities based on difficulty
+
+
