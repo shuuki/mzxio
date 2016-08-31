@@ -87,26 +87,27 @@ Sim.render = function() {
 /**  keyboard events */
 
 var Key = {
-	pressed: {},
-
+	// index of recognized keys
+	BACKSPACE: 8,
 	LEFT: 37,
 	UP: 38,
 	RIGHT: 39,
 	DOWN: 40,
-
-	W: 87,
-	S: 83,
 	A: 65,
 	D: 68,
+	W: 87,
+	S: 83,
 
+	// cache keys currently pressed here
+	pressed: {},
+
+	// methods for tracking key state
 	isDown: function(keyCode) {
 		return this.pressed[keyCode];
 	},
-
 	onKeydown: function(event) {
 		this.pressed[event.keyCode] = true;
 	},
-
 	onKeyup: function(event) {
 		delete this.pressed[event.keyCode];
 	}
@@ -136,48 +137,36 @@ function Ship(domain) {
 	this.xSpeed = 0;
 	this.ySpeed = 0;
 	this.TurnSpeed = 0;
-	this.Direction = 0;
+	this.Direction = Math.PI*1.5;
 }
 
 Ship.prototype.update = function() {
 
 	// physics 
 	var Acceleration = 0.04,
-		Friction = 0.014,
+		Friction = 0.00000014,
 		TopSpeed = 5.0,
+		LateralMod = 0.75,
 		TurnAcceleration = 0.028,
 		TurnFriction = 0.06,
 		TurnMax = 3;
 
 	// movement controls
-
-
-	// Linear Movement (Keys Up, Down)	
-	//if (Key.isDown(Key.UP)) this.ySpeed -= Acceleration;
-	//if (Key.isDown(Key.DOWN)) this.ySpeed += Acceleration; 	
-	//if (Key.isDown(Key.LEFT)) this.xSpeed -= Acceleration;
-	//if (Key.isDown(Key.RIGHT))this.xSpeed += Acceleration;
-
-	if (Key.isDown(Key.A)) {
-		this.xSpeed += Math.cos(this.Direction-(Math.PI/2))*Acceleration;
-		this.ySpeed += Math.sin(this.Direction-(Math.PI/2))*Acceleration;	
-	}
-	if (Key.isDown(Key.D)) {
-		this.xSpeed -= Math.cos(this.Direction-(Math.PI/2))*Acceleration;
-		this.ySpeed -= Math.sin(this.Direction-(Math.PI/2))*Acceleration;	
-	}
-
-
-
-
 	if (Key.isDown(Key.UP) || Key.isDown(Key.W)) {
 			this.xSpeed += Math.cos(this.Direction)*Acceleration;
 			this.ySpeed += Math.sin(this.Direction)*Acceleration;	
 	}
-
 	if (Key.isDown(Key.DOWN) || Key.isDown(Key.S)) {
-			this.xSpeed -= Math.cos(this.Direction)*Acceleration;
-			this.ySpeed -= Math.sin(this.Direction)*Acceleration;	
+			this.xSpeed -= Math.cos(this.Direction)*(Acceleration*LateralMod);
+			this.ySpeed -= Math.sin(this.Direction)*(Acceleration*LateralMod);	
+	}
+	if (Key.isDown(Key.A)) {
+		this.xSpeed += Math.cos(this.Direction-(Math.PI/2))*(Acceleration*LateralMod);
+		this.ySpeed += Math.sin(this.Direction-(Math.PI/2))*(Acceleration*LateralMod);	
+	}
+	if (Key.isDown(Key.D)) {
+		this.xSpeed -= Math.cos(this.Direction-(Math.PI/2))*(Acceleration*LateralMod);
+		this.ySpeed -= Math.sin(this.Direction-(Math.PI/2))*(Acceleration*LateralMod);	
 	}
 
 	// Calculate Length of the Speed Vector with pythagoras
@@ -194,9 +183,9 @@ Ship.prototype.update = function() {
 		this.ySpeed += (this.ySpeed/SpeedVectorLength)*(TopSpeed - SpeedVectorLength);
 	}
 
-
-	
 	//console.log(SpeedVectorLength)
+	
+
 	
 	this.x += this.xSpeed;
 	this.y += this.ySpeed;
@@ -205,7 +194,7 @@ Ship.prototype.update = function() {
 	if (Key.isDown(Key.LEFT)) this.TurnSpeed -= TurnAcceleration;
 	if (Key.isDown(Key.RIGHT)) this.TurnSpeed += TurnAcceleration;
 
-		// Limit TurnSpeed
+	// Limit TurnSpeed
 	if (this.TurnSpeed > TurnMax) this.TurnSpeed = TurnMax;
 	if (this.TurnSpeed < -TurnMax) this.TurnSpeed = -TurnMax;
 
@@ -234,7 +223,7 @@ Ship.prototype.update = function() {
 Ship.prototype.draw = function(context) {
 
 	let shipAngle = 0.8,
-		shipSize = 10;
+		shipSize = 8;
 
 	// clear path: turn off for drawing
 	context.beginPath();
@@ -247,7 +236,7 @@ Ship.prototype.draw = function(context) {
 	//context.fillRect(this.x - 2, this.y - 2, 4, 4);
 	//context.arc(this.x, this.y, 4, 0, 2 * Math.PI, false);
 
-	context.fillText(Util.radToDeg(this.Direction).toFixed(2), 10, 40);
+	context.fillText(Util.radToDeg(this.Direction).toFixed(0), 10, 40);
 
 	//context.fill();
 	context.stroke();
